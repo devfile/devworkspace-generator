@@ -7,7 +7,7 @@
 # SPDX-License-Identifier: EPL-2.0
 #
 
-name: Release stable version
+name: Release Che Devworkspace Generator
 
 on:
   workflow_dispatch:
