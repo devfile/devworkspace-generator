@@ -78,5 +78,5 @@ jobs:
           git config --global user.name "Anatolii Bazko"
           git config --global user.email "abazko@redhat.com"
           
-          ./make-release.sh --version {{ github.event.inputs.version }}
+          ./make-release.sh --version ${{ github.event.inputs.version }}
 
