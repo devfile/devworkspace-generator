@@ -44,7 +44,7 @@
     "jsonschema": "^1.4.1",
     "axios": "^1.7.0",
     "fs-extra": "^11.2.0",
-    "inversify": "^5.0.1",
+    "inversify": "^6.0.2",
     "js-yaml": "^4.0.0",
     "jsonc-parser": "^3.0.0",
     "reflect-metadata": "^0.2.2"
