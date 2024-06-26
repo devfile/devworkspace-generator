@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eclipse-che/che-devfile-registry.git"
+    "url": "git+https://github.com/devfile/devworkspace-generator.git"
   },
   "author": "",
   "license": "EPL-2.0",
