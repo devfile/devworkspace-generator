@@ -90,7 +90,7 @@ describe('DevfileValidator', () => {
     expect(result.toString()).toContain('3: instance.components[0] requires property "volume"');
     expect(result.toString()).toContain('4: instance.components[0] requires property "image"');
     expect(result.toString()).toContain(
-      '5: instance.components[0] is not exactly one from [subschema 0],[subschema 1],[subschema 2],[subschema 3],[subschema 4]'
+      '5: instance.components[0] is not exactly one from [subschema 0],[subschema 1],[subschema 2],[subschema 3],[subschema 4]',
     );
   });
 
@@ -119,7 +119,7 @@ describe('DevfileValidator', () => {
     const version = '3.0.0';
 
     expect(() => validator.validateDevfile(devfile, version)).toThrowError(
-      `Dev Workspace generator tool doesn't support devfile version: ${version}`
+      `Dev Workspace generator tool doesn't support devfile version: ${version}`,
     );
   });
 });

@@ -35,7 +35,7 @@ export class DevContainerComponentInserter {
 
     const devContainerImage = defaultComponentImage ? defaultComponentImage : this.DEFAULT_DEV_CONTAINER_IMAGE;
     console.log(
-      `No container component has been found. A default container component with image ${devContainerImage} will be added.`
+      `No container component has been found. A default container component with image ${devContainerImage} will be added.`,
     );
     const devContainerComponent: V1alpha2DevWorkspaceSpecTemplateComponents = {
       name: this.DEFAULT_DEV_CONTAINER_NAME,

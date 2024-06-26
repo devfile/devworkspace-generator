@@ -39,13 +39,13 @@ export class Generate {
     editorContent: string,
     outputFile?: string,
     injectDefaultComponent?: string,
-    defaultComponentImage?: string
+    defaultComponentImage?: string,
   ): Promise<DevfileContext> {
     const context = await this.generateContent(
       devfileContent,
       editorContent,
       injectDefaultComponent,
-      defaultComponentImage
+      defaultComponentImage,
     );
 
     // write the result
@@ -67,7 +67,7 @@ export class Generate {
     devfileContent: string,
     editorContent: string,
     injectDefaultComponent?: string,
-    defaultComponentImage?: string
+    defaultComponentImage?: string,
   ): Promise<DevfileContext> {
     const devfile = jsYaml.load(devfileContent);
 

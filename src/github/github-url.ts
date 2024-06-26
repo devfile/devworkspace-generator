@@ -17,7 +17,7 @@ export class GithubUrl implements Url {
     private readonly repoUser: string,
     private readonly repoName: string,
     private readonly branchName: string,
-    private readonly subFolder: string
+    private readonly subFolder: string,
   ) {}
 
   /**

@@ -17,7 +17,7 @@ export class BitbucketServerUrl implements Url {
     private readonly user: string | undefined,
     private readonly project: string | undefined,
     private readonly repo: string,
-    private readonly branch: string | undefined
+    private readonly branch: string | undefined,
   ) {}
 
   getContentUrl(path: string): string {

@@ -24,7 +24,7 @@ export class DevContainerComponentFinder {
   async find(
     devfileContext: DevfileContext,
     injectDefaultComponent?: string,
-    defaultComponentImage?: string
+    defaultComponentImage?: string,
   ): Promise<V1alpha2DevWorkspaceSpecTemplateComponents | undefined> {
     // if a devfile contains a parent, we should not add a default dev container
     if (devfileContext.devfile?.parent) {
@@ -35,7 +35,7 @@ export class DevContainerComponentFinder {
       ?.filter(component => component.container)
       .filter(
         // we should ignore component that do not mount the sources
-        component => component.container && component.container.mountSources !== false
+        component => component.container && component.container.mountSources !== false,
       );
 
     if (!devComponents || devComponents.length === 0) {
@@ -53,8 +53,8 @@ export class DevContainerComponentFinder {
     } else {
       console.warn(
         `More than one dev container component has been potentially found, taking the first one of ${devComponents.map(
-          component => component.name
-        )}`
+          component => component.name,
+        )}`,
       );
       return devComponents[0];
     }
