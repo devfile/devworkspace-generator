@@ -131,7 +131,7 @@ describe('Test DevContainerComponentFinder', () => {
     const devWorkspaceSpecTemplateComponents = await devContainerComponentFinder.find(
       devfileContext,
       'true',
-      'my-image'
+      'my-image',
     );
     // default dev component is added with custom image
     expect(devfileContext.devWorkspace.spec?.template?.components?.length).toBe(3);
@@ -228,7 +228,7 @@ describe('Test DevContainerComponentFinder', () => {
     const devWorkspaceSpecTemplateComponents = await devContainerComponentFinder.find(devfileContext);
     expect(devWorkspaceSpecTemplateComponents?.name).toBe('my-container-1');
     expect(console.warn).toBeCalledWith(
-      'More than one dev container component has been potentially found, taking the first one of my-container-1,my-container-2'
+      'More than one dev container component has been potentially found, taking the first one of my-container-1,my-container-2',
     );
   });
 });

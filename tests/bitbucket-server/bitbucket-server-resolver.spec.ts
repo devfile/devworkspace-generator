@@ -93,15 +93,15 @@ describe('Test Bitbucket resolver', () => {
 
   test('test get branch', async () => {
     expect(
-      bitbucketResolver.resolve(BITBUCKET_SERVER_URL + 'users/user/repos/repo/browse?at=branch').getBranchName()
+      bitbucketResolver.resolve(BITBUCKET_SERVER_URL + 'users/user/repos/repo/browse?at=branch').getBranchName(),
     ).toBe('branch');
     expect(
       bitbucketResolver
         .resolve(BITBUCKET_SERVER_URL + 'users/user/repos/repo/browse?at=refs%2Fheads%2Fbranch')
-        .getBranchName()
+        .getBranchName(),
     ).toBe('branch');
     expect(
-      bitbucketResolver.resolve(BITBUCKET_SERVER_URL + 'projects/project/repos/repo/browse?at=branch').getBranchName()
+      bitbucketResolver.resolve(BITBUCKET_SERVER_URL + 'projects/project/repos/repo/browse?at=branch').getBranchName(),
     ).toBe('branch');
   });
 

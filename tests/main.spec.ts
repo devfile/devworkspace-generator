@@ -59,7 +59,7 @@ describe('Test Main with stubs', () => {
     outputFile: string | undefined,
     pluginRegistryUrl: string | undefined,
     injectDefaultComponent: string | undefined,
-    defaultComponentImage: string | undefined
+    defaultComponentImage: string | undefined,
   ) {
     // empty args
     process.argv = ['', ''];
@@ -109,7 +109,7 @@ describe('Test Main with stubs', () => {
         FAKE_OUTPUT_FILE,
         FAKE_PLUGIN_REGISTRY_URL,
         undefined,
-        undefined
+        undefined,
       );
       jest.spyOn(fs, 'readFile').mockResolvedValue('');
 
@@ -155,7 +155,7 @@ describe('Test Main with stubs', () => {
         FAKE_OUTPUT_FILE,
         FAKE_PLUGIN_REGISTRY_URL,
         'true',
-        'my-image'
+        'my-image',
       );
       process.argv.push('--project.foo=bar');
       containerGetMethod.mockReset();
@@ -241,7 +241,7 @@ describe('Test Main with stubs', () => {
         FAKE_OUTPUT_FILE,
         undefined,
         'false',
-        undefined
+        undefined,
       );
       await main.start();
       expect(mockedConsoleLog).toBeCalled();
@@ -249,7 +249,7 @@ describe('Test Main with stubs', () => {
 
       // check plugin url is provided to initBindings
       expect(spyInitBindings.mock.calls[0][0].pluginRegistryUrl).toBe(
-        'https://eclipse-che.github.io/che-plugin-registry/main/v3'
+        'https://eclipse-che.github.io/che-plugin-registry/main/v3',
       );
     });
 
@@ -263,7 +263,7 @@ describe('Test Main with stubs', () => {
         FAKE_OUTPUT_FILE,
         FAKE_PLUGIN_REGISTRY_URL,
         'false',
-        undefined
+        undefined,
       );
       const returnCode = await main.start();
       expect(mockedConsoleError).toBeCalled();
@@ -282,7 +282,7 @@ describe('Test Main with stubs', () => {
         FAKE_OUTPUT_FILE,
         FAKE_PLUGIN_REGISTRY_URL,
         'false',
-        undefined
+        undefined,
       );
 
       const returnCode = await main.start();
@@ -302,7 +302,7 @@ describe('Test Main with stubs', () => {
         undefined,
         FAKE_PLUGIN_REGISTRY_URL,
         'false',
-        undefined
+        undefined,
       );
       const returnCode = await main.start();
       expect(mockedConsoleError).toBeCalled();
@@ -345,7 +345,7 @@ describe('Test Main with stubs', () => {
             devfilePath: FAKE_DEVFILE_PATH,
             projects: [],
           },
-          axios.default
+          axios.default,
         );
         throw new Error('Dummy error');
       } catch (e) {
@@ -363,7 +363,7 @@ describe('Test Main with stubs', () => {
             editorEntry: FAKE_EDITOR_ENTRY,
             projects: [],
           },
-          axios.default
+          axios.default,
         );
         throw new Error('Dummy error');
       } catch (e) {
@@ -420,7 +420,7 @@ describe('Test Main with stubs', () => {
           injectDefaultComponent: 'true',
           defaultComponentImage: 'quay.io/custom-image:next',
         },
-        axios.default
+        axios.default,
       );
 
       expect(validateDevfileMethod).toBeCalled();
@@ -431,7 +431,7 @@ describe('Test Main with stubs', () => {
         "''\n",
         FAKE_OUTPUT_FILE,
         'true',
-        'quay.io/custom-image:next'
+        'quay.io/custom-image:next',
       );
     });
 
@@ -480,7 +480,7 @@ describe('Test Main with stubs', () => {
           editorEntry: FAKE_EDITOR_ENTRY,
           projects: [],
         },
-        axios.default
+        axios.default,
       );
 
       expect(mockedConsoleError).toBeCalledTimes(0);
@@ -509,8 +509,8 @@ describe('Test Main with stubs', () => {
             editorEntry: FAKE_EDITOR_ENTRY,
             projects: [],
           },
-          axios.default
-        )
+          axios.default,
+        ),
       ).rejects.toThrow('Devfile is not valid, schemaVersion is required');
     });
 
@@ -562,7 +562,7 @@ describe('Test Main with stubs', () => {
           editorContent,
           projects: [],
         },
-        axios.default
+        axios.default,
       );
 
       expect(mockedConsoleError).toBeCalledTimes(0);
@@ -581,7 +581,7 @@ describe('Test Main with stubs', () => {
         }),
         FAKE_OUTPUT_FILE,
         undefined,
-        undefined
+        undefined,
       );
     });
 
@@ -611,7 +611,7 @@ describe('Test Main with stubs', () => {
           editorPath: FAKE_EDITOR_PATH,
           projects: [],
         },
-        axios.default
+        axios.default,
       );
 
       expect(mockedConsoleError).toBeCalledTimes(0);
@@ -651,8 +651,8 @@ describe('Test Main with stubs', () => {
             editorPath: FAKE_EDITOR_PATH,
             projects: [],
           },
-          axios.default
-        )
+          axios.default,
+        ),
       ).rejects.toThrow('Devfile schema validation failed. Error: Dummy error');
 
       expect(validateDevfileMethod).toBeCalled();

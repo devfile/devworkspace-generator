@@ -16,7 +16,7 @@ export class BitbucketUrl implements Url {
   constructor(
     private readonly workspaceId: string,
     private readonly repoName: string,
-    private readonly branchName: string
+    private readonly branchName: string,
   ) {}
 
   getContentUrl(path: string): string {

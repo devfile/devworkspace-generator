@@ -66,7 +66,7 @@ describe('Test Bitbucket resolver', () => {
   test('test get branch', async () => {
     expect(bitbucketResolver.resolve('https://bitbucket.org/workspace/repo/src/branch').getBranchName()).toBe('branch');
     expect(bitbucketResolver.resolve('https://bitbucket.org/workspace/repo/src/branch/').getBranchName()).toBe(
-      'branch'
+      'branch',
     );
   });
 

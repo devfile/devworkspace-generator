@@ -56,7 +56,7 @@ metadata:
       // expect not to write the file
       expect(fsWriteFileSpy).not.toBeCalled();
       expect(JSON.stringify(context.devfile)).toEqual(
-        '{"schemaVersion":"2.2.0","metadata":{"name":"my-dummy-project"},"parent":{"id":"udi","registryUrl":"https://dummy-registry.io/","version":"1.2.0"}}'
+        '{"schemaVersion":"2.2.0","metadata":{"name":"my-dummy-project"},"parent":{"id":"udi","registryUrl":"https://dummy-registry.io/","version":"1.2.0"}}',
       );
       const expectedDevWorkspace = {
         apiVersion: 'workspace.devfile.io/v1alpha2',
@@ -196,7 +196,7 @@ metadata:
       // expect not to write the file
       expect(fsWriteFileSpy).not.toBeCalled();
       expect(JSON.stringify(context.devfile)).toEqual(
-        '{"schemaVersion":"2.2.0","metadata":{"name":"my-dummy-project"},"components":[{"name":"dev-container","mountSources":true,"container":{"image":"quay.io/foo/bar"}}]}'
+        '{"schemaVersion":"2.2.0","metadata":{"name":"my-dummy-project"},"components":[{"name":"dev-container","mountSources":true,"container":{"image":"quay.io/foo/bar"}}]}',
       );
       const expectedDevWorkspace = {
         apiVersion: 'workspace.devfile.io/v1alpha2',
@@ -263,7 +263,7 @@ metadata:
       // expect not to write the file
       expect(fsWriteFileSpy).not.toBeCalled();
       expect(JSON.stringify(context.devfile)).toEqual(
-        '{"schemaVersion":"2.2.0","metadata":{"generateName":"custom-project"},"components":[{"name":"dev-container","mountSources":true,"container":{"image":"quay.io/foo/bar"}}]}'
+        '{"schemaVersion":"2.2.0","metadata":{"generateName":"custom-project"},"components":[{"name":"dev-container","mountSources":true,"container":{"image":"quay.io/foo/bar"}}]}',
       );
       const expectedDevWorkspace = {
         apiVersion: 'workspace.devfile.io/v1alpha2',
@@ -331,7 +331,7 @@ metadata:
       // expect to write the file
       expect(fsWriteFileSpy).toBeCalled();
       expect(JSON.stringify(context.devfile)).toEqual(
-        '{"schemaVersion":"2.2.0","metadata":{"name":"my-dummy-project"},"components":[{"name":"dev-container","mountSources":true,"container":{"image":"quay.io/foo/bar"}}]}'
+        '{"schemaVersion":"2.2.0","metadata":{"name":"my-dummy-project"},"components":[{"name":"dev-container","mountSources":true,"container":{"image":"quay.io/foo/bar"}}]}',
       );
       const expectedDevWorkspace = {
         apiVersion: 'workspace.devfile.io/v1alpha2',
@@ -399,7 +399,7 @@ metadata:
       // expect to write the file
       expect(fsWriteFileSpy).toBeCalled();
       expect(JSON.stringify(context.devfile)).toEqual(
-        '{"schemaVersion":"2.2.0","metadata":{"name":"my-dummy-project"},"components":[{"name":"dev-container","attributes":{"old":"attribute"},"mountSources":true,"container":{"image":"quay.io/foo/bar"}}]}'
+        '{"schemaVersion":"2.2.0","metadata":{"name":"my-dummy-project"},"components":[{"name":"dev-container","attributes":{"old":"attribute"},"mountSources":true,"container":{"image":"quay.io/foo/bar"}}]}',
       );
       const expectedDevWorkspace = {
         apiVersion: 'workspace.devfile.io/v1alpha2',
@@ -492,7 +492,7 @@ metadata:
     expect(context.devWorkspace.spec?.template?.components?.length).toBe(1);
     expect(context.devWorkspace.spec?.template?.components?.[0].name).toBe('dev');
     expect(context.devWorkspace.spec?.template?.components?.[0].container?.image).toBe(
-      'quay.io/devfile/universal-developer-image:ubi8-latest'
+      'quay.io/devfile/universal-developer-image:ubi8-latest',
     );
   });
 

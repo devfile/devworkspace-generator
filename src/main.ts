@@ -43,7 +43,7 @@ export class Main {
       injectDefaultComponent?: string;
       defaultComponentImage?: string;
     },
-    axiosInstance: axios.AxiosInstance
+    axiosInstance: axios.AxiosInstance,
   ): Promise<DevfileContext> {
     if (!params.editorPath && !params.editorEntry && !params.editorContent) {
       throw new Error('missing editorPath or editorEntry or editorContent');
@@ -113,7 +113,7 @@ export class Main {
     console.log(`Validating devfile`);
     const validationResult: ValidatorResult = devfileSchemaValidator.validateDevfile(
       jsYamlDevfileContent,
-      schemaVersion
+      schemaVersion,
     );
     if (!validationResult.valid) {
       throw new Error(`Devfile schema validation failed. Error: ${validationResult.toString()}`);
@@ -139,7 +139,7 @@ export class Main {
       editorContent,
       params.outputFile,
       params.injectDefaultComponent,
-      params.defaultComponentImage
+      params.defaultComponentImage,
     );
   }
 
@@ -238,7 +238,7 @@ export class Main {
           injectDefaultComponent,
           defaultComponentImage,
         },
-        axios.default
+        axios.default,
       );
       return true;
     } catch (error) {
