@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/eclipse-che/che-devfile-registry#readme",
   "dependencies": {
-    "@devfile/api": "2.2.2-1716821574",
+    "@devfile/api": "2.3.0-1721400636",
     "jsonschema": "^1.4.1",
     "axios": "^1.7.0",
     "fs-extra": "^11.2.0",
