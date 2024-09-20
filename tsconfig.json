@@ -1,19 +1,25 @@
 {
     "compilerOptions": {
+        "target": "ES2023",
+        "module": "commonjs",
         "esModuleInterop": true,
         "experimentalDecorators": true,
         "lib": [
-            "ES2017",
+            "ES2023",
         ],
         "sourceMap": true,
         "rootDir": "src",
         "outDir": "lib",
         "types": [
-            "node", "jest"
+            "node", "jest", "reflect-metadata"
         ],
+        "moduleResolution": "node",
         "resolveJsonModule": true,
     },
     "include": [
         "src"
+    ],
+    "exclude": [
+        "node_modules",
     ]
 }
