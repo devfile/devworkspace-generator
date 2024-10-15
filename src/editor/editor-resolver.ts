@@ -10,7 +10,7 @@
 
 import * as jsYaml from 'js-yaml';
 
-import { inject, injectable, named } from 'inversify';
+import { inject, injectable } from 'inversify';
 
 import { UrlFetcher } from '../fetch/url-fetcher';
 
@@ -18,19 +18,14 @@ import { UrlFetcher } from '../fetch/url-fetcher';
  * Resolve plug-ins by grabbing the definition from the plug-in registry.
  */
 @injectable()
-export class PluginRegistryResolver {
-  @inject('string')
-  @named('PLUGIN_REGISTRY_URL')
-  private pluginRegistryUrl: string;
-
+export class EditorResolver {
   @inject(UrlFetcher)
   private urlFetcher: UrlFetcher;
 
-  // FQN id (like che-incubator/che-code/next)
+  // Editor URL (like https://raw.githubusercontent.com/eclipse-che/che-operator/refs/heads/main/editors-definitions/che-code-latest.yaml)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  async loadDevfilePlugin(devfileId: string): Promise<any> {
-    const devfileUrl = `${this.pluginRegistryUrl}/plugins/${devfileId}/devfile.yaml`;
-    const devfileContent = await this.urlFetcher.fetchText(devfileUrl);
+  async loadEditor(editorUrl: string): Promise<any> {
+    const devfileContent = await this.urlFetcher.fetchText(editorUrl);
     return jsYaml.load(devfileContent);
   }
 }

@@ -15,7 +15,7 @@ import { DevfileSchemaValidator } from './devfile-schema/devfile-schema-validato
 import * as jsYaml from 'js-yaml';
 import { InversifyBinding } from './inversify/inversify-binding';
 import { UrlFetcher } from './fetch/url-fetcher';
-import { PluginRegistryResolver } from './plugin-registry/plugin-registry-resolver';
+import { EditorResolver } from './editor/editor-resolver';
 import { V1alpha2DevWorkspaceSpecTemplate } from '@devfile/api';
 import { DevfileContext } from './api/devfile-context';
 import { GitUrlResolver } from './resolve/git-url-resolver';
@@ -37,33 +37,22 @@ export class Main {
       outputFile?: string;
       editorPath?: string;
       editorContent?: string;
-      editorEntry?: string;
-      pluginRegistryUrl?: string;
+      editorUrl?: string;
       projects: { name: string; location: string }[];
       injectDefaultComponent?: string;
       defaultComponentImage?: string;
     },
     axiosInstance: axios.AxiosInstance,
   ): Promise<DevfileContext> {
-    if (!params.editorPath && !params.editorEntry && !params.editorContent) {
-      throw new Error('missing editorPath or editorEntry or editorContent');
+    if (!params.editorPath && !params.editorUrl && !params.editorContent) {
+      throw new Error('missing editorPath or editorUrl or editorContent');
     }
     if (!params.devfilePath && !params.devfileUrl && !params.devfileContent) {
       throw new Error('missing devfilePath or devfileUrl or devfileContent');
     }
 
-    let pluginRegistryUrl: string;
-
-    if (params.pluginRegistryUrl) {
-      pluginRegistryUrl = params.pluginRegistryUrl;
-    } else {
-      pluginRegistryUrl = 'https://eclipse-che.github.io/che-plugin-registry/main/v3';
-      console.log(`No plug-in registry url. Setting to ${pluginRegistryUrl}`);
-    }
-
     const inversifyBinbding = new InversifyBinding();
     const container = await inversifyBinbding.initBindings({
-      pluginRegistryUrl,
       axiosInstance,
     });
     container.bind(Generate).toSelf().inSingletonScope();
@@ -125,9 +114,9 @@ export class Main {
 
     if (params.editorContent) {
       editorContent = params.editorContent;
-    } else if (params.editorEntry) {
+    } else if (params.editorUrl) {
       // devfile of the editor
-      const editorDevfile = await container.get(PluginRegistryResolver).loadDevfilePlugin(params.editorEntry);
+      const editorDevfile = await container.get(EditorResolver).loadEditor(params.editorUrl);
       editorContent = jsYaml.dump(editorDevfile);
     } else {
       editorContent = await fs.readFile(params.editorPath);
@@ -175,8 +164,7 @@ export class Main {
     let devfileUrl: string | undefined;
     let outputFile: string | undefined;
     let editorPath: string | undefined;
-    let pluginRegistryUrl: string | undefined;
-    let editorEntry: string | undefined;
+    let editorUrl: string | undefined;
     let injectDefaultComponent: string | undefined;
     let defaultComponentImage: string | undefined;
     const projects: { name: string; location: string }[] = [];
@@ -189,11 +177,8 @@ export class Main {
       if (arg.startsWith('--devfile-url:')) {
         devfileUrl = arg.substring('--devfile-url:'.length);
       }
-      if (arg.startsWith('--plugin-registry-url:')) {
-        pluginRegistryUrl = arg.substring('--plugin-registry-url:'.length);
-      }
-      if (arg.startsWith('--editor-entry:')) {
-        editorEntry = arg.substring('--editor-entry:'.length);
+      if (arg.startsWith('--editor-url:')) {
+        editorUrl = arg.substring('--editor-url:'.length);
       }
       if (arg.startsWith('--editor-path:')) {
         editorPath = arg.substring('--editor-path:'.length);
@@ -217,8 +202,8 @@ export class Main {
     });
 
     try {
-      if (!editorPath && !editorEntry) {
-        throw new Error('missing --editor-path: or --editor-entry: parameter');
+      if (!editorPath && !editorUrl) {
+        throw new Error('missing --editor-path: or --editor-url: parameter');
       }
       if (!devfilePath && !devfileUrl) {
         throw new Error('missing --devfile-path: or --devfile-url: parameter');
@@ -232,8 +217,7 @@ export class Main {
           devfileUrl,
           editorPath,
           outputFile,
-          pluginRegistryUrl,
-          editorEntry,
+          editorUrl,
           projects,
           injectDefaultComponent,
           defaultComponentImage,

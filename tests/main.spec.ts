@@ -21,8 +21,7 @@ describe('Test Main with stubs', () => {
   const FAKE_DEVFILE_URL = 'http://fake-devfile-url';
   const FAKE_EDITOR_PATH = '/my-fake-editor-path';
   const FAKE_OUTPUT_FILE = '/fake-output';
-  const FAKE_PLUGIN_REGISTRY_URL = 'http://fake-plugin-registry-url';
-  const FAKE_EDITOR_ENTRY = 'fake/editor';
+  const FAKE_EDITOR_URL = 'http://fake-editor.yaml';
 
   const originalConsoleError = console.error;
   const mockedConsoleError = jest.fn();
@@ -55,9 +54,8 @@ describe('Test Main with stubs', () => {
     devfilePath: string | undefined,
     devfileUrl: string | undefined,
     editorPath: string | undefined,
-    editorEntry: string | undefined,
+    editorUrl: string | undefined,
     outputFile: string | undefined,
-    pluginRegistryUrl: string | undefined,
     injectDefaultComponent: string | undefined,
     defaultComponentImage: string | undefined,
   ) {
@@ -69,17 +67,14 @@ describe('Test Main with stubs', () => {
     if (devfileUrl) {
       process.argv.push(`--devfile-url:${devfileUrl}`);
     }
-    if (editorEntry) {
-      process.argv.push(`--editor-entry:${editorEntry}`);
+    if (editorUrl) {
+      process.argv.push(`--editor-url:${editorUrl}`);
     }
     if (editorPath) {
       process.argv.push(`--editor-path:${editorPath}`);
     }
     if (outputFile) {
       process.argv.push(`--output-file:${outputFile}`);
-    }
-    if (pluginRegistryUrl) {
-      process.argv.push(`--plugin-registry-url:${pluginRegistryUrl}`);
     }
     if (defaultComponentImage) {
       process.argv.push(`--defaultComponentImage:${defaultComponentImage}`);
@@ -101,16 +96,7 @@ describe('Test Main with stubs', () => {
 
   describe('start', () => {
     beforeEach(() => {
-      initArgs(
-        FAKE_DEVFILE_PATH,
-        undefined,
-        FAKE_EDITOR_PATH,
-        undefined,
-        FAKE_OUTPUT_FILE,
-        FAKE_PLUGIN_REGISTRY_URL,
-        undefined,
-        undefined,
-      );
+      initArgs(FAKE_DEVFILE_PATH, undefined, FAKE_EDITOR_PATH, undefined, FAKE_OUTPUT_FILE, undefined, undefined);
       jest.spyOn(fs, 'readFile').mockResolvedValue('');
 
       spyInitBindings = jest.spyOn(InversifyBinding.prototype, 'initBindings');
@@ -147,16 +133,7 @@ describe('Test Main with stubs', () => {
 
     test('success with custom devfile Url', async () => {
       const main = new Main();
-      initArgs(
-        undefined,
-        FAKE_DEVFILE_URL,
-        undefined,
-        FAKE_EDITOR_ENTRY,
-        FAKE_OUTPUT_FILE,
-        FAKE_PLUGIN_REGISTRY_URL,
-        'true',
-        'my-image',
-      );
+      initArgs(undefined, FAKE_DEVFILE_URL, undefined, FAKE_EDITOR_URL, FAKE_OUTPUT_FILE, 'true', 'my-image');
       process.argv.push('--project.foo=bar');
       containerGetMethod.mockReset();
       const githubResolverResolveMethod = jest.fn();
@@ -196,18 +173,18 @@ describe('Test Main with stubs', () => {
       validateDevfileMethod.mockReturnValueOnce({ valid: true });
       containerGetMethod.mockReturnValueOnce(devfileSchemaValidatorMock);
 
-      const loadDevfilePluginMethod = jest.fn();
-      const pluginRegistryResolverMock = {
-        loadDevfilePlugin: loadDevfilePluginMethod as any,
+      const loadEditorMethod = jest.fn();
+      const editorResolverMock = {
+        loadEditor: loadEditorMethod as any,
       };
-      loadDevfilePluginMethod.mockReturnValue('');
-      containerGetMethod.mockReturnValueOnce(pluginRegistryResolverMock);
+      loadEditorMethod.mockReturnValue('');
+      containerGetMethod.mockReturnValueOnce(editorResolverMock);
 
       // last one is generate mock
       containerGetMethod.mockReturnValueOnce(generateMock);
       const returnCode = await main.start();
       expect(mockedConsoleError).toBeCalledTimes(0);
-      expect(loadDevfilePluginMethod).toBeCalled();
+      expect(loadEditorMethod).toBeCalled();
       expect(urlFetcherFetchTextMethod).toBeCalled();
 
       expect(returnCode).toBeTruthy();
@@ -231,40 +208,9 @@ describe('Test Main with stubs', () => {
       expect(generateMethod).toBeCalledWith(jsYaml.dump(result), "''\n", FAKE_OUTPUT_FILE, 'true', 'my-image');
     });
 
-    test('editorEntry with default plugin registry URL', async () => {
-      const main = new Main();
-      initArgs(
-        FAKE_DEVFILE_PATH,
-        undefined,
-        undefined,
-        FAKE_EDITOR_ENTRY,
-        FAKE_OUTPUT_FILE,
-        undefined,
-        'false',
-        undefined,
-      );
-      await main.start();
-      expect(mockedConsoleLog).toBeCalled();
-      expect(mockedConsoleLog.mock.calls[0][0].toString()).toContain('No plug-in registry url. Setting to');
-
-      // check plugin url is provided to initBindings
-      expect(spyInitBindings.mock.calls[0][0].pluginRegistryUrl).toBe(
-        'https://eclipse-che.github.io/che-plugin-registry/main/v3',
-      );
-    });
-
     test('missing devfile', async () => {
       const main = new Main();
-      initArgs(
-        undefined,
-        undefined,
-        FAKE_EDITOR_PATH,
-        undefined,
-        FAKE_OUTPUT_FILE,
-        FAKE_PLUGIN_REGISTRY_URL,
-        'false',
-        undefined,
-      );
+      initArgs(undefined, undefined, FAKE_EDITOR_PATH, FAKE_DEVFILE_URL, FAKE_OUTPUT_FILE, 'false', undefined);
       const returnCode = await main.start();
       expect(mockedConsoleError).toBeCalled();
       expect(mockedConsoleError.mock.calls[1][1].toString()).toContain('missing --devfile-path:');
@@ -274,16 +220,7 @@ describe('Test Main with stubs', () => {
 
     test('missing editor', async () => {
       const main = new Main();
-      initArgs(
-        FAKE_DEVFILE_PATH,
-        undefined,
-        undefined,
-        undefined,
-        FAKE_OUTPUT_FILE,
-        FAKE_PLUGIN_REGISTRY_URL,
-        'false',
-        undefined,
-      );
+      initArgs(FAKE_DEVFILE_PATH, undefined, undefined, undefined, FAKE_OUTPUT_FILE, 'false', undefined);
 
       const returnCode = await main.start();
       expect(mockedConsoleError).toBeCalled();
@@ -294,16 +231,7 @@ describe('Test Main with stubs', () => {
 
     test('missing outputfile', async () => {
       const main = new Main();
-      initArgs(
-        FAKE_DEVFILE_PATH,
-        undefined,
-        FAKE_EDITOR_PATH,
-        undefined,
-        undefined,
-        FAKE_PLUGIN_REGISTRY_URL,
-        'false',
-        undefined,
-      );
+      initArgs(FAKE_DEVFILE_PATH, undefined, FAKE_EDITOR_PATH, undefined, undefined, 'false', undefined);
       const returnCode = await main.start();
       expect(mockedConsoleError).toBeCalled();
       expect(mockedConsoleError.mock.calls[1][1].toString()).toContain('missing --output-file: parameter');
@@ -351,7 +279,7 @@ describe('Test Main with stubs', () => {
       } catch (e) {
         message = e.message;
       }
-      expect(message).toEqual('missing editorPath or editorEntry or editorContent');
+      expect(message).toEqual('missing editorPath or editorUrl or editorContent');
     });
 
     test('missing devfile', async () => {
@@ -360,7 +288,7 @@ describe('Test Main with stubs', () => {
       try {
         await main.generateDevfileContext(
           {
-            editorEntry: FAKE_EDITOR_ENTRY,
+            editorUrl: FAKE_EDITOR_URL,
             projects: [],
           },
           axios.default,
@@ -383,12 +311,12 @@ describe('Test Main with stubs', () => {
       validateDevfileMethod.mockReturnValueOnce({ valid: true });
       containerGetMethod.mockReturnValueOnce(devfileSchemaValidatorMock);
 
-      const loadDevfilePluginMethod = jest.fn();
-      const pluginRegistryResolverMock = {
-        loadDevfilePlugin: loadDevfilePluginMethod as any,
+      const loadEditorMethod = jest.fn();
+      const editorResolverMock = {
+        loadEditor: loadEditorMethod as any,
       };
-      loadDevfilePluginMethod.mockReturnValue('');
-      containerGetMethod.mockReturnValueOnce(pluginRegistryResolverMock);
+      loadEditorMethod.mockReturnValue('');
+      containerGetMethod.mockReturnValueOnce(editorResolverMock);
 
       // last one is generate mock
       containerGetMethod.mockReturnValueOnce(generateMock);
@@ -414,8 +342,7 @@ describe('Test Main with stubs', () => {
         {
           devfileContent,
           outputFile: FAKE_OUTPUT_FILE,
-          pluginRegistryUrl: FAKE_PLUGIN_REGISTRY_URL,
-          editorEntry: FAKE_EDITOR_ENTRY,
+          editorUrl: FAKE_EDITOR_URL,
           projects: [],
           injectDefaultComponent: 'true',
           defaultComponentImage: 'quay.io/custom-image:next',
@@ -425,7 +352,7 @@ describe('Test Main with stubs', () => {
 
       expect(validateDevfileMethod).toBeCalled();
       expect(mockedConsoleError).toBeCalledTimes(0);
-      expect(loadDevfilePluginMethod).toBeCalled();
+      expect(loadEditorMethod).toBeCalled();
       expect(generateMethod).toBeCalledWith(
         devfileContent,
         "''\n",
@@ -445,12 +372,12 @@ describe('Test Main with stubs', () => {
       validateDevfileMethod.mockReturnValueOnce({ valid: true });
       containerGetMethod.mockReturnValueOnce(devfileSchemaValidatorMock);
 
-      const loadDevfilePluginMethod = jest.fn();
-      const pluginRegistryResolverMock = {
-        loadDevfilePlugin: loadDevfilePluginMethod as any,
+      const loadEditorMethod = jest.fn();
+      const editorResolverMock = {
+        loadEditor: loadEditorMethod as any,
       };
-      loadDevfilePluginMethod.mockReturnValue('');
-      containerGetMethod.mockReturnValueOnce(pluginRegistryResolverMock);
+      loadEditorMethod.mockReturnValue('');
+      containerGetMethod.mockReturnValueOnce(editorResolverMock);
 
       // last one is generate mock
       containerGetMethod.mockReturnValueOnce(generateMock);
@@ -476,15 +403,14 @@ describe('Test Main with stubs', () => {
         {
           devfileContent,
           outputFile: FAKE_OUTPUT_FILE,
-          pluginRegistryUrl: FAKE_PLUGIN_REGISTRY_URL,
-          editorEntry: FAKE_EDITOR_ENTRY,
+          editorUrl: FAKE_EDITOR_URL,
           projects: [],
         },
         axios.default,
       );
 
       expect(mockedConsoleError).toBeCalledTimes(0);
-      expect(loadDevfilePluginMethod).toBeCalled();
+      expect(loadEditorMethod).toBeCalled();
       expect(validateDevfileMethod).toBeCalled();
       expect(generateMethod).toBeCalledWith(devfileContent, "''\n", FAKE_OUTPUT_FILE, undefined, undefined);
     });
@@ -505,8 +431,7 @@ describe('Test Main with stubs', () => {
           {
             devfileContent,
             outputFile: FAKE_OUTPUT_FILE,
-            pluginRegistryUrl: FAKE_PLUGIN_REGISTRY_URL,
-            editorEntry: FAKE_EDITOR_ENTRY,
+            editorUrl: FAKE_EDITOR_URL,
             projects: [],
           },
           axios.default,

@@ -1,9 +1,51 @@
 ## DevWorkspace Generator
-The library is used by Devfile registry component to generate the DevWorkspace components and DevWorkspace templates. It requires editor definitions from the 
-[che-plugin-registry](https://github.com/eclipse-che/che-plugin-registry/).
+[![Contribute](https://www.eclipse.org/che/contribute.svg)](https://workspaces.openshift.com#https://github.com/devfile/devworkspace-generator)
+[![Contribute (nightly)](https://img.shields.io/static/v1?label=nightly%20Che&message=for%20maintainers&logo=eclipseche&color=FDB940&labelColor=525C86)](https://che-dogfooding.apps.che-dev.x6e0.p1.openshiftapps.com#https://github.com/devfile/devworkspace-generator)
 
-## How to use the library
-The library can be used as a standalone library.
+The library is used by Eclipse Che to generate DevWorkspace components and templates. It requires both the original devfile.yaml and the editor definitions.
+
+## Where is it Published?
+This library is available on npm.
+
+You can find the published package here: \
+__npm:__ [@eclipse-che/che-devworkspace-generator](https://www.npmjs.com/package/@eclipse-che/che-devworkspace-generator)
+
+## Usage
+
+### Here’s an example of how to use the @eclipse-che/che-devworkspace-generator library to generate a DevWorkspace and DevWorkspaceTemplate:
+
+```typescript
+import { Main as DevworkspaceGenerator } from '@eclipse-che/che-devworkspace-generator/lib/main';
+import { V1alpha2DevWorkspaceTemplate } from '@devfile/api';
+import { dump } from 'js-yaml';
+
+// Initialize the DevWorkspace generator
+const generator = new DevworkspaceGenerator();
+
+// Example function to generate DevWorkspace resources
+async function generateDevWorkspace(devfileContent: string, editorContent: string, axiosInstance: any) {
+  // Generate the Devfile context
+  const context = await generator.generateDevfileContext(
+    {
+      devfileContent,
+      editorContent,
+      projects: [],
+    },
+    axiosInstance,
+  );
+
+  // Convert templates and DevWorkspace to YAML
+  const allContentArray = context.devWorkspaceTemplates.map(
+    (template: V1alpha2DevWorkspaceTemplate) => dump(template),
+  );
+  allContentArray.push(dump(context.devWorkspace));
+
+  // Return the YAML content joined by "---"
+  return allContentArray.join('---\n');
+}
+```
+
+### The library can be used as a standalone library:
 
 ```
 USAGE
@@ -14,10 +56,11 @@ OPTIONS
             or
       --devfile-path:          path to the devfile.yaml file
 
-      --plugin-registry-url:   URL to the plugin registry that contains editor definitions (devfile.yaml)
-      --editor-entry:          editor ID, found on the <plugin-registry-url>, to resolve the devfile.yaml
+      --editor-url:            URL for the editor's definition, should be publicly accessible for download.
             or
       --editor-path:           local file path of the editor devfile.yaml
+            or
+      --editor-content:        content of the editor devfile.yaml
 
       --output-file:           local file path for the generated devworkspace yaml 
 
@@ -29,12 +72,11 @@ OPTIONS
 
 EXAMPLES
 
-    # online example, using editor definition from https://che-plugin-registry-main.surge.sh/
+    # online example, using editor definition from https://raw.githubusercontent.com/eclipse-che/che-operator/refs/heads/main/editors-definitions/che-code-insiders.yaml
 
     $ node lib/entrypoint.js \
         --devfile-url:https://github.com/che-samples/java-spring-petclinic/tree/main \
-        --plugin-registry-url:https://che-plugin-registry-main.surge.sh/v3/ \
-        --editor-entry:che-incubator/che-code/latest \
+        --editor-url:https://raw.githubusercontent.com/eclipse-che/che-operator/refs/heads/main/editors-definitions/che-code-insiders.yaml \
         --output-file:/tmp/devworkspace-che-code-latest.yaml \
         --injectDefaultComponent:true \
         --defaultComponentImage:registry.access.redhat.com/ubi8/openjdk-11:latest

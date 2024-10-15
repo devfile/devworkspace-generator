@@ -9,10 +9,10 @@
  ***********************************************************************/
 import { ContainerModule, interfaces } from 'inversify';
 
-import { PluginRegistryResolver } from './plugin-registry-resolver';
+import { EditorResolver } from './editor-resolver';
 
-const pluginRegistryModule = new ContainerModule((bind: interfaces.Bind) => {
-  bind(PluginRegistryResolver).toSelf().inSingletonScope();
+const editorModule = new ContainerModule((bind: interfaces.Bind) => {
+  bind(EditorResolver).toSelf().inSingletonScope();
 });
 
-export { pluginRegistryModule };
+export { editorModule };
