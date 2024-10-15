@@ -13,10 +13,10 @@ import 'reflect-metadata';
 import * as jsYaml from 'js-yaml';
 
 import { Container } from 'inversify';
-import { PluginRegistryResolver } from '../../src/plugin-registry/plugin-registry-resolver';
+import { EditorResolver } from '../../src/editor/editor-resolver';
 import { UrlFetcher } from '../../src/fetch/url-fetcher';
 
-describe('Test PluginRegistryResolver', () => {
+describe('Test EditorResolver', () => {
   let container: Container;
 
   const originalConsoleError = console.error;
@@ -29,16 +29,15 @@ describe('Test PluginRegistryResolver', () => {
     fetchTextOptionalContent: urlFetcherFetchTextOptionalMock,
   } as any;
 
-  let pluginRegistryResolver: PluginRegistryResolver;
+  let editorResolver: EditorResolver;
 
   beforeEach(() => {
     jest.restoreAllMocks();
     jest.resetAllMocks();
     container = new Container();
-    container.bind(PluginRegistryResolver).toSelf().inSingletonScope();
+    container.bind(EditorResolver).toSelf().inSingletonScope();
     container.bind(UrlFetcher).toConstantValue(urlFetcher);
-    container.bind('string').toConstantValue('http://fake-plugin-registry').whenTargetNamed('PLUGIN_REGISTRY_URL');
-    pluginRegistryResolver = container.get(PluginRegistryResolver);
+    editorResolver = container.get(EditorResolver);
     console.error = mockedConsoleError;
   });
 
@@ -46,12 +45,12 @@ describe('Test PluginRegistryResolver', () => {
     console.error = originalConsoleError;
   });
 
-  test('basic loadDevfilePlugin', async () => {
-    const myId = 'foo';
+  test('basic loadEditor', async () => {
+    const myId = 'http://editor.yaml';
     const dummy = { dummyContent: 'dummy' };
     urlFetcherFetchTextMock.mockResolvedValue(jsYaml.dump(dummy));
-    const content = await pluginRegistryResolver.loadDevfilePlugin(myId);
-    expect(urlFetcherFetchTextMock).toBeCalledWith('http://fake-plugin-registry/plugins/foo/devfile.yaml');
+    const content = await editorResolver.loadEditor(myId);
+    expect(urlFetcherFetchTextMock).toBeCalledWith('http://editor.yaml');
     expect(content).toStrictEqual(dummy);
   });
 });

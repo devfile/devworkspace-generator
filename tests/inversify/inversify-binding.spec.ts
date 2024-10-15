@@ -17,7 +17,6 @@ import { InversifyBinding, InversifyBindingOptions } from '../../src/inversify/i
 import { Container } from 'inversify';
 import { Generate } from '../../src/generate';
 import { UrlFetcher } from '../../src/fetch/url-fetcher';
-import { PluginRegistryResolver } from '../../src/plugin-registry/plugin-registry-resolver';
 import { DevContainerComponentFinder } from '../../src/devfile/dev-container-component-finder';
 import { TYPES } from '../../src/types';
 import { DevfileSchemaValidator } from '../../src/devfile-schema/devfile-schema-validator';
@@ -39,7 +38,6 @@ describe('Test InversifyBinding', () => {
 
     const axiosInstance = axios.default;
     const options: InversifyBindingOptions = {
-      pluginRegistryUrl: 'http://fake-registry',
       axiosInstance,
     };
 
@@ -56,9 +54,6 @@ describe('Test InversifyBinding', () => {
 
     // check resolve module
     expect(container.getAll(TYPES.Resolver).length).toBe(3);
-
-    // check plugin-registry module
-    expect(container.get(PluginRegistryResolver)).toBeDefined();
 
     // check devfile-schema module
     expect(container.get(DevfileSchemaValidator)).toBeDefined();
