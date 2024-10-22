@@ -1,0 +1,36 @@
+schemaVersion: 2.3.0
+metadata:
+  name: devworkspace-generator
+components:
+  - name: builder
+    container:
+      image: quay.io/devfile/universal-developer-image:ubi8-latest
+      memoryRequest: 256Mi
+      memoryLimit: 3Gi
+      cpuRequest: 100m
+      cpuLimit: '1'
+commands:
+  - id: build
+    exec:
+      label: "1. Build"
+      component: builder
+      workingDir: ${PROJECTS_ROOT}/devworkspace-generator
+      commandLine: yarn && yarn format:fix && yarn build
+  - id: test
+    exec:
+      label: "2. Run tests"
+      component: builder
+      workingDir: ${PROJECTS_ROOT}/devworkspace-generator
+      commandLine: yarn test
+  - id: generate-devworkspace
+    exec:
+      label: "3. Generate DevWorkspace with Template"
+      component: builder
+      workingDir: ${PROJECTS_ROOT}/devworkspace-generator
+      commandLine: |
+        node lib/entrypoint.js \
+        --devfile-url:https://github.com/che-samples/java-spring-petclinic/tree/main \
+        --editor-url:https://raw.githubusercontent.com/eclipse-che/che-operator/refs/heads/main/editors-definitions/che-code-insiders.yaml \
+        --output-file:/tmp/devworkspace-che-code-latest.yaml \
+        --injectDefaultComponent:true \
+        --defaultComponentImage:registry.access.redhat.com/ubi8/openjdk-11:latest
