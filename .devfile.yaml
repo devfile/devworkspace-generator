@@ -15,19 +15,24 @@ commands:
       label: "1. Build"
       component: builder
       workingDir: ${PROJECTS_ROOT}/devworkspace-generator
-      commandLine: yarn && yarn format:fix && yarn build
+      commandLine: |
+        nvm use v${NODEJS_20_VERSION}
+        yarn && yarn format:fix && yarn build
   - id: test
     exec:
       label: "2. Run tests"
       component: builder
       workingDir: ${PROJECTS_ROOT}/devworkspace-generator
-      commandLine: yarn test
+      commandLine: |
+        nvm use v${NODEJS_20_VERSION}
+        yarn test
   - id: generate-devworkspace
     exec:
       label: "3. Generate DevWorkspace with Template"
       component: builder
       workingDir: ${PROJECTS_ROOT}/devworkspace-generator
       commandLine: |
+        nvm use v${NODEJS_20_VERSION}
         node lib/entrypoint.js \
         --devfile-url:https://github.com/che-samples/java-spring-petclinic/tree/main \
         --editor-url:https://raw.githubusercontent.com/eclipse-che/che-operator/refs/heads/main/editors-definitions/che-code-insiders.yaml \
