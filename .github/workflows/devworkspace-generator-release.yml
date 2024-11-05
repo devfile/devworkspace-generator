@@ -22,7 +22,7 @@ on:
 
 jobs:
   build:
-    name: Create Che Devfile Registry Release
+    name: Create Che Devworkspace Generator Release
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/setup-node@v4
@@ -39,10 +39,6 @@ jobs:
           sudo apt-get update -y || true
           sudo apt-get -y -q install hub
           hub --version
-      - name: Install NodeJS
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.18.0
       - name: Check existing tags
         run: |
           set +e
