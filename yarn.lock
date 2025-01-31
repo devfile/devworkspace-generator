@@ -284,10 +284,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@devfile/api@2.3.0-1737452847":
-  version "2.3.0-1737452847"
-  resolved "https://registry.yarnpkg.com/@devfile/api/-/api-2.3.0-1737452847.tgz#99c72519d246eea42b827927967133005cbe1951"
-  integrity sha512-9z/M9OqrKbdJfdWKxBNo7AUkm+ooAbnUp8/jDC+PFiZFmV4IKa9J1D2kcmGFD7Ckd4EogUrB7ZJdWEXMtDGRhw==
+"@devfile/api@2.3.0-1738342178":
+  version "2.3.0-1738342178"
+  resolved "https://registry.yarnpkg.com/@devfile/api/-/api-2.3.0-1738342178.tgz#682f0097cae39267e32426cf52bfd4a0e71e7a55"
+  integrity sha512-asgIDvCeBoSjk9cufBEZaJac5VHTaehaVBjxAyeehR4NZir2HOtgLMf26BYWLs2/PObmuen06PJgjr70kO3oGA==
   dependencies:
     "@types/node" "*"
     "@types/node-fetch" "^2.5.7"
