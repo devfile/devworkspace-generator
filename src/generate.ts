@@ -99,7 +99,10 @@ export class Generate {
           if (devfileCopy.attributes[key] === undefined) {
             devfileCopy.attributes[key] = devfileCopy.metadata.attributes[key];
           } else {
-            if (typeof devfileCopy.attributes[key] === 'object' && typeof devfileCopy.metadata.attributes[key] === 'object') {
+            if (
+              typeof devfileCopy.attributes[key] === 'object' &&
+              typeof devfileCopy.metadata.attributes[key] === 'object'
+            ) {
               devfileCopy.attributes[key] = Object.assign(
                 devfileCopy.metadata.attributes[key],
                 devfileCopy.attributes[key],

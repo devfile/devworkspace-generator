@@ -10,7 +10,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import 'reflect-metadata';
 import fs from 'fs-extra';
-import * as jsYaml from 'js-yaml';
 import { Container } from 'inversify';
 import { Generate } from '../src/generate';
 import { DevContainerComponentFinder } from '../src/devfile/dev-container-component-finder';
@@ -19,7 +18,6 @@ import { DevContainerComponentInserter } from '../src/devfile/dev-container-comp
 describe('Test Generate', () => {
   let container: Container;
   let generate: Generate;
-  let devContainerFinder: DevContainerComponentFinder;
 
   beforeEach(() => {
     jest.restoreAllMocks();
@@ -29,7 +27,6 @@ describe('Test Generate', () => {
     container.bind(DevContainerComponentFinder).toSelf().inSingletonScope();
     container.bind(DevContainerComponentInserter).toSelf().inSingletonScope();
     generate = container.get(Generate);
-    devContainerFinder = container.get(DevContainerComponentFinder);
   });
 
   describe('Devfile references a parent', () => {
@@ -532,7 +529,8 @@ metadata:
           template: {
             attributes: {
               'dw.metadata.annotations': {
-                'che.eclipse.org/devfile-source': 'scm:\n  repo: https://github.com/dummy-repo.git\n  fileName: devfile.yaml\nfactory:\n  params: storageType=ephemeral\n',
+                'che.eclipse.org/devfile-source':
+                  'scm:\n  repo: https://github.com/dummy-repo.git\n  fileName: devfile.yaml\nfactory:\n  params: storageType=ephemeral\n',
               },
             },
           },
@@ -576,7 +574,8 @@ metadata:
             attributes: {
               dummy: 'dummy',
               'dw.metadata.annotations': {
-                'che.eclipse.org/devfile-source': 'scm:\n  repo: https://github.com/dummy-repo.git\n  fileName: devfile.yaml\nfactory:\n  params: storageType=ephemeral\n',
+                'che.eclipse.org/devfile-source':
+                  'scm:\n  repo: https://github.com/dummy-repo.git\n  fileName: devfile.yaml\nfactory:\n  params: storageType=ephemeral\n',
                 'che.eclipse.org/devfile': 'schemaVersion: 2.2.0\nmetadata:\n  name: my-dummy-project',
               },
             },
@@ -617,7 +616,8 @@ metadata:
         template: {
           attributes: {
             'dw.metadata.annotations': {
-              'che.eclipse.org/devfile-source': 'scm:\n  repo: https://github.com/dummy-repo.git\n  fileName: devfile.yaml\nfactory:\n  params: storageType=ephemeral\n',
+              'che.eclipse.org/devfile-source':
+                'scm:\n  repo: https://github.com/dummy-repo.git\n  fileName: devfile.yaml\nfactory:\n  params: storageType=ephemeral\n',
             },
           },
         },
