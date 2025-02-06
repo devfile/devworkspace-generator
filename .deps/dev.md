@@ -279,7 +279,6 @@
 | [`locate-path@5.0.0`](https://github.com/sindresorhus/locate-path.git) | MIT | clearlydefined |
 | [`lodash.memoize@4.1.2`](https://github.com/lodash/lodash.git) | MIT | clearlydefined |
 | [`lodash.merge@4.6.2`](https://github.com/lodash/lodash.git) | MIT | clearlydefined |
-| [`lodash@4.17.21`](https://github.com/lodash/lodash.git) | MIT | #2096 |
 | [`lru-cache@11.0.1`](git://github.com/isaacs/node-lru-cache.git) | ISC | clearlydefined |
 | [`make-dir@4.0.0`](https://github.com/sindresorhus/make-dir.git) | MIT | clearlydefined |
 | [`make-error@1.3.6`](git://github.com/JsCommunity/make-error.git) | ISC | clearlydefined |

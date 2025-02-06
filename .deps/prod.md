@@ -23,6 +23,7 @@
 | [`jsonc-parser@3.3.1`](https://github.com/microsoft/node-jsonc-parser) | MIT | #15491 |
 | [`jsonfile@6.1.0`](git@github.com:jprichardson/node-jsonfile.git) | MIT | clearlydefined |
 | [`jsonschema@1.5.0`](git://github.com/tdegrunt/jsonschema.git) | MIT | clearlydefined |
+| [`lodash@4.17.21`](https://github.com/lodash/lodash.git) | MIT | #2096 |
 | [`mime-db@1.52.0`](https://github.com/jshttp/mime-db.git) | MIT | clearlydefined |
 | [`mime-types@2.1.35`](https://github.com/jshttp/mime-types.git) | MIT | clearlydefined |
 | [`node-fetch@2.7.0`](https://github.com/bitinn/node-fetch.git) | MIT | #10509 |

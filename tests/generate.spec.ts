@@ -522,18 +522,15 @@ metadata:
         kind: 'DevWorkspace',
         metadata: {
           name: 'my-dummy-project',
+          annotations: {
+            'che.eclipse.org/devfile-source':
+              'scm:\n  repo: https://github.com/dummy-repo.git\n  fileName: devfile.yaml\nfactory:\n  params: storageType=ephemeral\n',
+          },
         },
         spec: {
           started: true,
           routingClass: 'che',
-          template: {
-            attributes: {
-              'dw.metadata.annotations': {
-                'che.eclipse.org/devfile-source':
-                  'scm:\n  repo: https://github.com/dummy-repo.git\n  fileName: devfile.yaml\nfactory:\n  params: storageType=ephemeral\n',
-              },
-            },
-          },
+          template: {},
           contributions: [{ name: 'editor', kubernetes: { name: 'che-code-my-dummy-project' } }],
         },
       };
@@ -566,6 +563,11 @@ metadata:
         kind: 'DevWorkspace',
         metadata: {
           name: 'my-dummy-project',
+          annotations: {
+            'che.eclipse.org/devfile-source':
+              'scm:\n  repo: https://github.com/dummy-repo.git\n  fileName: devfile.yaml\nfactory:\n  params: storageType=ephemeral\n',
+            'che.eclipse.org/devfile': 'schemaVersion: 2.2.0\nmetadata:\n  name: my-dummy-project',
+          },
         },
         spec: {
           started: true,
@@ -573,11 +575,6 @@ metadata:
           template: {
             attributes: {
               dummy: 'dummy',
-              'dw.metadata.annotations': {
-                'che.eclipse.org/devfile-source':
-                  'scm:\n  repo: https://github.com/dummy-repo.git\n  fileName: devfile.yaml\nfactory:\n  params: storageType=ephemeral\n',
-                'che.eclipse.org/devfile': 'schemaVersion: 2.2.0\nmetadata:\n  name: my-dummy-project',
-              },
             },
           },
           contributions: [{ name: 'editor', kubernetes: { name: 'che-code-my-dummy-project' } }],
@@ -609,18 +606,15 @@ metadata:
       kind: 'DevWorkspace',
       metadata: {
         name: 'my-dummy-project',
+        annotations: {
+          'che.eclipse.org/devfile-source':
+            'scm:\n  repo: https://github.com/dummy-repo.git\n  fileName: devfile.yaml\nfactory:\n  params: storageType=ephemeral\n',
+        },
       },
       spec: {
         started: true,
         routingClass: 'che',
-        template: {
-          attributes: {
-            'dw.metadata.annotations': {
-              'che.eclipse.org/devfile-source':
-                'scm:\n  repo: https://github.com/dummy-repo.git\n  fileName: devfile.yaml\nfactory:\n  params: storageType=ephemeral\n',
-            },
-          },
-        },
+        template: {},
         contributions: [{ name: 'editor', kubernetes: { name: 'che-code-my-dummy-project' } }],
       },
     };

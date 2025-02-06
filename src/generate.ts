@@ -18,6 +18,7 @@ import {
   V1alpha2DevWorkspaceTemplateSpec,
 } from '@devfile/api';
 import { injectable, inject } from 'inversify';
+import { cloneDeep, merge } from 'lodash';
 import * as jsYaml from 'js-yaml';
 import * as fs from 'fs-extra';
 import { DevfileContext } from './api/devfile-context';
@@ -28,6 +29,8 @@ type DevfileLike = V230Devfile & {
     generateName?: string;
   };
 };
+
+const DEVWORKSPACE_METADATA_ANNOTATION = 'dw.metadata.annotations';
 
 @injectable()
 export class Generate {
@@ -91,30 +94,15 @@ export class Generate {
     };
 
     // transform it into a devWorkspace
-    const devfileMetadata = this.createDevWorkspaceMetadata(devfile);
-    const devfileCopy: V230Devfile = Object.assign({}, devfile);
+    const devfileCopy: V230Devfile = cloneDeep(devfile);
     if (devfileCopy.metadata.attributes) {
       if (devfileCopy.attributes) {
-        for (const key in devfileCopy.metadata.attributes) {
-          if (devfileCopy.attributes[key] === undefined) {
-            devfileCopy.attributes[key] = devfileCopy.metadata.attributes[key];
-          } else {
-            if (
-              typeof devfileCopy.attributes[key] === 'object' &&
-              typeof devfileCopy.metadata.attributes[key] === 'object'
-            ) {
-              devfileCopy.attributes[key] = Object.assign(
-                devfileCopy.metadata.attributes[key],
-                devfileCopy.attributes[key],
-              );
-            }
-          }
-        }
-        Object.assign(devfileCopy.attributes, devfileCopy.metadata.attributes);
+        devfileCopy.attributes = merge(devfileCopy.attributes, devfileCopy.metadata.attributes);
       } else {
         devfileCopy.attributes = devfileCopy.metadata.attributes;
       }
     }
+    const devWorkspaceMetadata = this.createDevWorkspaceMetadata(devfileCopy as DevfileLike);
     delete devfileCopy.schemaVersion;
     delete devfileCopy.metadata;
     const editorSpecContribution: V1alpha2DevWorkspaceSpecContributions = {
@@ -126,7 +114,7 @@ export class Generate {
     const devWorkspace: V1alpha2DevWorkspace = {
       apiVersion: 'workspace.devfile.io/v1alpha2',
       kind: 'DevWorkspace',
-      metadata: devfileMetadata,
+      metadata: devWorkspaceMetadata,
       spec: {
         started: true,
         routingClass: 'che',
@@ -167,6 +155,13 @@ export class Generate {
     }
     if (devfileMetadata.generateName) {
       devWorkspaceMetadata.generateName = devfileMetadata.generateName;
+    }
+    if (devfile.attributes?.[DEVWORKSPACE_METADATA_ANNOTATION]) {
+      devWorkspaceMetadata.annotations = Object.assign({}, devfile.attributes?.[DEVWORKSPACE_METADATA_ANNOTATION]);
+      delete devfile.attributes?.[DEVWORKSPACE_METADATA_ANNOTATION];
+      if (Object.keys(devfile.attributes).length === 0) {
+        delete devfile.attributes;
+      }
     }
 
     return devWorkspaceMetadata;
