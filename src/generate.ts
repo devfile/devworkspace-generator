@@ -91,8 +91,27 @@ export class Generate {
     };
 
     // transform it into a devWorkspace
-    const devfileMetadata = this.createDevWorkspaceMetadata(devfile, true);
+    const devfileMetadata = this.createDevWorkspaceMetadata(devfile);
     const devfileCopy: V230Devfile = Object.assign({}, devfile);
+    if (devfileCopy.metadata.attributes) {
+      if (devfileCopy.attributes) {
+        for (const key in devfileCopy.metadata.attributes) {
+          if (devfileCopy.attributes[key] === undefined) {
+            devfileCopy.attributes[key] = devfileCopy.metadata.attributes[key];
+          } else {
+            if (typeof devfileCopy.attributes[key] === 'object' && typeof devfileCopy.metadata.attributes[key] === 'object') {
+              devfileCopy.attributes[key] = Object.assign(
+                devfileCopy.metadata.attributes[key],
+                devfileCopy.attributes[key],
+              );
+            }
+          }
+        }
+        Object.assign(devfileCopy.attributes, devfileCopy.metadata.attributes);
+      } else {
+        devfileCopy.attributes = devfileCopy.metadata.attributes;
+      }
+    }
     delete devfileCopy.schemaVersion;
     delete devfileCopy.metadata;
     const editorSpecContribution: V1alpha2DevWorkspaceSpecContributions = {
@@ -136,7 +155,7 @@ export class Generate {
     return context;
   }
 
-  private createDevWorkspaceMetadata(devfile: DevfileLike, addDevfileContent = false): V1alpha2DevWorkspaceMetadata {
+  private createDevWorkspaceMetadata(devfile: DevfileLike): V1alpha2DevWorkspaceMetadata {
     const devWorkspaceMetadata = {} as V1alpha2DevWorkspaceMetadata;
     const devfileMetadata = devfile.metadata;
 
@@ -145,11 +164,6 @@ export class Generate {
     }
     if (devfileMetadata.generateName) {
       devWorkspaceMetadata.generateName = devfileMetadata.generateName;
-    }
-    if (addDevfileContent) {
-      devWorkspaceMetadata.annotations = {
-        'che.eclipse.org/devfile': jsYaml.dump(devfile),
-      };
     }
 
     return devWorkspaceMetadata;

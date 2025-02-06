@@ -63,9 +63,6 @@ metadata:
         kind: 'DevWorkspace',
         metadata: {
           name: 'my-dummy-project',
-          annotations: {
-            'che.eclipse.org/devfile': jsYaml.dump(jsYaml.load(devfileContent)),
-          },
         },
         spec: {
           started: true,
@@ -130,9 +127,6 @@ metadata:
         kind: 'DevWorkspace',
         metadata: {
           name: 'starter-project',
-          annotations: {
-            'che.eclipse.org/devfile': jsYaml.dump(jsYaml.load(devfileContent)),
-          },
         },
         spec: {
           started: true,
@@ -203,9 +197,6 @@ metadata:
         kind: 'DevWorkspace',
         metadata: {
           name: 'my-dummy-project',
-          annotations: {
-            'che.eclipse.org/devfile': jsYaml.dump(jsYaml.load(devfileContent)),
-          },
         },
         spec: {
           started: true,
@@ -270,9 +261,6 @@ metadata:
         kind: 'DevWorkspace',
         metadata: {
           generateName: 'custom-project',
-          annotations: {
-            'che.eclipse.org/devfile': jsYaml.dump(jsYaml.load(devfileContent)),
-          },
         },
         spec: {
           started: true,
@@ -338,9 +326,6 @@ metadata:
         kind: 'DevWorkspace',
         metadata: {
           name: 'my-dummy-project',
-          annotations: {
-            'che.eclipse.org/devfile': jsYaml.dump(jsYaml.load(devfileContent)),
-          },
         },
         spec: {
           started: true,
@@ -406,9 +391,6 @@ metadata:
         kind: 'DevWorkspace',
         metadata: {
           name: 'my-dummy-project',
-          annotations: {
-            'che.eclipse.org/devfile': jsYaml.dump(jsYaml.load(devfileContent)),
-          },
         },
         spec: {
           started: true,
@@ -518,5 +500,130 @@ metadata:
     expect(context.devWorkspace.spec?.template?.components?.length).toBe(1);
     expect(context.devWorkspace.spec?.template?.components?.[0].name).toBe('dev');
     expect(context.devWorkspace.spec?.template?.components?.[0].container?.image).toBe(image);
+  });
+
+  describe('Has attributes', () => {
+    test('devfile schema 2.0', async () => {
+      const devfileContent = `
+schemaVersion: 2.0.0
+metadata:
+  name: my-dummy-project
+  attributes:
+    dw.metadata.annotations:
+      che.eclipse.org/devfile-source:  "scm:\\n  repo: https://github.com/dummy-repo.git\\n  fileName: devfile.yaml\\nfactory:\\n  params: storageType=ephemeral\\n"
+`;
+      const editorContent = `
+schemaVersion: 2.2.0
+metadata:
+  name: che-code
+`;
+
+      let context = await generate.generate(devfileContent, editorContent);
+
+      const expectedDevWorkspace = {
+        apiVersion: 'workspace.devfile.io/v1alpha2',
+        kind: 'DevWorkspace',
+        metadata: {
+          name: 'my-dummy-project',
+        },
+        spec: {
+          started: true,
+          routingClass: 'che',
+          template: {
+            attributes: {
+              'dw.metadata.annotations': {
+                'che.eclipse.org/devfile-source': 'scm:\n  repo: https://github.com/dummy-repo.git\n  fileName: devfile.yaml\nfactory:\n  params: storageType=ephemeral\n',
+              },
+            },
+          },
+          contributions: [{ name: 'editor', kubernetes: { name: 'che-code-my-dummy-project' } }],
+        },
+      };
+      expect(context.devWorkspace).toStrictEqual(expectedDevWorkspace);
+    });
+
+    test('devfile schema greater than 2.0 with deprecated metadata', async () => {
+      const devfileContent = `
+schemaVersion: 2.2.0
+metadata:
+  name: my-dummy-project
+  attributes:
+    dummy: dummy
+    dw.metadata.annotations:
+      che.eclipse.org/devfile-source:  "scm:\\n  repo: https://github.com/dummy-repo.git\\n  fileName: devfile.yaml\\nfactory:\\n  params: storageType=ephemeral\\n"
+attributes:
+  dw.metadata.annotations:
+    che.eclipse.org/devfile: "schemaVersion: 2.2.0\\nmetadata:\\n  name: my-dummy-project"
+`;
+      const editorContent = `
+schemaVersion: 2.2.0
+metadata:
+  name: che-code
+`;
+
+      let context = await generate.generate(devfileContent, editorContent);
+
+      const expectedDevWorkspace = {
+        apiVersion: 'workspace.devfile.io/v1alpha2',
+        kind: 'DevWorkspace',
+        metadata: {
+          name: 'my-dummy-project',
+        },
+        spec: {
+          started: true,
+          routingClass: 'che',
+          template: {
+            attributes: {
+              dummy: 'dummy',
+              'dw.metadata.annotations': {
+                'che.eclipse.org/devfile-source': 'scm:\n  repo: https://github.com/dummy-repo.git\n  fileName: devfile.yaml\nfactory:\n  params: storageType=ephemeral\n',
+                'che.eclipse.org/devfile': 'schemaVersion: 2.2.0\nmetadata:\n  name: my-dummy-project',
+              },
+            },
+          },
+          contributions: [{ name: 'editor', kubernetes: { name: 'che-code-my-dummy-project' } }],
+        },
+      };
+      expect(context.devWorkspace).toStrictEqual(expectedDevWorkspace);
+    });
+  });
+
+  test('devfile schema greater than 2.0', async () => {
+    const devfileContent = `
+schemaVersion: 2.2.0
+metadata:
+  name: my-dummy-project
+attributes:
+  dw.metadata.annotations:
+    che.eclipse.org/devfile-source:  "scm:\\n  repo: https://github.com/dummy-repo.git\\n  fileName: devfile.yaml\\nfactory:\\n  params: storageType=ephemeral\\n"
+`;
+    const editorContent = `
+schemaVersion: 2.2.0
+metadata:
+  name: che-code
+`;
+
+    let context = await generate.generate(devfileContent, editorContent);
+
+    const expectedDevWorkspace = {
+      apiVersion: 'workspace.devfile.io/v1alpha2',
+      kind: 'DevWorkspace',
+      metadata: {
+        name: 'my-dummy-project',
+      },
+      spec: {
+        started: true,
+        routingClass: 'che',
+        template: {
+          attributes: {
+            'dw.metadata.annotations': {
+              'che.eclipse.org/devfile-source': 'scm:\n  repo: https://github.com/dummy-repo.git\n  fileName: devfile.yaml\nfactory:\n  params: storageType=ephemeral\n',
+            },
+          },
+        },
+        contributions: [{ name: 'editor', kubernetes: { name: 'che-code-my-dummy-project' } }],
+      },
+    };
+    expect(context.devWorkspace).toStrictEqual(expectedDevWorkspace);
   });
 });
