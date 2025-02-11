@@ -157,8 +157,8 @@ export class Generate {
       devWorkspaceMetadata.generateName = devfileMetadata.generateName;
     }
     if (devfile.attributes?.[DEVWORKSPACE_METADATA_ANNOTATION]) {
-      devWorkspaceMetadata.annotations = Object.assign({}, devfile.attributes?.[DEVWORKSPACE_METADATA_ANNOTATION]);
-      delete devfile.attributes?.[DEVWORKSPACE_METADATA_ANNOTATION];
+      devWorkspaceMetadata.annotations = Object.assign({}, devfile.attributes[DEVWORKSPACE_METADATA_ANNOTATION]);
+      delete devfile.attributes[DEVWORKSPACE_METADATA_ANNOTATION];
       if (Object.keys(devfile.attributes).length === 0) {
         delete devfile.attributes;
       }
