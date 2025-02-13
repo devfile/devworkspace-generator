@@ -30,7 +30,7 @@ type DevfileLike = V230Devfile & {
   };
 };
 
-const DEVWORKSPACE_METADATA_ANNOTATION = 'dw.metadata.annotations';
+export const DEVWORKSPACE_METADATA_ANNOTATION = 'dw.metadata.annotations';
 
 @injectable()
 export class Generate {
