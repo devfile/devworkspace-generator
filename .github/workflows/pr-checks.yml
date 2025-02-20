@@ -15,6 +15,18 @@ on:
       - main
 
 jobs:
+  dash-licenses:
+    runs-on: ubuntu-22.04
+    if: ${{ github.base_ref == 'main' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Check dependencies usage restrictions
+        run: docker run --rm -t -v ${PWD}/:/workspace/project quay.io/che-incubator/dash-licenses:next --check
+
   unit-tests:
     runs-on: ubuntu-22.04
     steps:

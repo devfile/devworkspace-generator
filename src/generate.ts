@@ -18,6 +18,7 @@ import {
   V1alpha2DevWorkspaceTemplateSpec,
 } from '@devfile/api';
 import { injectable, inject } from 'inversify';
+import { cloneDeep, merge } from 'lodash';
 import * as jsYaml from 'js-yaml';
 import * as fs from 'fs-extra';
 import { DevfileContext } from './api/devfile-context';
@@ -28,6 +29,8 @@ type DevfileLike = V230Devfile & {
     generateName?: string;
   };
 };
+
+export const DEVWORKSPACE_METADATA_ANNOTATION = 'dw.metadata.annotations';
 
 @injectable()
 export class Generate {
@@ -91,8 +94,15 @@ export class Generate {
     };
 
     // transform it into a devWorkspace
-    const devfileMetadata = this.createDevWorkspaceMetadata(devfile, true);
-    const devfileCopy: V230Devfile = Object.assign({}, devfile);
+    const devfileCopy: V230Devfile = cloneDeep(devfile);
+    if (devfileCopy.metadata.attributes) {
+      if (devfileCopy.attributes) {
+        devfileCopy.attributes = merge(devfileCopy.attributes, devfileCopy.metadata.attributes);
+      } else {
+        devfileCopy.attributes = devfileCopy.metadata.attributes;
+      }
+    }
+    const devWorkspaceMetadata = this.createDevWorkspaceMetadata(devfileCopy as DevfileLike);
     delete devfileCopy.schemaVersion;
     delete devfileCopy.metadata;
     const editorSpecContribution: V1alpha2DevWorkspaceSpecContributions = {
@@ -104,7 +114,7 @@ export class Generate {
     const devWorkspace: V1alpha2DevWorkspace = {
       apiVersion: 'workspace.devfile.io/v1alpha2',
       kind: 'DevWorkspace',
-      metadata: devfileMetadata,
+      metadata: devWorkspaceMetadata,
       spec: {
         started: true,
         routingClass: 'che',
@@ -136,7 +146,7 @@ export class Generate {
     return context;
   }
 
-  private createDevWorkspaceMetadata(devfile: DevfileLike, addDevfileContent = false): V1alpha2DevWorkspaceMetadata {
+  private createDevWorkspaceMetadata(devfile: DevfileLike): V1alpha2DevWorkspaceMetadata {
     const devWorkspaceMetadata = {} as V1alpha2DevWorkspaceMetadata;
     const devfileMetadata = devfile.metadata;
 
@@ -146,10 +156,12 @@ export class Generate {
     if (devfileMetadata.generateName) {
       devWorkspaceMetadata.generateName = devfileMetadata.generateName;
     }
-    if (addDevfileContent) {
-      devWorkspaceMetadata.annotations = {
-        'che.eclipse.org/devfile': jsYaml.dump(devfile),
-      };
+    if (devfile.attributes?.[DEVWORKSPACE_METADATA_ANNOTATION]) {
+      devWorkspaceMetadata.annotations = Object.assign({}, devfile.attributes[DEVWORKSPACE_METADATA_ANNOTATION]);
+      delete devfile.attributes[DEVWORKSPACE_METADATA_ANNOTATION];
+      if (Object.keys(devfile.attributes).length === 0) {
+        delete devfile.attributes;
+      }
     }
 
     return devWorkspaceMetadata;

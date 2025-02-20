@@ -11,10 +11,11 @@
 import 'reflect-metadata';
 
 import { InversifyBinding } from '../src/inversify/inversify-binding';
-import { Main } from '../src/main';
+import { Main, DEVWORKSPACE_DEVFILE, DEVWORKSPACE_DEVFILE_SOURCE } from '../src/main';
 import fs from 'fs-extra';
 import * as jsYaml from 'js-yaml';
 import * as axios from 'axios';
+import { DEVWORKSPACE_METADATA_ANNOTATION } from '../src/generate';
 
 describe('Test Main with stubs', () => {
   const FAKE_DEVFILE_PATH = '/my-fake-devfile-path';
@@ -191,6 +192,104 @@ describe('Test Main with stubs', () => {
 
       const result = {
         schemaVersion: '2.1.0',
+        attributes: {
+          [DEVWORKSPACE_METADATA_ANNOTATION]: {
+            [DEVWORKSPACE_DEVFILE]: 'schemaVersion: 2.1.0',
+            [DEVWORKSPACE_DEVFILE_SOURCE]: jsYaml.dump({
+              factory: {
+                params: `url=${FAKE_DEVFILE_URL}`,
+              },
+            }),
+          },
+        },
+        projects: [
+          {
+            name: 'my-repo',
+            git: {
+              remotes: {
+                origin: 'http://foo.bar',
+              },
+              checkoutFrom: {
+                revision: 'my-branch',
+              },
+            },
+          },
+        ],
+      };
+      expect(generateMethod).toBeCalledWith(jsYaml.dump(result), "''\n", FAKE_OUTPUT_FILE, 'true', 'my-image');
+    });
+
+    test('success with custom devfile Url (devfile includes attributes)', async () => {
+      const main = new Main();
+      initArgs(undefined, FAKE_DEVFILE_URL, undefined, FAKE_EDITOR_URL, FAKE_OUTPUT_FILE, 'true', 'my-image');
+      process.argv.push('--project.foo=bar');
+      containerGetMethod.mockReset();
+      const githubResolverResolveMethod = jest.fn();
+      const githubResolverMock = {
+        resolve: githubResolverResolveMethod as any,
+      };
+
+      const getContentUrlMethod = jest.fn();
+      const getCloneUrlMethod = jest.fn();
+      const getBranchNameMethod = jest.fn();
+      const getRepoNameMethod = jest.fn();
+
+      const githubUrlMock = {
+        getContentUrl: githubResolverResolveMethod as any,
+        getCloneUrl: getCloneUrlMethod as any,
+        getBranchName: getBranchNameMethod as any,
+        getRepoName: getRepoNameMethod as any,
+      };
+      getContentUrlMethod.mockReturnValue('http://foo.bar');
+      getCloneUrlMethod.mockReturnValue('http://foo.bar');
+      getBranchNameMethod.mockReturnValue('my-branch');
+      getRepoNameMethod.mockReturnValue('my-repo');
+      githubResolverResolveMethod.mockReturnValue(githubUrlMock);
+      containerGetMethod.mockReturnValueOnce(githubResolverMock);
+
+      const urlFetcherFetchTextMethod = jest.fn();
+      const urlFetcherMock = {
+        fetchText: urlFetcherFetchTextMethod as any,
+      };
+      urlFetcherFetchTextMethod.mockReturnValueOnce('schemaVersion: 2.1.0\nattributes:\n  foo: bar');
+      containerGetMethod.mockReturnValueOnce(urlFetcherMock);
+
+      const validateDevfileMethod = jest.fn();
+      const devfileSchemaValidatorMock = {
+        validateDevfile: validateDevfileMethod as any,
+      };
+      validateDevfileMethod.mockReturnValueOnce({ valid: true });
+      containerGetMethod.mockReturnValueOnce(devfileSchemaValidatorMock);
+
+      const loadEditorMethod = jest.fn();
+      const editorResolverMock = {
+        loadEditor: loadEditorMethod as any,
+      };
+      loadEditorMethod.mockReturnValue('');
+      containerGetMethod.mockReturnValueOnce(editorResolverMock);
+
+      // last one is generate mock
+      containerGetMethod.mockReturnValueOnce(generateMock);
+      const returnCode = await main.start();
+      expect(mockedConsoleError).toBeCalledTimes(0);
+      expect(loadEditorMethod).toBeCalled();
+      expect(urlFetcherFetchTextMethod).toBeCalled();
+
+      expect(returnCode).toBeTruthy();
+
+      const result = {
+        schemaVersion: '2.1.0',
+        attributes: {
+          foo: 'bar',
+          [DEVWORKSPACE_METADATA_ANNOTATION]: {
+            [DEVWORKSPACE_DEVFILE]: 'schemaVersion: 2.1.0\nattributes:\n  foo: bar',
+            [DEVWORKSPACE_DEVFILE_SOURCE]: jsYaml.dump({
+              factory: {
+                params: `url=${FAKE_DEVFILE_URL}`,
+              },
+            }),
+          },
+        },
         projects: [
           {
             name: 'my-repo',
