@@ -2,7 +2,7 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 
 | Packages | Resolved CQs |
 | --- | --- |
-| `eslint@9.19.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/9.19.0) |
+| `eslint@9.21.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/9.21.0) |
 | `fsevents@2.3.3` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/fsevents/2.3.3) |
 | `@rollup/rollup-android-arm-eabi@4.34.4` | transitive dependency |
 | `@rollup/rollup-android-arm64@4.34.4` | transitive dependency |
