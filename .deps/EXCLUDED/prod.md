@@ -2,4 +2,4 @@ This file lists dependencies that do not need CQs or auto-detection does not wor
 
 | Packages | Resolved CQs |
 | --- | --- |
-| `@devfile/api@2.3.0-1738342178` | N/A |
+| `@devfile/api@2.3.0-1738854228` | N/A |
