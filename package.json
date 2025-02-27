@@ -43,7 +43,7 @@
     "@devfile/api": "2.3.0-1738854228",
     "axios": "^1.7.4",
     "fs-extra": "^11.2.0",
-    "inversify": "^6.0.2",
+    "inversify": "^7.0.0",
     "lodash": "^4.17.21",
     "js-yaml": "^4.0.0",
     "jsonc-parser": "^3.0.0",
