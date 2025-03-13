@@ -41,7 +41,7 @@
   "homepage": "https://github.com/eclipse-che/che-devfile-registry#readme",
   "dependencies": {
     "@devfile/api": "2.3.0-1738854228",
-    "axios": "^1.8.4",
+    "axios": "^1.8.3",
     "fs-extra": "^11.2.0",
     "inversify": "^6.0.2",
     "lodash": "^4.17.21",
