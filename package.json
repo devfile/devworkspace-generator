@@ -87,7 +87,7 @@
       }
     },
     "moduleNameMapper": {
-      "axios": "axios/dist/node/axios.cjs"
+      "^axios$": "axios"
     },
     "coverageDirectory": "coverage",
     "modulePathIgnorePatterns": [
