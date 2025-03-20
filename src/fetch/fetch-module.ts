@@ -1,5 +1,5 @@
 /**********************************************************************
- * Copyright (c) 2022-2024
+ * Copyright (c) 2022-2025
  *
  * This program and the accompanying materials are made
  * available under the terms of the Eclipse Public License 2.0
@@ -7,12 +7,12 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  ***********************************************************************/
-import { ContainerModule, interfaces } from 'inversify';
+import { ContainerModule, ContainerModuleLoadOptions } from 'inversify';
 
 import { UrlFetcher } from './url-fetcher';
 
-const fetchModule = new ContainerModule((bind: interfaces.Bind) => {
-  bind(UrlFetcher).toSelf().inSingletonScope();
+const fetchModule = new ContainerModule((options: ContainerModuleLoadOptions) => {
+  options.bind(UrlFetcher).toSelf().inSingletonScope();
 });
 
 export { fetchModule };
