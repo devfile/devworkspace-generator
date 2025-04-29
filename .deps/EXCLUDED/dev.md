@@ -3,7 +3,7 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 | Packages | Resolved CQs |
 | --- | --- |
 | `ts-jest@29.3.1` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ts-jest/29.3.1) |
-| `eslint@9.24.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/9.21.0) |
+| `eslint@9.25.1` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/9.21.0) |
 | `@eslint/config-array@0.20.0` | transitive dependency |
 | `fsevents@2.3.3` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/fsevents/2.3.3) |
 | `rollup@4.40.1` | transitive dependency |
