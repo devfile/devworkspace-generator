@@ -2,7 +2,7 @@ This file lists dependencies that do not need CQs or auto-detection does not wor
 
 | Packages | Resolved CQs |
 | --- | --- |
-| `@devfile/api@2.3.0-1741179368` | N/A |
+| `@devfile/api@2.3.0-1746644330` | N/A |
 | `inversify@7.5.1` | N/A |
 | `@inversifyjs/common@1.5.0` | transitive dependency |
 | `@inversifyjs/container@1.9.1` | transitive dependency |
