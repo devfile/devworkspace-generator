@@ -94,6 +94,8 @@ metadata:
 schemaVersion: 2.2.0
 metadata:
   name: starter-project
+attributes:  
+  controller.devfile.io/storage-type: ephemeral
 starterProjects:
   - name: go-starter
     description: A Go project
@@ -130,6 +132,7 @@ metadata:
           routingClass: 'che',
           template: {
             attributes: {
+              'controller.devfile.io/storage-type': 'ephemeral',
               'controller.devfile.io/use-starter-project': 'go-starter',
             },
             starterProjects: [
