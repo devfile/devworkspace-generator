@@ -125,9 +125,12 @@ export class Generate {
 
     // if the devfile has a starter project, we use it for the devWorkspace
     if (devfileCopy.starterProjects && devfileCopy.starterProjects.length > 0) {
-      devWorkspace.spec.template.attributes = {
-        'controller.devfile.io/use-starter-project': devfileCopy.starterProjects[0].name,
-      };
+      if (devWorkspace.spec.template.attributes === undefined) {
+        devWorkspace.spec.template.attributes = {};
+      }
+      const starterProjectName = devfileCopy.starterProjects[0].name;
+      // add starter projects to the devWorkspace
+      devWorkspace.spec.template.attributes['controller.devfile.io/use-starter-project'] = starterProjectName;
     }
 
     // for now the list of devWorkspace templates is only the editor template
