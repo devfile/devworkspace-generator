@@ -1,0 +1,47 @@
+schemaVersion: 2.2.0
+metadata:
+  name: default-devfile
+components:
+  - name: dev-container
+    container:
+      image: quay.io/devfile/universal-developer-image:ubi9-latest
+commands:
+  - id: on-create-command
+    exec:
+      component: dev-container
+      commandLine: "yarn install"
+      workingDir: /projects
+  - id: update-content-command
+    exec:
+      component: dev-container
+      commandLine: "echo foo='bar'"
+      workingDir: /projects
+  - id: post-create-command
+    exec:
+      component: dev-container
+      commandLine: "npm start && mysql -u root -p my-password"
+      workingDir: /projects
+  - id: post-start-command
+    exec:
+      component: dev-container
+      commandLine: "echo foo='bar'"
+      workingDir: /projects
+  - id: post-attach-command
+    exec:
+      component: dev-container
+      commandLine: "echo foo='bar'"
+      workingDir: /projects
+  - id: initialize-command
+    exec:
+      component: dev-container
+      commandLine: "yarn install"
+      workingDir: /projects
+events:
+  postStart:
+    - on-create-command
+    - update-content-command
+    - post-create-command
+    - post-start-command
+    - post-attach-command
+  preStart:
+    - initialize-command

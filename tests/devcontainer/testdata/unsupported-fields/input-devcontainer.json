@@ -1,0 +1,25 @@
+{
+  "capAdd": ["SYS_PTRACE"],
+  "shutdownAction": "none",
+  "runArgs": ["--device-cgroup-rule=my rule here"],
+  "securityOpt": [ "seccomp=unconfined" ],
+  "privileged": false,
+  "init": false,
+  "userEnvProbe": "none",
+  "remoteUser": "root",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli": {},
+    "ghcr.io/devcontainers/features/common-utils": {}
+  },
+  "overrideFeatureInstallОrder": [ "ghcr.io/devcontainers/features/common-utils", "ghcr.io/devcontainers/features/github-cli" ],
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": []
+    }
+  },
+  "service": "app",
+  "runServices": ["db", "redis"],
+  "dockerComposeFile": ["docker-compose.yml", "docker-compose.override.yml"],
+  "waitFor": "updateContentCommand"
+}

@@ -1,0 +1,28 @@
+schemaVersion: 2.2.0
+metadata:
+  name: node-app
+  description: Simple Node App description
+components:
+  - name: dev-container
+    container:
+      image: node:18
+      mountSources: true
+      sourceMapping: "/projects/my-app"
+      endpoints:
+        - name: port-3000
+          targetPort: 3000
+        - name: db
+          targetPort: 5329
+      env:
+        - name: DEBUG
+          value: "true"
+        - name: NODE_ENV
+          value: "development"
+        - name: PORT
+          value: "3000"
+      volumeMounts:
+        - name: devcontainer-cache
+          path: /workspace/cache
+  - name: devcontainer-cache
+    volume:
+      ephemeral: true

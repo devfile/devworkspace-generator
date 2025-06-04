@@ -1,0 +1,18 @@
+{
+  "name": "Node App",
+  "description": "Simple Node App description",
+  "image": "node:18",
+  "forwardPorts": [3000, "db:5329", "invalidport"],
+  "workspaceFolder": "/projects/my-app",
+  "mounts": [
+    "source=${localWorkspaceFolder}/data,target=/workspace/data,type=bind",
+    "source=devcontainer-cache,target=/workspace/cache,type=tmpfs"
+  ],
+  "containerEnv": {
+    "PORT": 3000
+  },
+  "remoteEnv": {
+    "DEBUG": true,
+    "NODE_ENV": "development"
+  }
+}
