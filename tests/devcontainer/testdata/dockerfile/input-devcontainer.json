@@ -1,0 +1,10 @@
+{
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".",
+    "args": {
+      "ENV1": "dev",
+      "PORT": "3000"
+    }
+  }
+}

@@ -20,6 +20,7 @@ import { V1alpha2DevWorkspaceSpecTemplate } from '@devfile/api';
 import { DevfileContext } from './api/devfile-context';
 import { GitUrlResolver } from './resolve/git-url-resolver';
 import { ValidatorResult } from 'jsonschema';
+import { convertDevContainerToDevfile } from './devcontainers/dev-containers-to-devfile-adapter';
 
 export const DEVWORKSPACE_DEVFILE = 'che.eclipse.org/devfile';
 export const DEVWORKSPACE_DEVFILE_SOURCE = 'che.eclipse.org/devfile-source';
@@ -37,6 +38,7 @@ export class Main {
       devfilePath?: string;
       devfileUrl?: string;
       devfileContent?: string;
+      devContainerJsonContent?: string;
       outputFile?: string;
       editorPath?: string;
       editorContent?: string;
@@ -50,8 +52,8 @@ export class Main {
     if (!params.editorPath && !params.editorUrl && !params.editorContent) {
       throw new Error('missing editorPath or editorUrl or editorContent');
     }
-    if (!params.devfilePath && !params.devfileUrl && !params.devfileContent) {
-      throw new Error('missing devfilePath or devfileUrl or devfileContent');
+    if (!params.devfilePath && !params.devfileUrl && !params.devfileContent && !params.devContainerJsonContent) {
+      throw new Error('missing devfilePath or devfileUrl or devfileContent or devContainerJsonContent');
     }
 
     const inversifyBinbding = new InversifyBinding();
@@ -102,8 +104,11 @@ export class Main {
       devfileContent = jsYaml.dump(devfileParsed);
     } else if (params.devfilePath) {
       devfileContent = await fs.readFile(params.devfilePath);
-    } else {
+    } else if (params.devfileContent) {
       devfileContent = params.devfileContent;
+    } else if (params.devContainerJsonContent) {
+      const devContainer = JSON.parse(params.devContainerJsonContent);
+      devfileContent = convertDevContainerToDevfile(devContainer);
     }
 
     const jsYamlDevfileContent = jsYaml.load(devfileContent);
@@ -182,6 +187,7 @@ export class Main {
     let editorUrl: string | undefined;
     let injectDefaultComponent: string | undefined;
     let defaultComponentImage: string | undefined;
+    let devContainerJsonContent: string | undefined;
     const projects: { name: string; location: string }[] = [];
 
     const args = process.argv.slice(2);
@@ -200,6 +206,9 @@ export class Main {
       }
       if (arg.startsWith('--output-file:')) {
         outputFile = arg.substring('--output-file:'.length);
+      }
+      if (arg.startsWith('--devcontainer-json:')) {
+        devContainerJsonContent = arg.substring('--devcontainer-json:'.length);
       }
       if (arg.startsWith('--project.')) {
         const name = arg.substring('--project.'.length, arg.indexOf('='));
@@ -220,8 +229,8 @@ export class Main {
       if (!editorPath && !editorUrl) {
         throw new Error('missing --editor-path: or --editor-url: parameter');
       }
-      if (!devfilePath && !devfileUrl) {
-        throw new Error('missing --devfile-path: or --devfile-url: parameter');
+      if (!devfilePath && !devfileUrl && !devContainerJsonContent) {
+        throw new Error('missing --devfile-path: or --devfile-url: parameter or --devcontainer-json: parameter');
       }
       if (!outputFile) {
         throw new Error('missing --output-file: parameter');
@@ -231,6 +240,7 @@ export class Main {
           devfilePath,
           devfileUrl,
           editorPath,
+          devContainerJsonContent: devContainerJsonContent,
           outputFile,
           editorUrl,
           projects,

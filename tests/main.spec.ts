@@ -55,6 +55,7 @@ describe('Test Main with stubs', () => {
     devfilePath: string | undefined,
     devfileUrl: string | undefined,
     editorPath: string | undefined,
+    devContainerJson: string | undefined,
     editorUrl: string | undefined,
     outputFile: string | undefined,
     injectDefaultComponent: string | undefined,
@@ -70,6 +71,9 @@ describe('Test Main with stubs', () => {
     }
     if (editorUrl) {
       process.argv.push(`--editor-url:${editorUrl}`);
+    }
+    if (devContainerJson) {
+      process.argv.push(`--devcontainer-json:${devContainerJson}`);
     }
     if (editorPath) {
       process.argv.push(`--editor-path:${editorPath}`);
@@ -97,7 +101,16 @@ describe('Test Main with stubs', () => {
 
   describe('start', () => {
     beforeEach(() => {
-      initArgs(FAKE_DEVFILE_PATH, undefined, FAKE_EDITOR_PATH, undefined, FAKE_OUTPUT_FILE, undefined, undefined);
+      initArgs(
+        FAKE_DEVFILE_PATH,
+        undefined,
+        FAKE_EDITOR_PATH,
+        undefined,
+        undefined,
+        FAKE_OUTPUT_FILE,
+        undefined,
+        undefined,
+      );
       jest.spyOn(fs, 'readFile').mockResolvedValue('');
 
       spyInitBindings = jest.spyOn(InversifyBinding.prototype, 'initBindings');
@@ -134,7 +147,16 @@ describe('Test Main with stubs', () => {
 
     test('success with custom devfile Url', async () => {
       const main = new Main();
-      initArgs(undefined, FAKE_DEVFILE_URL, undefined, FAKE_EDITOR_URL, FAKE_OUTPUT_FILE, 'true', 'my-image');
+      initArgs(
+        undefined,
+        FAKE_DEVFILE_URL,
+        undefined,
+        undefined,
+        FAKE_EDITOR_URL,
+        FAKE_OUTPUT_FILE,
+        'true',
+        'my-image',
+      );
       process.argv.push('--project.foo=bar');
       containerGetMethod.mockReset();
       const githubResolverResolveMethod = jest.fn();
@@ -221,7 +243,16 @@ describe('Test Main with stubs', () => {
 
     test('success with custom devfile Url (devfile includes attributes)', async () => {
       const main = new Main();
-      initArgs(undefined, FAKE_DEVFILE_URL, undefined, FAKE_EDITOR_URL, FAKE_OUTPUT_FILE, 'true', 'my-image');
+      initArgs(
+        undefined,
+        FAKE_DEVFILE_URL,
+        undefined,
+        undefined,
+        FAKE_EDITOR_URL,
+        FAKE_OUTPUT_FILE,
+        'true',
+        'my-image',
+      );
       process.argv.push('--project.foo=bar');
       containerGetMethod.mockReset();
       const githubResolverResolveMethod = jest.fn();
@@ -307,9 +338,67 @@ describe('Test Main with stubs', () => {
       expect(generateMethod).toBeCalledWith(jsYaml.dump(result), "''\n", FAKE_OUTPUT_FILE, 'true', 'my-image');
     });
 
+    test('success with devcontainer.json', async () => {
+      // Given
+      const main = new Main();
+      initArgs(undefined, undefined, undefined, '{}', FAKE_EDITOR_URL, FAKE_OUTPUT_FILE, 'true', 'my-image');
+      containerGetMethod.mockReset();
+      const validateDevfileMethod = jest.fn();
+      const devfileSchemaValidatorMock = {
+        validateDevfile: validateDevfileMethod as any,
+      };
+      validateDevfileMethod.mockReturnValueOnce({ valid: true });
+      containerGetMethod.mockReturnValueOnce(devfileSchemaValidatorMock);
+
+      const loadEditorMethod = jest.fn();
+      const editorResolverMock = {
+        loadEditor: loadEditorMethod as any,
+      };
+      loadEditorMethod.mockReturnValue('');
+      containerGetMethod.mockReturnValueOnce(editorResolverMock);
+      containerGetMethod.mockReturnValueOnce(generateMock);
+
+      // When
+      const returnCode = await main.start();
+
+      // Then
+      expect(mockedConsoleError).toBeCalledTimes(0);
+      expect(loadEditorMethod).toBeCalled();
+
+      expect(returnCode).toBeTruthy();
+
+      expect(generateMethod).toBeCalledWith(
+        'schemaVersion: 2.2.0\n' +
+          'metadata:\n' +
+          '  name: default-devfile\n' +
+          "  description: ''\n" +
+          'components:\n' +
+          '  - name: dev-container\n' +
+          '    container:\n' +
+          '      image: quay.io/devfile/universal-developer-image:ubi9-latest\n' +
+          '      env: []\n' +
+          'commands: []\n' +
+          'events:\n' +
+          '  postStart: []\n',
+        "''\n",
+        FAKE_OUTPUT_FILE,
+        'true',
+        'my-image',
+      );
+    });
+
     test('missing devfile', async () => {
       const main = new Main();
-      initArgs(undefined, undefined, FAKE_EDITOR_PATH, FAKE_DEVFILE_URL, FAKE_OUTPUT_FILE, 'false', undefined);
+      initArgs(
+        undefined,
+        undefined,
+        FAKE_EDITOR_PATH,
+        undefined,
+        FAKE_DEVFILE_URL,
+        FAKE_OUTPUT_FILE,
+        'false',
+        undefined,
+      );
       const returnCode = await main.start();
       expect(mockedConsoleError).toBeCalled();
       expect(mockedConsoleError.mock.calls[1][1].toString()).toContain('missing --devfile-path:');
@@ -319,7 +408,7 @@ describe('Test Main with stubs', () => {
 
     test('missing editor', async () => {
       const main = new Main();
-      initArgs(FAKE_DEVFILE_PATH, undefined, undefined, undefined, FAKE_OUTPUT_FILE, 'false', undefined);
+      initArgs(FAKE_DEVFILE_PATH, undefined, undefined, undefined, undefined, FAKE_OUTPUT_FILE, 'false', undefined);
 
       const returnCode = await main.start();
       expect(mockedConsoleError).toBeCalled();
@@ -330,7 +419,7 @@ describe('Test Main with stubs', () => {
 
     test('missing outputfile', async () => {
       const main = new Main();
-      initArgs(FAKE_DEVFILE_PATH, undefined, FAKE_EDITOR_PATH, undefined, undefined, 'false', undefined);
+      initArgs(FAKE_DEVFILE_PATH, undefined, FAKE_EDITOR_PATH, undefined, undefined, undefined, 'false', undefined);
       const returnCode = await main.start();
       expect(mockedConsoleError).toBeCalled();
       expect(mockedConsoleError.mock.calls[1][1].toString()).toContain('missing --output-file: parameter');
@@ -396,7 +485,7 @@ describe('Test Main with stubs', () => {
       } catch (e) {
         message = e.message;
       }
-      expect(message).toEqual('missing devfilePath or devfileUrl or devfileContent');
+      expect(message).toEqual('missing devfilePath or devfileUrl or devfileContent or devContainerJsonContent');
     });
 
     test('success with custom default image', async () => {
