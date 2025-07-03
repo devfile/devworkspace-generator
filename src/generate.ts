@@ -24,7 +24,7 @@ import * as fs from 'fs-extra';
 import { DevfileContext } from './api/devfile-context';
 import { DevContainerComponentFinder } from './devfile/dev-container-component-finder';
 
-type DevfileLike = V230Devfile & {
+export type DevfileLike = V230Devfile & {
   metadata: V230DevfileMetadata & {
     generateName?: string;
   };
@@ -72,13 +72,13 @@ export class Generate {
     injectDefaultComponent?: string,
     defaultComponentImage?: string,
   ): Promise<DevfileContext> {
-    const devfile = jsYaml.load(devfileContent);
+    const devfile = jsYaml.load(devfileContent) as DevfileLike;
 
     // sets the suffix to the devfile name
     const suffix = devfile.metadata.name || '';
 
     // devfile of the editor
-    const editorDevfile = jsYaml.load(editorContent);
+    const editorDevfile = jsYaml.load(editorContent) as DevfileLike;
 
     // transform it into a devWorkspace template
     const metadata = this.createDevWorkspaceMetadata(editorDevfile);

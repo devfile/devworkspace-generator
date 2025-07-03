@@ -10,7 +10,7 @@
 
 import * as axios from 'axios';
 import * as fs from 'fs-extra';
-import { Generate, DEVWORKSPACE_METADATA_ANNOTATION } from './generate';
+import { Generate, DEVWORKSPACE_METADATA_ANNOTATION, DevfileLike } from './generate';
 import { DevfileSchemaValidator } from './devfile-schema/devfile-schema-validator';
 import * as jsYaml from 'js-yaml';
 import { InversifyBinding } from './inversify/inversify-binding';
@@ -71,7 +71,7 @@ export class Main {
       devfileContent = await container.get(UrlFetcher).fetchText(url.getContentUrl('devfile.yaml'));
 
       // load content
-      const devfileParsed = jsYaml.load(devfileContent);
+      const devfileParsed = jsYaml.load(devfileContent) as DevfileLike;
 
       if (!devfileParsed.attributes) {
         devfileParsed.attributes = {};
@@ -106,7 +106,7 @@ export class Main {
       devfileContent = params.devfileContent;
     }
 
-    const jsYamlDevfileContent = jsYaml.load(devfileContent);
+    const jsYamlDevfileContent = jsYaml.load(devfileContent) as DevfileLike;
     const schemaVersion = jsYamlDevfileContent.schemaVersion;
     if (!schemaVersion) {
       throw new Error(`Devfile is not valid, schemaVersion is required`);
