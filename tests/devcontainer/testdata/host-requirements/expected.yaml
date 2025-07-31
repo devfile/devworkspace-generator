@@ -1,0 +1,9 @@
+schemaVersion: 2.2.0
+metadata:
+  name: default-devfile
+components:
+  - name: dev-container
+    container:
+      cpuRequest: 2
+      image: quay.io/devfile/universal-developer-image:ubi9-latest
+      memoryRequest: "4GiB"
