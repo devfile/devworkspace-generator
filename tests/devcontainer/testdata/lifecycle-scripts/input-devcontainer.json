@@ -1,0 +1,11 @@
+{
+  "initializeCommand": "yarn install",
+  "onCreateCommand": ["yarn", "install"],
+  "updateContentCommand": "echo foo='bar'",
+  "postCreateCommand": {
+    "server": "npm start",
+    "db": ["mysql", "-u", "root", "-p", "my-password"]
+  },
+  "postStartCommand": ["echo", "foo='bar'"],
+  "postAttachCommand": "echo foo='bar'"
+}
