@@ -25,7 +25,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Check dependencies usage restrictions
-        run: docker run --rm -t -v ${PWD}/:/workspace/project quay.io/che-incubator/dash-licenses:test --check --batch 100
+        run: docker run --rm -t -v ${PWD}/:/workspace/project quay.io/che-incubator/dash-licenses:test --check
 
   unit-tests:
     runs-on: ubuntu-22.04
