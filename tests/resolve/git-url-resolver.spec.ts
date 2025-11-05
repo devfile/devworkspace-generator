@@ -40,7 +40,7 @@ describe('Test git Url resolver', () => {
 
     urlResolver.resolve('test');
 
-    expect(resolveMock).toBeCalledWith('test');
+    expect(resolveMock).toHaveBeenCalledWith('test');
   });
 
   test('test resolver failure', async () => {

@@ -227,7 +227,7 @@ describe('Test DevContainerComponentFinder', () => {
     } as DevfileContext;
     const devWorkspaceSpecTemplateComponents = await devContainerComponentFinder.find(devfileContext);
     expect(devWorkspaceSpecTemplateComponents?.name).toBe('my-container-1');
-    expect(console.warn).toBeCalledWith(
+    expect(console.warn).toHaveBeenCalledWith(
       'More than one dev container component has been potentially found, taking the first one of my-container-1,my-container-2',
     );
   });
