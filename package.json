@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
+    "@types/node": "^20.11.30",
     "axios": "^1.13.1",
     "eslint": "^9.5.0",
     "if-env": "^1.0.4",

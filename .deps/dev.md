@@ -112,6 +112,7 @@
 | [`@types/istanbul-reports@3.0.4`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/istanbul-reports/3.0.4) |
 | [`@types/jest@29.5.14`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | #11951 |
 | [`@types/json-schema@7.0.15`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/json-schema/7.0.15) |
+| [`@types/node@20.19.24`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | #23880 |
 | [`@types/stack-utils@2.0.3`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/stack-utils/2.0.3) |
 | [`@types/yargs-parser@21.0.3`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/yargs-parser/21.0.3) |
 | [`@types/yargs@17.0.33`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | #7054 |
@@ -357,8 +358,9 @@
 | [`type-check@0.4.0`](git://github.com/gkz/type-check.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/type-check/0.4.0) |
 | [`type-detect@4.0.8`](git+ssh://git@github.com/chaijs/type-detect.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/type-detect/4.0.8) |
 | [`type-fest@4.41.0`](https://github.com/sindresorhus/type-fest.git) | (MIT OR CC0-1.0) | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/type-fest/4.41.0) |
-| [`typescript@5.8.3`](https://github.com/microsoft/TypeScript.git) | Apache-2.0 | #19825 |
+| [`typescript@5.9.3`](https://github.com/microsoft/TypeScript.git) | Apache-2.0 | #22726 |
 | [`uglify-js@3.19.3`](https://github.com/mishoo/UglifyJS.git) | BSD-2-Clause | #16043 |
+| [`undici-types@6.21.0`](git+https://github.com/nodejs/undici.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/undici-types/6.21.0) |
 | [`update-browserslist-db@1.1.3`](https://github.com/browserslist/update-db.git) | MIT | #16405 |
 | [`uri-js@4.4.1`](http://github.com/garycourt/uri-js) | BSD-2-Clause | #1086 |
 | [`v8-to-istanbul@9.3.0`](https://github.com/istanbuljs/v8-to-istanbul.git) | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/v8-to-istanbul/9.3.0) |
