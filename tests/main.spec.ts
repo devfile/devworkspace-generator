@@ -128,8 +128,8 @@ describe('Test Main with stubs', () => {
       const returnCode = await main.start();
 
       expect(returnCode).toBeFalsy();
-      expect(generateMethod).toBeCalledTimes(0);
-      expect(mockedConsoleError).toBeCalledTimes(2);
+      expect(generateMethod).toHaveBeenCalledTimes(0);
+      expect(mockedConsoleError).toHaveBeenCalledTimes(2);
     });
 
     test('success with custom devfile Url', async () => {
@@ -184,9 +184,9 @@ describe('Test Main with stubs', () => {
       // last one is generate mock
       containerGetMethod.mockReturnValueOnce(generateMock);
       const returnCode = await main.start();
-      expect(mockedConsoleError).toBeCalledTimes(0);
-      expect(loadEditorMethod).toBeCalled();
-      expect(urlFetcherFetchTextMethod).toBeCalled();
+      expect(mockedConsoleError).toHaveBeenCalledTimes(0);
+      expect(loadEditorMethod).toHaveBeenCalled();
+      expect(urlFetcherFetchTextMethod).toHaveBeenCalled();
 
       expect(returnCode).toBeTruthy();
 
@@ -216,7 +216,7 @@ describe('Test Main with stubs', () => {
           },
         ],
       };
-      expect(generateMethod).toBeCalledWith(jsYaml.dump(result), "''\n", FAKE_OUTPUT_FILE, 'true', 'my-image');
+      expect(generateMethod).toHaveBeenCalledWith(jsYaml.dump(result), "''\n", FAKE_OUTPUT_FILE, 'true', 'my-image');
     });
 
     test('success with custom devfile Url (devfile includes attributes)', async () => {
@@ -271,9 +271,9 @@ describe('Test Main with stubs', () => {
       // last one is generate mock
       containerGetMethod.mockReturnValueOnce(generateMock);
       const returnCode = await main.start();
-      expect(mockedConsoleError).toBeCalledTimes(0);
-      expect(loadEditorMethod).toBeCalled();
-      expect(urlFetcherFetchTextMethod).toBeCalled();
+      expect(mockedConsoleError).toHaveBeenCalledTimes(0);
+      expect(loadEditorMethod).toHaveBeenCalled();
+      expect(urlFetcherFetchTextMethod).toHaveBeenCalled();
 
       expect(returnCode).toBeTruthy();
 
@@ -304,17 +304,99 @@ describe('Test Main with stubs', () => {
           },
         ],
       };
-      expect(generateMethod).toBeCalledWith(jsYaml.dump(result), "''\n", FAKE_OUTPUT_FILE, 'true', 'my-image');
+      expect(generateMethod).toHaveBeenCalledWith(jsYaml.dump(result), "''\n", FAKE_OUTPUT_FILE, 'true', 'my-image');
+    });
+
+    test('success with custom devfile Url that already has projects', async () => {
+      const main = new Main();
+      initArgs(undefined, FAKE_DEVFILE_URL, undefined, FAKE_EDITOR_URL, FAKE_OUTPUT_FILE, 'false', undefined);
+      containerGetMethod.mockReset();
+      const githubResolverResolveMethod = jest.fn();
+      const githubResolverMock = {
+        resolve: githubResolverResolveMethod as any,
+      };
+
+      const getContentUrlMethod = jest.fn();
+      const getCloneUrlMethod = jest.fn();
+      const getBranchNameMethod = jest.fn();
+      const getRepoNameMethod = jest.fn();
+
+      const githubUrlMock = {
+        getContentUrl: githubResolverResolveMethod as any,
+        getCloneUrl: getCloneUrlMethod as any,
+        getBranchName: getBranchNameMethod as any,
+        getRepoName: getRepoNameMethod as any,
+      };
+      getContentUrlMethod.mockReturnValue('http://foo.bar');
+      getCloneUrlMethod.mockReturnValue('http://foo.bar');
+      getBranchNameMethod.mockReturnValue('my-branch');
+      getRepoNameMethod.mockReturnValue('my-repo');
+      githubResolverResolveMethod.mockReturnValue(githubUrlMock);
+      containerGetMethod.mockReturnValueOnce(githubResolverMock);
+
+      const urlFetcherFetchTextMethod = jest.fn();
+      const urlFetcherMock = {
+        fetchText: urlFetcherFetchTextMethod as any,
+      };
+      // Return devfile that already has projects - this should NOT add projects
+      urlFetcherFetchTextMethod.mockReturnValueOnce(
+        'schemaVersion: 2.1.0\nmetadata:\n  name: test\nprojects:\n  - name: existing-project\n    git:\n      remotes:\n        origin: http://existing.git',
+      );
+      containerGetMethod.mockReturnValueOnce(urlFetcherMock);
+
+      const validateDevfileMethod = jest.fn();
+      const devfileSchemaValidatorMock = {
+        validateDevfile: validateDevfileMethod as any,
+      };
+      validateDevfileMethod.mockReturnValueOnce({ valid: true });
+      containerGetMethod.mockReturnValueOnce(devfileSchemaValidatorMock);
+
+      const loadEditorMethod = jest.fn();
+      const editorResolverMock = {
+        loadEditor: loadEditorMethod as any,
+      };
+      loadEditorMethod.mockReturnValue('');
+      containerGetMethod.mockReturnValueOnce(editorResolverMock);
+
+      // last one is generate mock
+      containerGetMethod.mockReturnValueOnce(generateMock);
+      const returnCode = await main.start();
+      expect(mockedConsoleError).toHaveBeenCalledTimes(0);
+      expect(loadEditorMethod).toHaveBeenCalled();
+      expect(urlFetcherFetchTextMethod).toHaveBeenCalled();
+
+      expect(returnCode).toBeTruthy();
+
+      const devfileContent =
+        'schemaVersion: 2.1.0\nmetadata:\n  name: test\nprojects:\n  - name: existing-project\n    git:\n      remotes:\n        origin: http://existing.git';
+      const devfileParsed = jsYaml.load(devfileContent) as any;
+      devfileParsed.attributes = {
+        [DEVWORKSPACE_METADATA_ANNOTATION]: {
+          [DEVWORKSPACE_DEVFILE]: devfileContent,
+          [DEVWORKSPACE_DEVFILE_SOURCE]: jsYaml.dump({
+            factory: {
+              params: `url=${FAKE_DEVFILE_URL}`,
+            },
+          }),
+        },
+      };
+      expect(generateMethod).toHaveBeenCalledWith(
+        jsYaml.dump(devfileParsed),
+        "''\n",
+        FAKE_OUTPUT_FILE,
+        'false',
+        undefined,
+      );
     });
 
     test('missing devfile', async () => {
       const main = new Main();
       initArgs(undefined, undefined, FAKE_EDITOR_PATH, FAKE_DEVFILE_URL, FAKE_OUTPUT_FILE, 'false', undefined);
       const returnCode = await main.start();
-      expect(mockedConsoleError).toBeCalled();
+      expect(mockedConsoleError).toHaveBeenCalled();
       expect(mockedConsoleError.mock.calls[1][1].toString()).toContain('missing --devfile-path:');
       expect(returnCode).toBeFalsy();
-      expect(generateMethod).toBeCalledTimes(0);
+      expect(generateMethod).toHaveBeenCalledTimes(0);
     });
 
     test('missing editor', async () => {
@@ -322,20 +404,20 @@ describe('Test Main with stubs', () => {
       initArgs(FAKE_DEVFILE_PATH, undefined, undefined, undefined, FAKE_OUTPUT_FILE, 'false', undefined);
 
       const returnCode = await main.start();
-      expect(mockedConsoleError).toBeCalled();
+      expect(mockedConsoleError).toHaveBeenCalled();
       expect(mockedConsoleError.mock.calls[1][1].toString()).toContain('missing --editor-path:');
       expect(returnCode).toBeFalsy();
-      expect(generateMethod).toBeCalledTimes(0);
+      expect(generateMethod).toHaveBeenCalledTimes(0);
     });
 
     test('missing outputfile', async () => {
       const main = new Main();
       initArgs(FAKE_DEVFILE_PATH, undefined, FAKE_EDITOR_PATH, undefined, undefined, 'false', undefined);
       const returnCode = await main.start();
-      expect(mockedConsoleError).toBeCalled();
+      expect(mockedConsoleError).toHaveBeenCalled();
       expect(mockedConsoleError.mock.calls[1][1].toString()).toContain('missing --output-file: parameter');
       expect(returnCode).toBeFalsy();
-      expect(generateMethod).toBeCalledTimes(0);
+      expect(generateMethod).toHaveBeenCalledTimes(0);
     });
 
     test('error', async () => {
@@ -344,9 +426,9 @@ describe('Test Main with stubs', () => {
       });
       const main = new Main();
       const returnCode = await main.start();
-      expect(mockedConsoleError).toBeCalled();
+      expect(mockedConsoleError).toHaveBeenCalled();
       expect(returnCode).toBeFalsy();
-      expect(generateMethod).toBeCalledTimes(0);
+      expect(generateMethod).toHaveBeenCalledTimes(0);
     });
   });
 
@@ -449,10 +531,10 @@ describe('Test Main with stubs', () => {
         axios.default,
       );
 
-      expect(validateDevfileMethod).toBeCalled();
-      expect(mockedConsoleError).toBeCalledTimes(0);
-      expect(loadEditorMethod).toBeCalled();
-      expect(generateMethod).toBeCalledWith(
+      expect(validateDevfileMethod).toHaveBeenCalled();
+      expect(mockedConsoleError).toHaveBeenCalledTimes(0);
+      expect(loadEditorMethod).toHaveBeenCalled();
+      expect(generateMethod).toHaveBeenCalledWith(
         devfileContent,
         "''\n",
         FAKE_OUTPUT_FILE,
@@ -508,10 +590,10 @@ describe('Test Main with stubs', () => {
         axios.default,
       );
 
-      expect(mockedConsoleError).toBeCalledTimes(0);
-      expect(loadEditorMethod).toBeCalled();
-      expect(validateDevfileMethod).toBeCalled();
-      expect(generateMethod).toBeCalledWith(devfileContent, "''\n", FAKE_OUTPUT_FILE, undefined, undefined);
+      expect(mockedConsoleError).toHaveBeenCalledTimes(0);
+      expect(loadEditorMethod).toHaveBeenCalled();
+      expect(validateDevfileMethod).toHaveBeenCalled();
+      expect(generateMethod).toHaveBeenCalledWith(devfileContent, "''\n", FAKE_OUTPUT_FILE, undefined, undefined);
     });
 
     test('devfile without schemaVersion', async () => {
@@ -589,9 +671,9 @@ describe('Test Main with stubs', () => {
         axios.default,
       );
 
-      expect(mockedConsoleError).toBeCalledTimes(0);
-      expect(validateDevfileMethod).toBeCalled();
-      expect(generateMethod).toBeCalledWith(
+      expect(mockedConsoleError).toHaveBeenCalledTimes(0);
+      expect(validateDevfileMethod).toHaveBeenCalled();
+      expect(generateMethod).toHaveBeenCalledWith(
         devfileContent,
         jsYaml.dump({
           schemaVersion: '2.1.0',
@@ -638,9 +720,15 @@ describe('Test Main with stubs', () => {
         axios.default,
       );
 
-      expect(mockedConsoleError).toBeCalledTimes(0);
-      expect(validateDevfileMethod).toBeCalled();
-      expect(generateMethod).toBeCalledWith(devfileContent, editorContent, FAKE_OUTPUT_FILE, undefined, undefined);
+      expect(mockedConsoleError).toHaveBeenCalledTimes(0);
+      expect(validateDevfileMethod).toHaveBeenCalled();
+      expect(generateMethod).toHaveBeenCalledWith(
+        devfileContent,
+        editorContent,
+        FAKE_OUTPUT_FILE,
+        undefined,
+        undefined,
+      );
     });
 
     test('failed with not valid devfile', async () => {
@@ -679,7 +767,7 @@ describe('Test Main with stubs', () => {
         ),
       ).rejects.toThrow('Devfile schema validation failed. Error: Dummy error');
 
-      expect(validateDevfileMethod).toBeCalled();
+      expect(validateDevfileMethod).toHaveBeenCalled();
     });
   });
 

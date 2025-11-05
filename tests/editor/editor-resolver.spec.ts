@@ -50,7 +50,7 @@ describe('Test EditorResolver', () => {
     const dummy = { dummyContent: 'dummy' };
     urlFetcherFetchTextMock.mockResolvedValue(jsYaml.dump(dummy));
     const content = await editorResolver.loadEditor(myId);
-    expect(urlFetcherFetchTextMock).toBeCalledWith('http://editor.yaml');
+    expect(urlFetcherFetchTextMock).toHaveBeenCalledWith('http://editor.yaml');
     expect(content).toStrictEqual(dummy);
   });
 });

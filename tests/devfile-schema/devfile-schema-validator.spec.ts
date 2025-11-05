@@ -118,7 +118,7 @@ describe('DevfileValidator', () => {
     };
     const version = '3.0.0';
 
-    expect(() => validator.validateDevfile(devfile, version)).toThrowError(
+    expect(() => validator.validateDevfile(devfile, version)).toThrow(
       `Dev Workspace generator tool doesn't support devfile version: ${version}`,
     );
   });
