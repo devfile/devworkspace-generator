@@ -51,7 +51,7 @@ metadata:
 
       let context = await generate.generate(devfileContent, editorContent);
       // expect not to write the file
-      expect(fsWriteFileSpy).not.toBeCalled();
+      expect(fsWriteFileSpy).not.toHaveBeenCalled();
       expect(JSON.stringify(context.devfile)).toEqual(
         '{"schemaVersion":"2.2.0","metadata":{"name":"my-dummy-project"},"parent":{"id":"udi","registryUrl":"https://dummy-registry.io/","version":"1.2.0"}}',
       );
@@ -118,7 +118,7 @@ metadata:
 
       let context = await generate.generate(devfileContent, editorContent);
       // expect not to write the file
-      expect(fsWriteFileSpy).not.toBeCalled();
+      expect(fsWriteFileSpy).not.toHaveBeenCalled();
       const expectedDevWorkspace = {
         apiVersion: 'workspace.devfile.io/v1alpha2',
         kind: 'DevWorkspace',
@@ -191,7 +191,7 @@ metadata:
 
       let context = await generate.generate(devfileContent, editorContent);
       // expect not to write the file
-      expect(fsWriteFileSpy).not.toBeCalled();
+      expect(fsWriteFileSpy).not.toHaveBeenCalled();
       const expectedDevWorkspace = {
         apiVersion: 'workspace.devfile.io/v1alpha2',
         kind: 'DevWorkspace',
@@ -259,7 +259,7 @@ metadata:
 
       let context = await generate.generate(devfileContent, editorContent);
       // expect not to write the file
-      expect(fsWriteFileSpy).not.toBeCalled();
+      expect(fsWriteFileSpy).not.toHaveBeenCalled();
       expect(JSON.stringify(context.devfile)).toEqual(
         '{"schemaVersion":"2.2.0","metadata":{"name":"my-dummy-project"},"components":[{"name":"dev-container","mountSources":true,"container":{"image":"quay.io/foo/bar"}}]}',
       );
@@ -323,7 +323,7 @@ metadata:
 
       let context = await generate.generate(devfileContent, editorContent);
       // expect not to write the file
-      expect(fsWriteFileSpy).not.toBeCalled();
+      expect(fsWriteFileSpy).not.toHaveBeenCalled();
       expect(JSON.stringify(context.devfile)).toEqual(
         '{"schemaVersion":"2.2.0","metadata":{"generateName":"custom-project"},"components":[{"name":"dev-container","mountSources":true,"container":{"image":"quay.io/foo/bar"}}]}',
       );
@@ -388,7 +388,7 @@ metadata:
 
       let context = await generate.generate(devfileContent, editorContent, fakeoutputDir);
       // expect to write the file
-      expect(fsWriteFileSpy).toBeCalled();
+      expect(fsWriteFileSpy).toHaveBeenCalled();
       expect(JSON.stringify(context.devfile)).toEqual(
         '{"schemaVersion":"2.2.0","metadata":{"name":"my-dummy-project"},"components":[{"name":"dev-container","mountSources":true,"container":{"image":"quay.io/foo/bar"}}]}',
       );
@@ -453,7 +453,7 @@ metadata:
 
       let context = await generate.generate(devfileContent, editorContent, fakeoutputDir, 'false');
       // expect to write the file
-      expect(fsWriteFileSpy).toBeCalled();
+      expect(fsWriteFileSpy).toHaveBeenCalled();
       expect(JSON.stringify(context.devfile)).toEqual(
         '{"schemaVersion":"2.2.0","metadata":{"name":"my-dummy-project"},"components":[{"name":"dev-container","attributes":{"old":"attribute"},"mountSources":true,"container":{"image":"quay.io/foo/bar"}}]}',
       );
@@ -519,7 +519,7 @@ metadata:
 
       let context = await generate.generate(devfileContent, editorContent, fakeoutputDir, 'false');
       // expect to write the file
-      expect(fsWriteFileSpy).toBeCalled();
+      expect(fsWriteFileSpy).toHaveBeenCalled();
       expect(context.suffix).toEqual('');
     });
   });
