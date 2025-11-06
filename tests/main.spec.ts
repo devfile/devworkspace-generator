@@ -102,7 +102,7 @@ describe('Test Main with stubs', () => {
 
       spyInitBindings = jest.spyOn(InversifyBinding.prototype, 'initBindings');
       spyInitBindings.mockImplementation(() => Promise.resolve(container));
-      toSelfMethod.mockReturnValue(selfMock), containerBindMethod.mockReturnValue(bindMock);
+      (toSelfMethod.mockReturnValue(selfMock), containerBindMethod.mockReturnValue(bindMock));
       containerGetMethod.mockReturnValueOnce(generateMock);
     });
 
@@ -436,7 +436,7 @@ describe('Test Main with stubs', () => {
     beforeEach(() => {
       spyInitBindings = jest.spyOn(InversifyBinding.prototype, 'initBindings');
       spyInitBindings.mockImplementation(() => Promise.resolve(container));
-      toSelfMethod.mockReturnValue(selfMock), containerBindMethod.mockReturnValue(bindMock);
+      (toSelfMethod.mockReturnValue(selfMock), containerBindMethod.mockReturnValue(bindMock));
     });
 
     afterEach(() => {
