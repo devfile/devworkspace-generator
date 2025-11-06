@@ -461,10 +461,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@devfile/api@2.3.0-1747843475":
-  version "2.3.0-1747843475"
-  resolved "https://registry.yarnpkg.com/@devfile/api/-/api-2.3.0-1747843475.tgz#0a4c9905a9e377ce310beb23bea93883ca03aedf"
-  integrity sha512-w+H4g7D3FsSB1W672Qf8kcQX8FCg7Iztd7rmpZyx1xun3I02VE/Hn3tk0xqP89Ys8tMrJU3F3IwcSkP7bEWRKA==
+"@devfile/api@2.3.0-1757407014":
+  version "2.3.0-1757407014"
+  resolved "https://registry.yarnpkg.com/@devfile/api/-/api-2.3.0-1757407014.tgz#d712e78748b588c3f5861e93881b3b4e27088519"
+  integrity sha512-keQ2K2wWNv83tSHN+nflX8W57TQDjqaF9CTFmjWLFTKHEMgwJqTOrQZENR9alq4bO+yC8GAvWiWS3NaMQqazrw==
   dependencies:
     "@types/node" "*"
     "@types/node-fetch" "^2.5.7"
