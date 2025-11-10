@@ -42,15 +42,15 @@
 | [`@emnapi/core@1.7.0`](git+https://github.com/toyobayashi/emnapi.git) | MIT | transitive dependency |
 | [`@emnapi/runtime@1.7.0`](git+https://github.com/toyobayashi/emnapi.git) | MIT | transitive dependency |
 | [`@emnapi/wasi-threads@1.1.0`](git+https://github.com/toyobayashi/emnapi.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@emnapi/wasi-threads/1.1.0) |
-| [`@eslint-community/eslint-utils@4.4.0`](https://github.com/eslint-community/eslint-utils) | MIT | #15285 |
+| [`@eslint-community/eslint-utils@4.9.0`](https://github.com/eslint-community/eslint-utils) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint-community/eslint-utils/4.9.0) |
 | [`@eslint-community/regexpp@4.12.1`](https://github.com/eslint-community/regexpp) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint-community/regexpp/4.12.1) |
-| [`@eslint/config-array@0.21.0`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | #23571 |
-| [`@eslint/config-helpers@0.3.0`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/config-helpers/0.3.0) |
-| [`@eslint/core@0.14.0`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/core/0.14.0) |
+| [`@eslint/config-array@0.21.1`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | #23571 |
+| [`@eslint/config-helpers@0.4.2`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/config-helpers/0.4.2) |
+| [`@eslint/core@0.17.0`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/core/0.17.0) |
 | [`@eslint/eslintrc@3.3.1`](https://github.com/eslint/eslintrc.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/eslintrc/3.3.1) |
-| [`@eslint/js@9.30.1`](https://github.com/eslint/eslint.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/js/9.30.1) |
-| [`@eslint/object-schema@2.1.6`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/object-schema/2.1.6) |
-| [`@eslint/plugin-kit@0.3.1`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/plugin-kit/0.3.1) |
+| [`@eslint/js@9.39.1`](https://github.com/eslint/eslint.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/js/9.39.1) |
+| [`@eslint/object-schema@2.1.7`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/object-schema/2.1.7) |
+| [`@eslint/plugin-kit@0.4.1`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/plugin-kit/0.4.1) |
 | [`@humanfs/core@0.19.1`](git+https://github.com/humanwhocodes/humanfs.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@humanfs/core/0.19.1) |
 | [`@humanfs/node@0.16.6`](git+https://github.com/humanwhocodes/humanfs.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@humanfs/node/0.16.6) |
 | [`@humanwhocodes/module-importer@1.0.1`](git+https://github.com/humanwhocodes/module-importer.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@humanwhocodes/module-importer/1.0.1) |
@@ -87,28 +87,28 @@
 | [`@napi-rs/wasm-runtime@0.2.12`](git+https://github.com/napi-rs/napi-rs.git) | MIT | #16301 |
 | [`@pkgjs/parseargs@0.11.0`](git@github.com:pkgjs/parseargs.git) | MIT | #8236 |
 | [`@pkgr/core@0.2.9`](git+https://github.com/un-ts/pkgr.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@pkgr/core/0.2.9) |
-| `@rollup/rollup-android-arm-eabi@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-android-arm64@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-darwin-arm64@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-darwin-x64@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-freebsd-arm64@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-freebsd-x64@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-linux-arm-gnueabihf@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-linux-arm-musleabihf@4.52.5` |  | transitive dependency |
-| [`@rollup/rollup-linux-arm64-gnu@4.52.5`](git+https://github.com/rollup/rollup.git) | MIT | transitive dependency |
-| [`@rollup/rollup-linux-arm64-musl@4.52.5`](git+https://github.com/rollup/rollup.git) | MIT | transitive dependency |
-| `@rollup/rollup-linux-loong64-gnu@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-linux-ppc64-gnu@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-linux-riscv64-gnu@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-linux-riscv64-musl@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-linux-s390x-gnu@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-linux-x64-gnu@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-linux-x64-musl@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-openharmony-arm64@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-win32-arm64-msvc@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-win32-ia32-msvc@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-win32-x64-gnu@4.52.5` |  | transitive dependency |
-| `@rollup/rollup-win32-x64-msvc@4.52.5` |  | transitive dependency |
+| `@rollup/rollup-android-arm-eabi@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-android-arm64@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-darwin-arm64@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-darwin-x64@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-freebsd-arm64@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-freebsd-x64@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-linux-arm-gnueabihf@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-linux-arm-musleabihf@4.53.1` |  | transitive dependency |
+| [`@rollup/rollup-linux-arm64-gnu@4.53.1`](git+https://github.com/rollup/rollup.git) | MIT | transitive dependency |
+| [`@rollup/rollup-linux-arm64-musl@4.53.1`](git+https://github.com/rollup/rollup.git) | MIT | transitive dependency |
+| `@rollup/rollup-linux-loong64-gnu@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-linux-ppc64-gnu@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-linux-riscv64-gnu@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-linux-riscv64-musl@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-linux-s390x-gnu@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-linux-x64-gnu@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-linux-x64-musl@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-openharmony-arm64@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-win32-arm64-msvc@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-win32-ia32-msvc@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-win32-x64-gnu@4.53.1` |  | transitive dependency |
+| `@rollup/rollup-win32-x64-msvc@4.53.1` |  | transitive dependency |
 | [`@sinclair/typebox@0.34.41`](https://github.com/sinclairzx81/typebox) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@sinclair/typebox/0.34.41) |
 | [`@sinonjs/commons@3.0.1`](git+https://github.com/sinonjs/commons.git) | BSD-3-Clause | #12905 |
 | [`@sinonjs/fake-timers@13.0.5`](git+https://github.com/sinonjs/fake-timers.git) | BSD-3-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@sinonjs/fake-timers/13.0.5) |
@@ -123,7 +123,6 @@
 | [`@types/istanbul-reports@3.0.4`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/istanbul-reports/3.0.4) |
 | [`@types/jest@30.0.0`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/jest/30.0.0) |
 | [`@types/json-schema@7.0.15`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/json-schema/7.0.15) |
-| [`@types/node@20.19.24`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | #23880 |
 | [`@types/stack-utils@2.0.3`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/stack-utils/2.0.3) |
 | [`@types/yargs-parser@21.0.3`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/yargs-parser/21.0.3) |
 | [`@types/yargs@17.0.34`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | #7054 |
@@ -200,7 +199,7 @@
 | [`escape-string-regexp@4.0.0`](https://github.com/sindresorhus/escape-string-regexp.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/escape-string-regexp/4.0.0) |
 | [`eslint-scope@8.4.0`](https://github.com/eslint/js.git) | BSD-2-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint-scope/8.4.0) |
 | [`eslint-visitor-keys@4.2.1`](https://github.com/eslint/js.git) | Apache-2.0 | #17084 |
-| [`eslint@9.30.1`](https://github.com/eslint/eslint.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/9.21.0) |
+| [`eslint@9.39.1`](https://github.com/eslint/eslint.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/9.39.1) |
 | [`espree@10.4.0`](https://github.com/eslint/js.git) | BSD-2-Clause | #22104 |
 | [`esprima@4.0.1`](https://github.com/jquery/esprima.git) | BSD-2-Clause | #995 |
 | [`esquery@1.6.0`](https://github.com/estools/esquery.git) | BSD-3-Clause | #15713 |
@@ -336,7 +335,7 @@
 | [`pirates@4.0.7`](https://github.com/danez/pirates.git) | MIT | #680 |
 | [`pkg-dir@4.2.0`](https://github.com/sindresorhus/pkg-dir.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/pkg-dir/4.2.0) |
 | [`prelude-ls@1.2.1`](git://github.com/gkz/prelude-ls.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/prelude-ls/1.2.1) |
-| [`prettier@3.5.3`](https://github.com/prettier/prettier.git) | MIT | #19396 |
+| [`prettier@3.6.2`](https://github.com/prettier/prettier.git) | MIT | #22237 |
 | [`pretty-format@30.2.0`](https://github.com/jestjs/jest.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/pretty-format/30.2.0) |
 | [`proxy-from-env@1.1.0`](https://github.com/Rob--W/proxy-from-env.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/proxy-from-env/1.1.0) |
 | [`ps-tree@1.2.0`](https://github.com/indexzero/ps-tree.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ps-tree/1.2.0) |
@@ -348,7 +347,7 @@
 | [`resolve-cwd@3.0.0`](https://github.com/sindresorhus/resolve-cwd.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/resolve-cwd/3.0.0) |
 | [`resolve-from@5.0.0`](https://github.com/sindresorhus/resolve-from.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/resolve-from/5.0.0) |
 | [`rimraf@6.1.0`](git@github.com:isaacs/rimraf.git) | BlueOak-1.0.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/rimraf/6.1.0) |
-| [`rollup@4.52.5`](git+https://github.com/rollup/rollup.git) | MIT | transitive dependency |
+| [`rollup@4.53.1`](git+https://github.com/rollup/rollup.git) | MIT | transitive dependency |
 | [`semver@6.3.1`](https://github.com/npm/node-semver.git) | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/semver/6.3.1) |
 | [`shebang-command@2.0.0`](https://github.com/kevva/shebang-command.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/shebang-command/2.0.0) |
 | [`shebang-regex@3.0.0`](https://github.com/sindresorhus/shebang-regex.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/shebang-regex/3.0.0) |
@@ -383,7 +382,6 @@
 | [`type-fest@4.41.0`](https://github.com/sindresorhus/type-fest.git) | (MIT OR CC0-1.0) | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/type-fest/4.41.0) |
 | [`typescript@5.9.3`](https://github.com/microsoft/TypeScript.git) | Apache-2.0 | #22726 |
 | [`uglify-js@3.19.3`](https://github.com/mishoo/UglifyJS.git) | BSD-2-Clause | #16043 |
-| [`undici-types@6.21.0`](git+https://github.com/nodejs/undici.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/undici-types/6.21.0) |
 | [`unrs-resolver@1.11.1`](git+https://github.com/unrs/unrs-resolver.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/unrs-resolver/1.11.1) |
 | [`update-browserslist-db@1.1.3`](https://github.com/browserslist/update-db.git) | MIT | #16405 |
 | [`uri-js@4.4.1`](http://github.com/garycourt/uri-js) | BSD-2-Clause | #1086 |
