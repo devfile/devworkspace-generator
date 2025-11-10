@@ -2,15 +2,15 @@
 
 | Packages | License | Resolved CQs |
 | --- | --- | --- |
-| [`@devfile/api@2.3.0-1747843475`](https://github.com/devfile/api) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@devfile/api/2.3.0-1747843475) |
+| [`@devfile/api@2.3.0-1757407014`](https://github.com/devfile/api) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@devfile/api/2.3.0-1757407014) |
 | [`@inversifyjs/common@1.5.2`](git+https://github.com/inversify/monorepo.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@inversifyjs/common/1.5.2) |
-| [`@inversifyjs/container@1.10.3`](git+https://github.com/inversify/monorepo.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@inversifyjs/container/1.10.3) |
-| [`@inversifyjs/core@5.3.3`](git+https://github.com/inversify/monorepo.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@inversifyjs/core/5.3.3) |
+| [`@inversifyjs/container@1.14.1`](git+https://github.com/inversify/monorepo.git) | MIT | transitive dependency |
+| [`@inversifyjs/core@9.1.1`](git+https://github.com/inversify/monorepo.git) | MIT | transitive dependency |
 | [`@inversifyjs/plugin@0.2.0`](git+https://github.com/inversify/monorepo.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@inversifyjs/plugin/0.2.0) |
-| [`@inversifyjs/prototype-utils@0.1.2`](git+https://github.com/inversify/monorepo.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@inversifyjs/prototype-utils/0.1.2) |
-| [`@inversifyjs/reflect-metadata-utils@1.2.0`](git+https://github.com/inversify/monorepo.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@inversifyjs/reflect-metadata-utils/1.2.0) |
+| [`@inversifyjs/prototype-utils@0.1.3`](git+https://github.com/inversify/monorepo.git) | MIT | transitive dependency |
+| [`@inversifyjs/reflect-metadata-utils@1.4.1`](git+https://github.com/inversify/monorepo.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@inversifyjs/reflect-metadata-utils/1.4.1) |
 | [`@types/node-fetch@2.6.11`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | #11004 |
-| [`@types/node@22.5.5`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/node/22.5.5) |
+| [`@types/node@24.10.0`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/node/24.10.0) |
 | [`argparse@2.0.1`](https://github.com/nodeca/argparse.git) | Python-2.0 | CQ22954 |
 | [`asynckit@0.4.0`](git+https://github.com/alexindigo/asynckit.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/asynckit/0.4.0) |
 | [`call-bind-apply-helpers@1.0.2`](git+https://github.com/ljharb/call-bind-apply-helpers.git) | MIT | #17826 |
@@ -32,7 +32,7 @@
 | [`has-symbols@1.1.0`](git://github.com/inspect-js/has-symbols.git) | MIT | #17606 |
 | [`has-tostringtag@1.0.2`](git+https://github.com/inspect-js/has-tostringtag.git) | MIT | #13161 |
 | [`hasown@2.0.2`](git+https://github.com/inspect-js/hasOwn.git) | MIT | #11097 |
-| [`inversify@7.5.4`](https://github.com/inversify/InversifyJS.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/inversify/7.5.4) |
+| [`inversify@7.10.4`](git+https://github.com/inversify/monorepo.git) | MIT | N/A |
 | [`js-yaml@4.1.0`](https://github.com/nodeca/js-yaml.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/js-yaml/4.1.0) |
 | [`jsonc-parser@3.3.1`](https://github.com/microsoft/node-jsonc-parser) | MIT | #15491 |
 | [`jsonfile@6.1.0`](git@github.com:jprichardson/node-jsonfile.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jsonfile/6.1.0) |
@@ -46,7 +46,7 @@
 | [`reflect-metadata@0.2.2`](https://github.com/rbuckton/reflect-metadata.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/reflect-metadata/0.2.2) |
 | [`requires-port@1.0.0`](https://github.com/unshiftio/requires-port) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/requires-port/1.0.0) |
 | [`tr46@0.0.3`](git+https://github.com/Sebmaster/tr46.js.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/tr46/0.0.3) |
-| [`undici-types@6.19.8`](git+https://github.com/nodejs/undici.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/undici-types/6.19.8) |
+| [`undici-types@7.16.0`](git+https://github.com/nodejs/undici.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/undici-types/7.16.0) |
 | [`universalify@2.0.1`](git+https://github.com/RyanZim/universalify.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/universalify/2.0.1) |
 | [`url-parse@1.5.10`](https://github.com/unshiftio/url-parse.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/url-parse/1.5.10) |
 | [`webidl-conversions@3.0.1`](https://github.com/jsdom/webidl-conversions.git) | BSD-2-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/webidl-conversions/3.0.1) |
