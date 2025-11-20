@@ -25,8 +25,8 @@
     "lint:fix": "eslint --fix --cache=true --no-error-on-unmatched-pattern=true '{src,tests}/(!model|**)/*.ts'",
     "test": "if-env SKIP_TEST=true && echo 'skip test' || jest --forceExit",
     "watch": "tsc -w",
-    "license:check": "docker run --rm -t -v ${PWD}/:/workspace/project quay.io/che-incubator/dash-licenses:next --check",
-    "license:generate": "docker run --rm -t -v ${PWD}/:/workspace/project quay.io/che-incubator/dash-licenses:next",
+    "license:check": "podman run --rm -t -v ${PWD}/:/workspace/project quay.io/che-incubator/dash-licenses:next --check --batch 500",
+    "license:generate": "podman run --rm -t -v ${PWD}/:/workspace/project quay.io/che-incubator/dash-licenses:next",
     "publish:next": "yarn publish  --registry=https://registry.npmjs.org/ --no-git-tag-version --new-version 0.0.1-'$(date +%s)'"
   },
   "repository": {
