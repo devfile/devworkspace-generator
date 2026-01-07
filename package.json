@@ -42,7 +42,7 @@
   "dependencies": {
     "@devfile/api": "2.3.0-1757407014",
     "fs-extra": "^11.2.0",
-    "inversify": "^7.1.0",
+    "inversify": "^7.10.5",
     "js-yaml": "^4.0.0",
     "jsonc-parser": "^3.0.0",
     "jsonschema": "^1.4.1",
