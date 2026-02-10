@@ -1,12 +1,9 @@
 {
   "name": "@eclipse-che/che-devworkspace-generator",
   "version": "7.114.0-next",
-  "private": false,
   "description": "Generates DevWorkspaces by transforming existing devfiles",
   "main": "lib/entrypoint.js",
-  "bin": {
-    "che-devworkspace-generator": "lib/entrypoint.js"
-  },
+  "bin": "lib/entrypoint.js",
   "publishConfig": {
     "access": "public"
   },
@@ -98,6 +95,5 @@
       "<rootDir>/lib"
     ],
     "preset": "ts-jest"
-  },
-  "packageManager": "yarn@1.22.22"
+  }
 }
