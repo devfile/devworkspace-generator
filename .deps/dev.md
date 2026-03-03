@@ -48,13 +48,11 @@
 | [`@bcoe/v8-coverage@0.2.3`](git://github.com/demurgos/v8-coverage.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@bcoe/v8-coverage/0.2.3) |
 | [`@eslint-community/eslint-utils@4.9.1`](https://github.com/eslint-community/eslint-utils) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint-community/eslint-utils/4.9.1) |
 | [`@eslint-community/regexpp@4.12.2`](https://github.com/eslint-community/regexpp) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint-community/regexpp/4.12.2) |
-| [`@eslint/config-array@0.21.1`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | #23571 |
-| [`@eslint/config-helpers@0.4.2`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/config-helpers/0.4.2) |
-| [`@eslint/core@0.17.0`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/core/0.17.0) |
-| [`@eslint/eslintrc@3.3.3`](https://github.com/eslint/eslintrc#readme) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/eslintrc/3.3.3) |
-| [`@eslint/js@9.39.2`](https://github.com/eslint/eslint.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/js/9.39.2) |
-| [`@eslint/object-schema@2.1.7`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/object-schema/2.1.7) |
-| [`@eslint/plugin-kit@0.4.1`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/plugin-kit/0.4.1) |
+| [`@eslint/config-array@0.23.2`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 |  |
+| [`@eslint/config-helpers@0.5.2`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/config-helpers/0.5.2) |
+| [`@eslint/core@1.1.0`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/core/1.1.0) |
+| [`@eslint/object-schema@3.0.2`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/object-schema/3.0.2) |
+| [`@eslint/plugin-kit@0.6.0`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/plugin-kit/0.6.0) |
 | [`@humanfs/core@0.19.1`](git+https://github.com/humanwhocodes/humanfs.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@humanfs/core/0.19.1) |
 | [`@humanfs/node@0.16.7`](git+https://github.com/humanwhocodes/humanfs.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@humanfs/node/0.16.7) |
 | [`@humanwhocodes/module-importer@1.0.1`](git+https://github.com/humanwhocodes/module-importer.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@humanwhocodes/module-importer/1.0.1) |
@@ -97,6 +95,7 @@
 | [`@types/babel__generator@7.27.0`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | #20520 |
 | [`@types/babel__template@7.4.4`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/babel__template/7.4.4) |
 | [`@types/babel__traverse@7.28.0`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/babel__traverse/7.28.0) |
+| [`@types/esrecurse@4.3.1`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/esrecurse/4.3.1) |
 | [`@types/estree@1.0.8`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | #8266 |
 | [`@types/istanbul-lib-coverage@2.0.6`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/istanbul-lib-coverage/2.0.6) |
 | [`@types/istanbul-lib-report@3.0.3`](https://github.com/DefinitelyTyped/DefinitelyTyped.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/istanbul-lib-report/3.0.3) |
@@ -109,8 +108,8 @@
 | [`@ungap/structured-clone@1.3.0`](git+https://github.com/ungap/structured-clone.git) | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@ungap/structured-clone/1.3.0) |
 | [`@unrs/resolver-binding-linux-arm64-gnu@1.11.1`](https://github.com/unrs/unrs-resolver#readme) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@unrs/resolver-binding-linux-arm64-gnu/1.11.1) |
 | [`acorn-jsx@5.3.2`](https://github.com/acornjs/acorn-jsx) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/acorn-jsx/5.3.2) |
-| [`acorn@8.15.0`](git+https://github.com/acornjs/acorn.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/acorn/8.15.0) |
-| [`ajv@6.12.6`](https://github.com/ajv-validator/ajv.git) | MIT | #15286 |
+| [`acorn@8.16.0`](git+https://github.com/acornjs/acorn.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/acorn/8.16.0) |
+| [`ajv@6.14.0`](https://github.com/ajv-validator/ajv.git) | MIT |  |
 | `ansi-escapes@4.3.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ansi-escapes/4.3.2) |
 | `ansi-regex@5.0.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ansi-regex/5.0.1) |
 | `ansi-regex@6.2.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ansi-regex/6.2.2) |
@@ -129,9 +128,11 @@
 | [`babel-preset-jest@30.2.0`](https://github.com/jestjs/jest.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/babel-preset-jest/30.2.0) |
 | `babel-runtime@6.26.0` | MIT | #943 |
 | [`balanced-match@1.0.2`](git://github.com/juliangruber/balanced-match.git) | MIT | #24802 |
+| [`balanced-match@4.0.4`](git://github.com/juliangruber/balanced-match.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/balanced-match/4.0.4) |
 | [`baseline-browser-mapping@2.9.19`](git+https://github.com/web-platform-dx/baseline-browser-mapping.git) | Apache-2.0 | #25275 |
 | [`brace-expansion@1.1.12`](git://github.com/juliangruber/brace-expansion.git) | MIT | #24803 |
 | [`brace-expansion@2.0.2`](git://github.com/juliangruber/brace-expansion.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/brace-expansion/2.0.2) |
+| [`brace-expansion@5.0.4`](git+ssh://git@github.com/juliangruber/brace-expansion.git) | MIT |  |
 | [`braces@3.0.3`](https://github.com/micromatch/braces) | MIT | #14866 |
 | `browserslist@4.28.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/browserslist/4.28.1) |
 | `bs-logger@0.2.6` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/bs-logger/0.2.6) |
@@ -173,11 +174,11 @@
 | `escape-string-regexp@1.0.5` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/escape-string-regexp/1.0.5) |
 | `escape-string-regexp@2.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/escape-string-regexp/2.0.0) |
 | `escape-string-regexp@4.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/escape-string-regexp/4.0.0) |
-| [`eslint-scope@8.4.0`](https://github.com/eslint/js.git) | BSD-2-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint-scope/8.4.0) |
+| [`eslint-scope@9.1.1`](https://github.com/eslint/js.git) | BSD-2-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint-scope/9.1.1) |
 | [`eslint-visitor-keys@3.4.3`](https://github.com/eslint/eslint-visitor-keys#readme) | Apache-2.0 | #18264 |
-| [`eslint-visitor-keys@4.2.1`](https://github.com/eslint/js.git) | Apache-2.0 | #17084 |
-| [`eslint@9.39.2`](https://eslint.org) | MIT | #24914 |
-| [`espree@10.4.0`](https://github.com/eslint/js.git) | BSD-2-Clause | #22104 |
+| [`eslint-visitor-keys@5.0.1`](https://github.com/eslint/js.git) | Apache-2.0 | #25950 |
+| [`eslint@10.0.2`](https://eslint.org) | MIT |  |
+| [`espree@11.1.1`](https://github.com/eslint/js.git) | BSD-2-Clause | #25982 |
 | [`esprima@4.0.1`](https://github.com/jquery/esprima.git) | BSD-2-Clause | #995 |
 | [`esquery@1.7.0`](https://github.com/estools/esquery.git) | BSD-3-Clause | #25798 |
 | [`esrecurse@4.3.0`](https://github.com/estools/esrecurse.git) | BSD-2-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/esrecurse/4.3.0) |
@@ -210,7 +211,6 @@
 | [`glob@13.0.1`](git@github.com:isaacs/node-glob.git) | BlueOak-1.0.0 | #25822 |
 | [`glob@7.2.3`](git://github.com/isaacs/node-glob.git) | ISC | #19366 |
 | `globals@11.12.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/globals/11.12.0) |
-| `globals@14.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/globals/14.0.0) |
 | [`handlebars@4.7.8`](https://github.com/handlebars-lang/handlebars.js.git) | MIT | #9933 |
 | `has-flag@3.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/has-flag/3.0.0) |
 | `has-flag@4.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/has-flag/4.0.0) |
@@ -218,7 +218,6 @@
 | [`human-signals@2.1.0`](https://git.io/JeluP) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/human-signals/2.1.0) |
 | [`if-env@1.0.4`](git+https://github.com/ericclemmons/if-env.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/if-env/1.0.4) |
 | [`ignore@5.3.2`](git@github.com:kaelzhang/node-ignore.git) | MIT | #11665 |
-| `import-fresh@3.3.1` | MIT | #19299 |
 | `import-local@3.2.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/import-local/3.2.0) |
 | [`imurmurhash@0.1.4`](https://github.com/jensyt/imurmurhash-js) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/imurmurhash/0.1.4) |
 | [`inflight@1.0.6`](https://github.com/npm/inflight.git) | ISC | #24826 |
@@ -277,7 +276,6 @@
 | `locate-path@5.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/locate-path/5.0.0) |
 | `locate-path@6.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/locate-path/6.0.0) |
 | [`lodash.memoize@4.1.2`](https://lodash.com/) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/lodash.memoize/4.1.2) |
-| [`lodash.merge@4.6.2`](https://lodash.com/) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/lodash.merge/4.6.2) |
 | [`lru-cache@10.4.3`](git://github.com/isaacs/node-lru-cache.git) | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/lru-cache/10.4.3) |
 | [`lru-cache@11.2.5`](git+ssh://git@github.com/isaacs/node-lru-cache.git) | BlueOak-1.0.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/lru-cache/11.2.5) |
 | `lru-cache@5.1.1` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/lru-cache/5.1.1) |
@@ -289,6 +287,7 @@
 | [`micromatch@4.0.8`](https://github.com/micromatch/micromatch) | MIT | #24818 |
 | `mimic-fn@2.1.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/mimic-fn/2.1.0) |
 | [`minimatch@10.1.2`](git@github.com:isaacs/minimatch) | BlueOak-1.0.0 | #24537 |
+| [`minimatch@10.2.4`](git@github.com:isaacs/minimatch) | BlueOak-1.0.0 |  |
 | [`minimatch@3.1.2`](git://github.com/isaacs/minimatch.git) | ISC | #24852 |
 | [`minimatch@9.0.5`](git://github.com/isaacs/minimatch.git) | ISC | #9190 |
 | [`minimist@1.2.8`](git://github.com/minimistjs/minimist.git) | MIT | #5886 |
@@ -311,7 +310,6 @@
 | `p-locate@5.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/p-locate/5.0.0) |
 | `p-try@2.2.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/p-try/2.2.0) |
 | [`package-json-from-dist@1.0.1`](git+https://github.com/isaacs/package-json-from-dist.git) | BlueOak-1.0.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/package-json-from-dist/1.0.1) |
-| `parent-module@1.0.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/parent-module/1.0.1) |
 | `parse-json@5.2.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/parse-json/5.2.0) |
 | `path-exists@4.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/path-exists/4.0.0) |
 | `path-is-absolute@1.0.1` | MIT | #24829 |
@@ -336,7 +334,6 @@
 | [`regenerator-runtime@0.11.1`](https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/regenerator-runtime/0.11.1) |
 | [`require-directory@2.1.1`](git://github.com/troygoode/node-require-directory.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/require-directory/2.1.1) |
 | `resolve-cwd@3.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/resolve-cwd/3.0.0) |
-| `resolve-from@4.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/resolve-from/4.0.0) |
 | `resolve-from@5.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/resolve-from/5.0.0) |
 | `rimraf@6.1.2` | BlueOak-1.0.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/rimraf/6.1.2) |
 | [`rollup@4.59.0`](git+https://github.com/rollup/rollup.git) | MIT | transitive dependency |
