@@ -48,7 +48,7 @@
 | [`@bcoe/v8-coverage@0.2.3`](git://github.com/demurgos/v8-coverage.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@bcoe/v8-coverage/0.2.3) |
 | [`@eslint-community/eslint-utils@4.9.1`](https://github.com/eslint-community/eslint-utils) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint-community/eslint-utils/4.9.1) |
 | [`@eslint-community/regexpp@4.12.2`](https://github.com/eslint-community/regexpp) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint-community/regexpp/4.12.2) |
-| [`@eslint/config-array@0.23.2`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 |  |
+| [`@eslint/config-array@0.23.2`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | transitive dependency |
 | [`@eslint/config-helpers@0.5.2`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/config-helpers/0.5.2) |
 | [`@eslint/core@1.1.0`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/core/1.1.0) |
 | [`@eslint/object-schema@3.0.2`](git+https://github.com/eslint/rewrite.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/object-schema/3.0.2) |
@@ -57,8 +57,6 @@
 | [`@humanfs/node@0.16.7`](git+https://github.com/humanwhocodes/humanfs.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@humanfs/node/0.16.7) |
 | [`@humanwhocodes/module-importer@1.0.1`](git+https://github.com/humanwhocodes/module-importer.git) | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@humanwhocodes/module-importer/1.0.1) |
 | [`@humanwhocodes/retry@0.4.3`](git+https://github.com/humanwhocodes/retry.git) | Apache-2.0 | #17085 |
-| [`@isaacs/balanced-match@4.0.1`](git://github.com/isaacs/balanced-match.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@isaacs/balanced-match/4.0.1) |
-| `@isaacs/brace-expansion@5.0.1` | MIT | #25977 |
 | `@isaacs/cliui@8.0.2` | ISC | #8260 |
 | [`@istanbuljs/load-nyc-config@1.1.0`](git+https://github.com/istanbuljs/load-nyc-config.git) | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@istanbuljs/load-nyc-config/1.1.0) |
 | [`@istanbuljs/schema@0.1.3`](git+https://github.com/istanbuljs/schema.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@istanbuljs/schema/0.1.3) |
@@ -109,7 +107,7 @@
 | [`@unrs/resolver-binding-linux-arm64-gnu@1.11.1`](https://github.com/unrs/unrs-resolver#readme) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@unrs/resolver-binding-linux-arm64-gnu/1.11.1) |
 | [`acorn-jsx@5.3.2`](https://github.com/acornjs/acorn-jsx) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/acorn-jsx/5.3.2) |
 | [`acorn@8.16.0`](git+https://github.com/acornjs/acorn.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/acorn/8.16.0) |
-| [`ajv@6.14.0`](https://github.com/ajv-validator/ajv.git) | MIT |  |
+| [`ajv@6.14.0`](https://github.com/ajv-validator/ajv.git) | MIT | transitive dependency |
 | `ansi-escapes@4.3.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ansi-escapes/4.3.2) |
 | `ansi-regex@5.0.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ansi-regex/5.0.1) |
 | `ansi-regex@6.2.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ansi-regex/6.2.2) |
@@ -132,7 +130,7 @@
 | [`baseline-browser-mapping@2.9.19`](git+https://github.com/web-platform-dx/baseline-browser-mapping.git) | Apache-2.0 | #25275 |
 | [`brace-expansion@1.1.12`](git://github.com/juliangruber/brace-expansion.git) | MIT | #24803 |
 | [`brace-expansion@2.0.2`](git://github.com/juliangruber/brace-expansion.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/brace-expansion/2.0.2) |
-| [`brace-expansion@5.0.4`](git+ssh://git@github.com/juliangruber/brace-expansion.git) | MIT |  |
+| [`brace-expansion@5.0.4`](git+ssh://git@github.com/juliangruber/brace-expansion.git) | MIT | transitive dependency |
 | [`braces@3.0.3`](https://github.com/micromatch/braces) | MIT | #14866 |
 | `browserslist@4.28.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/browserslist/4.28.1) |
 | `bs-logger@0.2.6` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/bs-logger/0.2.6) |
@@ -177,7 +175,7 @@
 | [`eslint-scope@9.1.1`](https://github.com/eslint/js.git) | BSD-2-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint-scope/9.1.1) |
 | [`eslint-visitor-keys@3.4.3`](https://github.com/eslint/eslint-visitor-keys#readme) | Apache-2.0 | #18264 |
 | [`eslint-visitor-keys@5.0.1`](https://github.com/eslint/js.git) | Apache-2.0 | #25950 |
-| [`eslint@10.0.2`](https://eslint.org) | MIT |  |
+| [`eslint@10.0.2`](https://eslint.org) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/9.39.1) |
 | [`espree@11.1.1`](https://github.com/eslint/js.git) | BSD-2-Clause | #25982 |
 | [`esprima@4.0.1`](https://github.com/jquery/esprima.git) | BSD-2-Clause | #995 |
 | [`esquery@1.7.0`](https://github.com/estools/esquery.git) | BSD-3-Clause | #25798 |
@@ -208,7 +206,7 @@
 | `get-stream@6.0.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/get-stream/6.0.1) |
 | `glob-parent@6.0.2` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/glob-parent/6.0.2) |
 | [`glob@10.5.0`](git://github.com/isaacs/node-glob.git) | ISC | #24937 |
-| [`glob@13.0.1`](git@github.com:isaacs/node-glob.git) | BlueOak-1.0.0 | #25822 |
+| [`glob@13.0.6`](git@github.com:isaacs/node-glob.git) | BlueOak-1.0.0 | #25822 |
 | [`glob@7.2.3`](git://github.com/isaacs/node-glob.git) | ISC | #19366 |
 | `globals@11.12.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/globals/11.12.0) |
 | [`handlebars@4.7.8`](https://github.com/handlebars-lang/handlebars.js.git) | MIT | #9933 |
@@ -286,12 +284,12 @@
 | `merge-stream@2.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/merge-stream/2.0.0) |
 | [`micromatch@4.0.8`](https://github.com/micromatch/micromatch) | MIT | #24818 |
 | `mimic-fn@2.1.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/mimic-fn/2.1.0) |
-| [`minimatch@10.1.2`](git@github.com:isaacs/minimatch) | BlueOak-1.0.0 | #24537 |
-| [`minimatch@10.2.4`](git@github.com:isaacs/minimatch) | BlueOak-1.0.0 |  |
+| [`minimatch@10.2.4`](git@github.com:isaacs/minimatch) | BlueOak-1.0.0 | transitive dependency |
 | [`minimatch@3.1.2`](git://github.com/isaacs/minimatch.git) | ISC | #24852 |
 | [`minimatch@9.0.5`](git://github.com/isaacs/minimatch.git) | ISC | #9190 |
 | [`minimist@1.2.8`](git://github.com/minimistjs/minimist.git) | MIT | #5886 |
 | `minipass@7.1.2` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/minipass/7.1.2) |
+| `minipass@7.1.3` | BlueOak-1.0.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/minipass/7.1.3) |
 | `ms@2.1.3` | MIT | #5895 |
 | `napi-postinstall@0.3.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/napi-postinstall/0.3.4) |
 | `natural-compare@1.4.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/natural-compare/1.4.0) |
@@ -315,7 +313,7 @@
 | `path-is-absolute@1.0.1` | MIT | #24829 |
 | `path-key@3.1.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/path-key/3.1.1) |
 | [`path-scurry@1.11.1`](git+https://github.com/isaacs/path-scurry) | BlueOak-1.0.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/path-scurry/1.11.1) |
-| [`path-scurry@2.0.1`](git+https://github.com/isaacs/path-scurry) | BlueOak-1.0.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/path-scurry/2.0.1) |
+| [`path-scurry@2.0.2`](git+https://github.com/isaacs/path-scurry) | BlueOak-1.0.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/path-scurry/2.0.2) |
 | [`pause-stream@0.0.11`](git://github.com/dominictarr/pause-stream.git) | UNKNOWN | #15442 |
 | `picocolors@1.1.1` | ISC | #24873 |
 | [`picomatch@2.3.1`](https://github.com/micromatch/picomatch) | MIT | #24822 |
@@ -335,8 +333,8 @@
 | [`require-directory@2.1.1`](git://github.com/troygoode/node-require-directory.git) | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/require-directory/2.1.1) |
 | `resolve-cwd@3.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/resolve-cwd/3.0.0) |
 | `resolve-from@5.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/resolve-from/5.0.0) |
-| `rimraf@6.1.2` | BlueOak-1.0.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/rimraf/6.1.2) |
-| [`rollup@4.59.0`](git+https://github.com/rollup/rollup.git) | MIT | transitive dependency |
+| `rimraf@6.1.3` | BlueOak-1.0.0 | transitive dependency |
+| [`rollup@4.59.0`](git+https://github.com/rollup/rollup.git) | MIT | #26404 |
 | [`semver@6.3.1`](https://github.com/npm/node-semver.git) | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/semver/6.3.1) |
 | [`semver@7.7.4`](git+https://github.com/npm/node-semver.git) | ISC | #19251 |
 | `shebang-command@2.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/shebang-command/2.0.0) |
