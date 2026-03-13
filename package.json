@@ -22,8 +22,8 @@
     "lint:fix": "eslint --fix --cache=true --no-error-on-unmatched-pattern=true '{src,tests}/(!model|**)/*.ts'",
     "test": "if-env SKIP_TEST=true && echo 'skip test' || jest --forceExit",
     "watch": "tsc -w",
-    "license:check": "podman run --rm -t -v ${PWD}/:/workspace/project quay.io/che-incubator/dash-licenses:next --check --batch 500",
-    "license:generate": "podman run --rm -t -v ${PWD}/:/workspace/project quay.io/che-incubator/dash-licenses:next",
+    "license:check": "license-tool --check",
+    "license:generate": "license-tool --harvest",
     "publish:next": "yarn publish  --registry=https://registry.npmjs.org/ --no-git-tag-version --new-version 0.0.1-'$(date +%s)'"
   },
   "repository": {
@@ -53,6 +53,7 @@
     "eslint": "^10.0.2",
     "if-env": "^1.0.4",
     "jest": "^30.2.0",
+    "license-tool": "https://github.com/che-incubator/dash-licenses.git#c09f697ea6336ce82d365654dfeb7ef6e9c84768",
     "prettier": "^3.3.2",
     "rimraf": "^6.0.1",
     "rollup": "^4.18.0",
