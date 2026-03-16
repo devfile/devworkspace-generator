@@ -3,6 +3,7 @@
         "dbaeumer.vscode-eslint",
         "redhat.vscode-yaml",
         "Orta.vscode-jest",
-        "cnshenj.vscode-task-manager"
+        "cnshenj.vscode-task-manager",
+        "RooVeterinaryInc.roo-cline"
     ]
 }
