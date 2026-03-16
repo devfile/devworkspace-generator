@@ -40,9 +40,17 @@ commands:
       component: builder
       workingDir: ${PROJECTS_ROOT}/devworkspace-generator
       commandLine: |
+        DEFAULT_DEVFILE_URL="https://github.com/che-incubator/quarkus-api-example/tree/main"
+        DEFAULT_EDITOR_URL="https://raw.githubusercontent.com/eclipse-che/che-operator/refs/heads/main/editors-definitions/che-code-insiders.yaml"
+        echo "Enter devfile URL (default: ${DEFAULT_DEVFILE_URL}):"
+        read DEVFILE_URL
+        DEVFILE_URL="${DEVFILE_URL:-${DEFAULT_DEVFILE_URL}}"
+        echo "Enter editor URL (default: ${DEFAULT_EDITOR_URL}):"
+        read EDITOR_URL
+        EDITOR_URL="${EDITOR_URL:-${DEFAULT_EDITOR_URL}}"
         node lib/entrypoint.js \
-        --devfile-url:https://github.com/che-incubator/quarkus-api-example/tree/main \
-        --editor-url:https://raw.githubusercontent.com/eclipse-che/che-operator/refs/heads/main/editors-definitions/che-code-insiders.yaml \
+        --devfile-url:"${DEVFILE_URL}" \
+        --editor-url:"${EDITOR_URL}" \
         --output-file:/tmp/devworkspace-che-code-latest.yaml \
         --injectDefaultComponent:true \
         --defaultComponentImage:registry.access.redhat.com/ubi8/openjdk-11:latest
