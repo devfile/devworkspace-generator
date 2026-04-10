@@ -54,3 +54,9 @@ commands:
         --output-file:/tmp/devworkspace-che-code-latest.yaml \
         --injectDefaultComponent:true \
         --defaultComponentImage:registry.access.redhat.com/ubi8/openjdk-11:latest
+  - id: install-claude-code
+    exec:
+      label: "Install Claude Code"
+      component: builder
+      workingDir: ${PROJECT_SOURCE}
+      commandLine: "npm install -g @anthropic-ai/claude-code"

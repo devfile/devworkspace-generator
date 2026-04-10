@@ -4,6 +4,7 @@
         "redhat.vscode-yaml",
         "Orta.vscode-jest",
         "cnshenj.vscode-task-manager",
-        "RooVeterinaryInc.roo-cline"
+        "RooVeterinaryInc.roo-cline",
+        "anthropic.claude-code"
     ]
 }
