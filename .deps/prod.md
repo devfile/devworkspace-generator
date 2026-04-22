@@ -13,13 +13,13 @@
 | `argparse@2.0.1` | Python-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/argparse/2.0.1) |
 | `es6-promise@4.2.8` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/es6-promise/4.2.8) |
 | `form-data@2.5.5` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/form-data/2.5.5) |
-| `fs-extra@11.3.4` |  | #18872 |
+| `fs-extra@11.3.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/fs-extra/11.3.4) |
 | `inversify@7.11.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/inversify/7.11.0) |
 | `js-yaml@4.1.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/js-yaml/4.1.1) |
 | `jsonc-parser@3.3.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jsonc-parser/3.3.1) |
 | `jsonfile@6.2.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jsonfile/6.2.0) |
 | `jsonschema@1.5.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jsonschema/1.5.0) |
-| `lodash@4.18.1` |  | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/lodash/4.18.1) |
+| `lodash@4.18.1` | CC0-1.0 AND MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/lodash/4.18.1) |
 | `node-fetch@2.7.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/node-fetch/2.7.0) |
 | `querystringify@2.2.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/querystringify/2.2.0) |
 | `reflect-metadata@0.2.2` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/reflect-metadata/0.2.2) |
