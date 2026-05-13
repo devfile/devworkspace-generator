@@ -72,7 +72,7 @@ checkoutToNextBranch() {
 publishArtifacts() {
   echo "[INFO] Publish DevWorkspace Generator ${VERSION} artifacts"
 
-  yarn
+  yarn install --frozen-lockfile
   yarn compile
   npm publish --tag latest
 }

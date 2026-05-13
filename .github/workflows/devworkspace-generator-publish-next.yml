@@ -15,13 +15,19 @@ on:
       - main
       - 7.**.x
 
+permissions:
+  id-token: write  # Required for publishing to npmjs
+  contents: write
+  pull-requests: write
+
+
 jobs:
   publish:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/setup-node@v4
       with:
-        node-version: '20'
+        node-version: '24'
         registry-url: 'https://registry.npmjs.org'
         scope: '@eclipse-che'
     - name: Clone source code
@@ -36,8 +42,6 @@ jobs:
         key: yarn-${{ hashFiles('yarn.lock') }}
         restore-keys: yarn-
     - name: publish
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       run: |
         if [[ ${GITHUB_REF##*/} == "7."**".x" ]]; then
           echo "[INFO] using ${GITHUB_REF##*/} tag"
@@ -47,7 +51,7 @@ jobs:
           DIST_TAG=next
         fi
 
-        yarn
+        yarn install --frozen-lockfile
         yarn compile
         SHORT_SHA1=$(git rev-parse --short=7 HEAD)
         CURRENT_VERSION=$(jq -r '.version' package.json)

@@ -9,6 +9,11 @@
 
 name: Release Che Devworkspace Generator
 
+permissions:
+  id-token: write  # Required for publishing to npmjs
+  contents: write
+  pull-requests: write
+
 on:
   workflow_dispatch:
     inputs:
@@ -27,11 +32,11 @@ jobs:
     steps:
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
           registry-url: 'https://registry.npmjs.org'
           scope: '@eclipse-che'
       - name: "Checkout source code"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - name: Set up environment
@@ -68,11 +73,9 @@ jobs:
           restore-keys: yarn-
       - name: Run make-release.sh script
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{secrets.DEVWORKSPACE_GENERATOR_RELEASE_GITHUB_TOKEN}}
         run: |
           git config --global user.name "Anatolii Bazko"
           git config --global user.email "abazko@redhat.com"
           
           ./make-release.sh --version ${{ github.event.inputs.version }}
-
