@@ -36,6 +36,7 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 | `eslint@10.4.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/10.4.0) |
 | `glob@11.0.0` | #17986 |
 | `isexe@3.1.4` | #26030 |
+| `react-is@19.2.6` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/react-is/19.2.6) |
 | `rollup@4.60.4` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/rollup/4.60.4) |
 | `ts-jest@29.4.10` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ts-jest/29.4.10) |
 
