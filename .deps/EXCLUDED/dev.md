@@ -3,6 +3,8 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 | Packages | Resolved CQs |
 | --- | --- |
 | `@emnapi/runtime@1.7.0` | transitive dependency |
+| `@eslint/config-helpers@0.6.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/config-helpers/0.6.0) |
+| `eslint@10.4.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/10.4.0) |
 | `@rollup/rollup-linux-loongarch64-gnu@4.60.1` | transitive dependency |
 | `@rollup/rollup-linux-powerpc64le-gnu@4.60.1` | transitive dependency |
 | `@sinclair/typebox@0.34.49` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@sinclair/typebox/0.34.49) |
