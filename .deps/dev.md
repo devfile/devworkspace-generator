@@ -42,11 +42,11 @@
 | `@emnapi/wasi-threads@1.2.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@emnapi/wasi-threads/1.2.0) |
 | `@eslint-community/eslint-utils@4.9.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint-community/eslint-utils/4.9.1) |
 | `@eslint-community/regexpp@4.12.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint-community/regexpp/4.12.2) |
-| `@eslint/config-array@0.23.3` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/config-array/0.23.3) |
-| `@eslint/config-helpers@0.5.3` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/config-helpers/0.5.3) |
-| `@eslint/core@1.1.1` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/core/1.1.1) |
-| `@eslint/object-schema@3.0.3` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/object-schema/3.0.3) |
-| `@eslint/plugin-kit@0.6.1` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/plugin-kit/0.6.1) |
+| `@eslint/config-array@0.23.5` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/config-array/0.23.5) |
+| `@eslint/config-helpers@0.6.0` |  | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/config-helpers/0.6.0) |
+| `@eslint/core@1.2.1` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/core/1.2.1) |
+| `@eslint/object-schema@3.0.5` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/object-schema/3.0.5) |
+| `@eslint/plugin-kit@0.7.1` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/plugin-kit/0.7.1) |
 | `@gar/promise-retry@1.0.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@gar/promise-retry/1.0.3) |
 | `@humanfs/core@0.19.1` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@humanfs/core/0.19.1) |
 | `@humanfs/node@0.16.7` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@humanfs/node/0.16.7) |
@@ -227,7 +227,7 @@
 | `eslint-scope@9.1.2` | BSD-2-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint-scope/9.1.2) |
 | `eslint-visitor-keys@3.4.3` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint-visitor-keys/3.4.3) |
 | `eslint-visitor-keys@5.0.1` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint-visitor-keys/5.0.1) |
-| `eslint@10.1.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/10.1.0) |
+| `eslint@10.4.0` |  | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/10.4.0) |
 | `espree@11.2.0` | BSD-2-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/espree/11.2.0) |
 | `esprima@4.0.1` | BSD-2-Clause AND BSD-3-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/esprima/4.0.1) |
 | `esquery@1.7.0` | BSD-3-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/esquery/1.7.0) |
