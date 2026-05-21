@@ -419,6 +419,7 @@
 | `safer-buffer@2.1.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/safer-buffer/2.1.2) |
 | `semver@6.3.1` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/semver/6.3.1) |
 | `semver@7.7.4` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/semver/7.7.4) |
+| `semver@7.8.0` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/semver/7.8.0) |
 | `shebang-command@2.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/shebang-command/2.0.0) |
 | `shebang-regex@3.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/shebang-regex/3.0.0) |
 | `shell-quote@1.8.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/shell-quote/1.8.3) |
@@ -451,7 +452,7 @@
 | `through@2.3.8` | Apache-2.0 AND MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/through/2.3.8) |
 | `tinyglobby@0.2.15` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/tinyglobby/0.2.15) |
 | `tmpl@1.0.5` | BSD-3-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/tmpl/1.0.5) |
-| `ts-jest@29.4.9` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ts-jest/29.4.9) |
+| `ts-jest@29.4.10` |  | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ts-jest/29.4.10) |
 | `tslib@2.8.1` | 0BSD | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/tslib/2.8.1) |
 | `type-check@0.4.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/type-check/0.4.0) |
 | `type-detect@4.0.8` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/type-detect/4.0.8) |

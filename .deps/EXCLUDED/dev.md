@@ -8,6 +8,7 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 | `@sinclair/typebox@0.34.49` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@sinclair/typebox/0.34.49) |
 | `glob@11.0.0` | #17986 |
 | `isexe@3.1.4` | #26030 |
+| `ts-jest@29.4.10` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ts-jest/29.4.10) |
 
 
 
