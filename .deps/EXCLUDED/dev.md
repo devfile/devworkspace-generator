@@ -2,6 +2,7 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 
 | Packages | Resolved CQs |
 | --- | --- |
+| `axios@1.16.1` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/axios/1.16.1) |
 | `@emnapi/runtime@1.7.0` | transitive dependency |
 | `@eslint/config-helpers@0.6.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/config-helpers/0.6.0) |
 | `@rollup/rollup-android-arm-eabi@4.60.4` | transitive dependency |
