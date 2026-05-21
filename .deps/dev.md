@@ -130,7 +130,7 @@
 | `@types/istanbul-reports@3.0.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/istanbul-reports/3.0.4) |
 | `@types/jest@30.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/jest/30.0.0) |
 | `@types/json-schema@7.0.15` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/json-schema/7.0.15) |
-| `@types/node@25.5.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/node/25.5.0) |
+| `@types/node@25.9.1` |  | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/node/25.9.1) |
 | `@types/stack-utils@2.0.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/stack-utils/2.0.3) |
 | `@types/yargs-parser@21.0.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/yargs-parser/21.0.3) |
 | `@types/yargs@17.0.35` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/yargs/17.0.35) |
@@ -476,7 +476,7 @@
 | `type-fest@4.41.0` | CC0-1.0 AND MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/type-fest/4.41.0) |
 | `typescript@5.9.3` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/typescript/5.9.3) |
 | `uglify-js@3.19.3` | BSD-2-Clause AND BSD-3-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/uglify-js/3.19.3) |
-| `undici-types@7.18.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/undici-types/7.18.2) |
+| `undici-types@7.24.6` |  | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/undici-types/7.24.6) |
 | `unrs-resolver@1.11.1` | Apache-2.0 AND MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/unrs-resolver/1.11.1) |
 | `update-browserslist-db@1.2.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/update-browserslist-db/1.2.3) |
 | `uri-js@4.4.1` | BSD-2-Clause AND BSD-2-Clause-Views | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/uri-js/4.4.1) |
