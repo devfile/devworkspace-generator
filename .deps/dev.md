@@ -152,6 +152,7 @@
 | `abbrev@4.0.0` | ISC AND MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/abbrev/4.0.0) |
 | `acorn-jsx@5.3.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/acorn-jsx/5.3.2) |
 | `acorn@8.16.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/acorn/8.16.0) |
+| `agent-base@6.0.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/agent-base/6.0.2) |
 | `agent-base@7.1.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/agent-base/7.1.4) |
 | `ajv@6.14.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ajv/6.14.0) |
 | `ansi-escapes@4.3.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ansi-escapes/4.3.2) |
@@ -163,7 +164,7 @@
 | `anymatch@3.1.3` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/anymatch/3.1.3) |
 | `argparse@1.0.10` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/argparse/1.0.10) |
 | `asynckit@0.4.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/asynckit/0.4.0) |
-| `axios@1.15.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/axios/1.15.2) |
+| `axios@1.16.1` |  | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/axios/1.16.1) |
 | `babel-jest@30.3.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/babel-jest/30.3.0) |
 | `babel-plugin-istanbul@7.0.1` | BSD-3-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/babel-plugin-istanbul/7.0.1) |
 | `babel-plugin-jest-hoist@30.3.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/babel-plugin-jest-hoist/30.3.0) |
@@ -249,7 +250,7 @@
 | `find-up@5.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/find-up/5.0.0) |
 | `flat-cache@4.0.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/flat-cache/4.0.1) |
 | `flatted@3.4.2` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/flatted/3.4.2) |
-| `follow-redirects@1.15.11` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/follow-redirects/1.15.11) |
+| `follow-redirects@1.16.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/follow-redirects/1.16.0) |
 | `foreground-child@3.3.1` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/foreground-child/3.3.1) |
 | `form-data@4.0.5` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/form-data/4.0.5) |
 | `from@0.1.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/from/0.1.7) |
@@ -277,6 +278,7 @@
 | `html-escaper@2.0.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/html-escaper/2.0.2) |
 | `http-cache-semantics@4.2.0` | BSD-2-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/http-cache-semantics/4.2.0) |
 | `http-proxy-agent@7.0.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/http-proxy-agent/7.0.2) |
+| `https-proxy-agent@5.0.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/https-proxy-agent/5.0.1) |
 | `https-proxy-agent@7.0.6` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/https-proxy-agent/7.0.6) |
 | `human-signals@2.1.0` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/human-signals/2.1.0) |
 | `iconv-lite@0.7.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/iconv-lite/0.7.2) |
