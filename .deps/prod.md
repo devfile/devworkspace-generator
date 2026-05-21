@@ -13,7 +13,7 @@
 | `argparse@2.0.1` | Python-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/argparse/2.0.1) |
 | `es6-promise@4.2.8` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/es6-promise/4.2.8) |
 | `form-data@2.5.5` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/form-data/2.5.5) |
-| `fs-extra@11.3.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/fs-extra/11.3.4) |
+| `fs-extra@11.3.5` |  | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/fs-extra/11.3.5) |
 | `inversify@7.11.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/inversify/7.11.0) |
 | `js-yaml@4.1.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/js-yaml/4.1.1) |
 | `jsonc-parser@3.3.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jsonc-parser/3.3.1) |
