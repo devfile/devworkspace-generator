@@ -6,11 +6,10 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 | `@rollup/rollup-linux-loongarch64-gnu@4.60.1` | transitive dependency |
 | `@rollup/rollup-linux-powerpc64le-gnu@4.60.1` | transitive dependency |
 | `@sinclair/typebox@0.34.49` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@sinclair/typebox/0.34.49) |
-| `@sinonjs/fake-timers@15.3.0` | transitive dependency |
-| `axios@1.15.2` | transitive dependency |
 | `glob@11.0.0` | #17986 |
 | `isexe@3.1.4` | #26030 |
-| `ts-jest@29.4.9` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ts-jest/29.4.9) |
+
+
 
 
 
