@@ -21,7 +21,7 @@ permissions:
 jobs:
   update-licenses:
     runs-on: ubuntu-22.04
-    if: github.actor == 'dependabot[bot]'
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
