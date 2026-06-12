@@ -1,6 +1,6 @@
 node_modules/
 .eslintcache
-.claude/
+.claude
 coverage
 lib
 output
