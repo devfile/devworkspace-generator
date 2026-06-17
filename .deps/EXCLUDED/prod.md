@@ -4,4 +4,5 @@ This file lists dependencies that do not need CQs or auto-detection does not wor
 | --- | --- |
 | `@inversifyjs/container@1.14.1` | transitive dependency |
 | `@inversifyjs/core@9.1.1` | transitive dependency |
+| `js-yaml@4.2.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/js-yaml/4.2.0) |
 

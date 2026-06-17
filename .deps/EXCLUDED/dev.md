@@ -10,8 +10,3 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 | `glob@11.0.0` | #17986 |
 | `isexe@3.1.4` | #26030 |
 | `react-is@19.2.6` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/react-is/19.2.6) |
-| `ts-jest@29.4.10` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ts-jest/29.4.10) |
-| `@eslint/plugin-kit@0.7.2` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/plugin-kit/0.7.2) |
-| `eslint@10.4.1` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/10.4.1) |
-
-
