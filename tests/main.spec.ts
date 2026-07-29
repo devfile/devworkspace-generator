@@ -793,6 +793,19 @@ describe('Test Main with stubs', () => {
       expect(result).toBe('');
     });
 
+    test('devfile without projects field', async () => {
+      const devfileContent = jsYaml.dump({ schemaVersion: '2.1.0', components: [] });
+      const projects = [
+        {
+          name: 'my-repo',
+          location: 'http://my-location',
+        },
+      ];
+      const main = new Main();
+      const result = main.replaceIfExistingProjects(devfileContent, projects);
+      expect(result).toBe(devfileContent);
+    });
+
     test('existing projects not matching', async () => {
       const initialProjects = [
         {
@@ -819,7 +832,7 @@ describe('Test Main with stubs', () => {
       ];
       const main = new Main();
       const result = main.replaceIfExistingProjects(devfileContent, projects);
-      const devfileResult = jsYaml.load(result);
+      const devfileResult = jsYaml.load(result) as { projects: unknown[] };
       expect(devfileResult.projects).toStrictEqual(initialProjects);
     });
 
@@ -849,7 +862,7 @@ describe('Test Main with stubs', () => {
       ];
       const main = new Main();
       const result = main.replaceIfExistingProjects(devfileContent, projects);
-      const devfileResult = jsYaml.load(result);
+      const devfileResult = jsYaml.load(result) as { projects: unknown[] };
 
       const expectedProjects = [
         {
@@ -888,7 +901,7 @@ describe('Test Main with stubs', () => {
       ];
       const main = new Main();
       const result = main.replaceIfExistingProjects(devfileContent, projects);
-      const devfileResult = jsYaml.load(result);
+      const devfileResult = jsYaml.load(result) as { projects: { git: { remotes: { origin: string } } }[] };
 
       const expectedProjects = [];
       Object.assign(expectedProjects, initialProjects);
