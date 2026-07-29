@@ -150,10 +150,12 @@ export class Main {
   // Update project entry based on the projects passed as parameter
   public replaceIfExistingProjects(devfileContent: string, projects: { name: string; location: string }[]): string {
     // do nothing if no override
-    if (projects.length === 0) {
+    if (projects.length === 0 || !devfileContent) {
       return devfileContent;
     }
-    const devfileParsed: V1alpha2DevWorkspaceSpecTemplate = jsYaml.load(devfileContent);
+    const devfileParsed: V1alpha2DevWorkspaceSpecTemplate = jsYaml.load(
+      devfileContent,
+    ) as V1alpha2DevWorkspaceSpecTemplate;
 
     if (!devfileParsed || !devfileParsed.projects) {
       return devfileContent;
