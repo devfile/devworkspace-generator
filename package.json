@@ -49,7 +49,7 @@
   "devDependencies": {
     "@eclipse-che/license-tool": "^2.0.0",
     "@types/jest": "^30.0.0",
-    "@types/node": "^25.0.3",
+    "@types/node": "^26.1.2",
     "axios": "^1.13.1",
     "eslint": "^10.0.2",
     "if-env": "^1.0.4",
