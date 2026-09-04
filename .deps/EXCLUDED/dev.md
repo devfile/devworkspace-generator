@@ -38,3 +38,53 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 | `node-gyp@13.0.1` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/node-gyp/13.0.1) |
 | `rollup@4.62.3` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/rollup/4.62.3) |
 | `which@7.0.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/which/7.0.0) |
+| `@jest/console@30.5.1` | transitive dependency |
+| `@jest/core@30.5.1` | transitive dependency |
+| `@jest/diff-sequences@30.5.0` | transitive dependency |
+| `@jest/environment@30.5.1` | transitive dependency |
+| `@jest/expect-utils@30.5.1` | transitive dependency |
+| `@jest/expect@30.5.1` | transitive dependency |
+| `@jest/fake-timers@30.5.1` | transitive dependency |
+| `@jest/get-type@30.5.0` | transitive dependency |
+| `@jest/globals@30.5.1` | transitive dependency |
+| `@jest/pattern@30.5.0` | transitive dependency |
+| `@jest/reporters@30.5.1` | transitive dependency |
+| `@jest/schemas@30.5.0` | transitive dependency |
+| `@jest/snapshot-utils@30.5.1` | transitive dependency |
+| `@jest/source-map@30.5.0` | transitive dependency |
+| `@jest/test-result@30.5.1` | transitive dependency |
+| `@jest/test-sequencer@30.5.1` | transitive dependency |
+| `@jest/transform@30.5.1` | transitive dependency |
+| `@jest/types@30.5.1` | transitive dependency |
+| `babel-jest@30.5.1` | transitive dependency |
+| `babel-plugin-istanbul@8.0.2` | transitive dependency |
+| `babel-plugin-jest-hoist@30.5.0` | transitive dependency |
+| `babel-preset-jest@30.5.0` | transitive dependency |
+| `cjs-module-lexer@2.2.1` | transitive dependency |
+| `es-module-lexer@2.3.2` | transitive dependency |
+| `expect@30.5.1` | transitive dependency |
+| `jest@30.5.1` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jest/30.5.1) |
+| `jest-changed-files@30.5.1` | transitive dependency |
+| `jest-circus@30.5.1` | transitive dependency |
+| `jest-cli@30.5.1` | transitive dependency |
+| `jest-config@30.5.1` | transitive dependency |
+| `jest-diff@30.5.1` | transitive dependency |
+| `jest-docblock@30.5.0` | transitive dependency |
+| `jest-each@30.5.1` | transitive dependency |
+| `jest-environment-node@30.5.1` | transitive dependency |
+| `jest-haste-map@30.5.1` | transitive dependency |
+| `jest-leak-detector@30.5.1` | transitive dependency |
+| `jest-matcher-utils@30.5.1` | transitive dependency |
+| `jest-message-util@30.5.1` | transitive dependency |
+| `jest-mock@30.5.1` | transitive dependency |
+| `jest-regex-util@30.5.0` | transitive dependency |
+| `jest-resolve-dependencies@30.5.1` | transitive dependency |
+| `jest-resolve@30.5.1` | transitive dependency |
+| `jest-runner@30.5.1` | transitive dependency |
+| `jest-runtime@30.5.1` | transitive dependency |
+| `jest-snapshot@30.5.1` | transitive dependency |
+| `jest-util@30.5.1` | transitive dependency |
+| `jest-validate@30.5.1` | transitive dependency |
+| `jest-watcher@30.5.1` | transitive dependency |
+| `jest-worker@30.5.1` | transitive dependency |
+| `pretty-format@30.5.1` | transitive dependency |
