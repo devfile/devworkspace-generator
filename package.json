@@ -47,7 +47,7 @@
     "reflect-metadata": "^0.2.2"
   },
   "devDependencies": {
-    "@eclipse-che/license-tool": "^2.0.0",
+    "@eclipse-che/license-tool": "^2.0.1-next.7742774",
     "@types/jest": "^30.0.0",
     "@types/node": "^26.1.2",
     "axios": "^1.13.1",

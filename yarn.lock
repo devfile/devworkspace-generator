@@ -400,7 +400,7 @@ __metadata:
   resolution: "@eclipse-che/che-devworkspace-generator@workspace:."
   dependencies:
     "@devfile/api": "npm:2.3.0-1757407014"
-    "@eclipse-che/license-tool": "npm:^2.0.0"
+    "@eclipse-che/license-tool": "npm:^2.0.1-next.7742774"
     "@types/jest": "npm:^30.0.0"
     "@types/node": "npm:^26.1.2"
     axios: "npm:^1.13.1"
@@ -426,9 +426,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@eclipse-che/license-tool@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@eclipse-che/license-tool@npm:2.0.0"
+"@eclipse-che/license-tool@npm:^2.0.1-next.7742774":
+  version: 2.0.1-next.7742774
+  resolution: "@eclipse-che/license-tool@npm:2.0.1-next.7742774"
   dependencies:
     "@eslint/eslintrc": "npm:3.3.4"
     "@yarnpkg/parsers": "npm:^3.0.3"
@@ -437,7 +437,7 @@ __metadata:
     loglevel: "npm:^1.9.2"
   bin:
     license-tool: dist/cli.js
-  checksum: 10c0/d4009150c9580133bd4b0e2dc3c373de8b7aa249854454a397f34498ce1a94eeac74425979f649a4da0565965d6a37973deba1b02c53b800db4182c14bca530d
+  checksum: 10c0/f1799f6f7717f9a0ff4f0107c0ab460fec32b98b94faf8af64b743371ab9a8db9ed2403bb9af0ec121d3c63c9f3b531ce27744e3f106983f0bf91f3a443767cb
   languageName: node
   linkType: hard
 
