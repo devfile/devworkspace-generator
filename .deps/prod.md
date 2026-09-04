@@ -10,14 +10,13 @@
 | `@inversifyjs/prototype-utils@0.1.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@inversifyjs/prototype-utils/0.1.3) |
 | `@inversifyjs/reflect-metadata-utils@1.4.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@inversifyjs/reflect-metadata-utils/1.4.1) |
 | `@types/node-fetch@2.6.13` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/node-fetch/2.6.13) |
-| `argparse@2.0.1` | Python-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/argparse/2.0.1) |
 | `es6-promise@4.2.8` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/es6-promise/4.2.8) |
-| `form-data@2.5.5` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/form-data/2.5.5) |
-| `fs-extra@11.3.5` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/fs-extra/11.3.5) |
+| `form-data@2.5.6` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/form-data/2.5.6) |
+| `fs-extra@11.4.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/fs-extra/11.4.0) |
 | `inversify@7.11.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/inversify/7.11.0) |
-| `js-yaml@5.2.2` |  | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/js-yaml/5.2.2) |
+| `js-yaml@5.4.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/js-yaml/5.4.1) |
 | `jsonc-parser@3.3.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jsonc-parser/3.3.1) |
-| `jsonfile@6.2.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jsonfile/6.2.0) |
+| `jsonfile@6.2.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jsonfile/6.2.1) |
 | `jsonschema@1.5.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jsonschema/1.5.0) |
 | `lodash@4.18.1` | CC0-1.0 AND MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/lodash/4.18.1) |
 | `node-fetch@2.7.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/node-fetch/2.7.0) |

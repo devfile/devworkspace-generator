@@ -400,7 +400,7 @@ __metadata:
   resolution: "@eclipse-che/che-devworkspace-generator@workspace:."
   dependencies:
     "@devfile/api": "npm:2.3.0-1757407014"
-    "@eclipse-che/license-tool": "npm:^2.0.0"
+    "@eclipse-che/license-tool": "npm:^2.0.1-next.7742774"
     "@types/jest": "npm:^30.0.0"
     "@types/node": "npm:^26.1.2"
     axios: "npm:^1.13.1"
@@ -426,9 +426,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@eclipse-che/license-tool@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@eclipse-che/license-tool@npm:2.0.0"
+"@eclipse-che/license-tool@npm:^2.0.1-next.7742774":
+  version: 2.0.1-next.7742774
+  resolution: "@eclipse-che/license-tool@npm:2.0.1-next.7742774"
   dependencies:
     "@eslint/eslintrc": "npm:3.3.4"
     "@yarnpkg/parsers": "npm:^3.0.3"
@@ -437,7 +437,7 @@ __metadata:
     loglevel: "npm:^1.9.2"
   bin:
     license-tool: dist/cli.js
-  checksum: 10c0/d4009150c9580133bd4b0e2dc3c373de8b7aa249854454a397f34498ce1a94eeac74425979f649a4da0565965d6a37973deba1b02c53b800db4182c14bca530d
+  checksum: 10c0/f1799f6f7717f9a0ff4f0107c0ab460fec32b98b94faf8af64b743371ab9a8db9ed2403bb9af0ec121d3c63c9f3b531ce27744e3f106983f0bf91f3a443767cb
   languageName: node
   linkType: hard
 
@@ -3473,36 +3473,36 @@ __metadata:
   linkType: hard
 
 "js-yaml@npm:^3.13.1":
-  version: 3.15.0
-  resolution: "js-yaml@npm:3.15.0"
+  version: 3.15.2
+  resolution: "js-yaml@npm:3.15.2"
   dependencies:
     argparse: "npm:^1.0.7"
     esprima: "npm:^4.0.0"
   bin:
     js-yaml: bin/js-yaml.js
-  checksum: 10c0/ca966bd354ac5b1b7a4694ebdba46526796aa3a6a99529fa540af2abf85918bd155a50ccc0166b413130a00622999973754458ec01e7095bc902177bfdbd5b64
+  checksum: 10c0/e341df211dece9d4b784849647ad7568b5b6a58a9ee58ead750482316d83276387343649fe4b71522705dc6c76acf97718588f23dc19443833ef3e75033af967
   languageName: node
   linkType: hard
 
 "js-yaml@npm:^4.1.1, js-yaml@npm:^4.3.0":
-  version: 4.3.0
-  resolution: "js-yaml@npm:4.3.0"
+  version: 4.3.2
+  resolution: "js-yaml@npm:4.3.2"
   dependencies:
     argparse: "npm:^2.0.1"
   bin:
     js-yaml: bin/js-yaml.js
-  checksum: 10c0/058b30473d6915ca5b4feb11e2f7d4d97242f98d00a798ed48dd90b46b7c640398afe9128c5db22c5300f8c6528fe2a174b9a93f351a70ebc28c6203938d8bff
+  checksum: 10c0/dedd34c2e8fef1d504687f1bc94ed0ee1311a1f78770fa2800352c6d59c635ccf555009d74e9afe529ae62199da2b1ccef30e53dc84dcd8d2d8187c22574bc97
   languageName: node
   linkType: hard
 
 "js-yaml@npm:^5.2.2":
-  version: 5.2.2
-  resolution: "js-yaml@npm:5.2.2"
+  version: 5.4.1
+  resolution: "js-yaml@npm:5.4.1"
   dependencies:
     argparse: "npm:^2.0.1"
   bin:
     js-yaml: bin/js-yaml.mjs
-  checksum: 10c0/e8ded203b235b3d562818c67bf362122abbcee89e507b62bddcdd3085b2f2dd866071e5e78f8e617d41d1a0c0baa1cec12a8fdec5859c571bf862adf585e2684
+  checksum: 10c0/efe9dfaf222809694d375ad5ecca825561d2432eb55bc0f628911c0dfa4dbce98a71dcbc3252f630208bbdf5f4e9ac363847e4a7f49845b577ae2548b8fcf147
   languageName: node
   linkType: hard
 
