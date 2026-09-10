@@ -35,7 +35,7 @@ export const DEVWORKSPACE_METADATA_ANNOTATION = 'dw.metadata.annotations';
 @injectable()
 export class Generate {
   @inject(DevContainerComponentFinder)
-  private devContainerComponentFinder: DevContainerComponentFinder;
+  private devContainerComponentFinder!: DevContainerComponentFinder;
 
   async generate(
     devfileContent: string,
@@ -62,7 +62,7 @@ export class Generate {
       await fs.writeFile(outputFile, generatedContent, 'utf-8');
     }
 
-    console.log(`DevWorkspace ${context.devWorkspaceTemplates[0].metadata.name} was generated`);
+    console.log(`DevWorkspace ${context.devWorkspaceTemplates[0].metadata?.name} was generated`);
     return context;
   }
 
@@ -84,8 +84,8 @@ export class Generate {
     const metadata = this.createDevWorkspaceMetadata(editorDevfile);
     // add sufix
     metadata.name = `${metadata.name}-${suffix}`;
-    delete editorDevfile.metadata;
-    delete editorDevfile.schemaVersion;
+    delete (editorDevfile as Partial<DevfileLike>).metadata;
+    delete (editorDevfile as Partial<DevfileLike>).schemaVersion;
     const editorDevWorkspaceTemplate: V1alpha2DevWorkspaceTemplate = {
       apiVersion: 'workspace.devfile.io/v1alpha2',
       kind: 'DevWorkspaceTemplate',
@@ -95,7 +95,7 @@ export class Generate {
 
     // transform it into a devWorkspace
     const devfileCopy: V230Devfile = cloneDeep(devfile);
-    if (devfileCopy.metadata.attributes) {
+    if (devfileCopy.metadata?.attributes) {
       if (devfileCopy.attributes) {
         devfileCopy.attributes = merge(devfileCopy.attributes, devfileCopy.metadata.attributes);
       } else {
@@ -103,12 +103,12 @@ export class Generate {
       }
     }
     const devWorkspaceMetadata = this.createDevWorkspaceMetadata(devfileCopy as DevfileLike);
-    delete devfileCopy.schemaVersion;
-    delete devfileCopy.metadata;
+    delete (devfileCopy as Partial<V230Devfile>).schemaVersion;
+    delete (devfileCopy as Partial<V230Devfile>).metadata;
     const editorSpecContribution: V1alpha2DevWorkspaceSpecContributions = {
       name: 'editor',
       kubernetes: {
-        name: editorDevWorkspaceTemplate.metadata.name,
+        name: editorDevWorkspaceTemplate.metadata!.name!,
       },
     };
     const devWorkspace: V1alpha2DevWorkspace = {
@@ -125,12 +125,12 @@ export class Generate {
 
     // if the devfile has a starter project, we use it for the devWorkspace
     if (devfileCopy.starterProjects && devfileCopy.starterProjects.length > 0) {
-      if (devWorkspace.spec.template.attributes === undefined) {
-        devWorkspace.spec.template.attributes = {};
+      if (devWorkspace.spec?.template?.attributes === undefined) {
+        devWorkspace.spec!.template!.attributes = {};
       }
       const starterProjectName = devfileCopy.starterProjects[0].name;
       // add starter projects to the devWorkspace
-      devWorkspace.spec.template.attributes['controller.devfile.io/use-starter-project'] = starterProjectName;
+      devWorkspace.spec!.template!.attributes!['controller.devfile.io/use-starter-project'] = starterProjectName;
     }
 
     // for now the list of devWorkspace templates is only the editor template

@@ -87,7 +87,7 @@ describe('Test DevContainerComponentFinder', () => {
       },
     } as DevfileContext;
     const devWorkspaceSpecTemplateComponents = await devContainerComponentFinder.find(devfileContext);
-    expect(devWorkspaceSpecTemplateComponents.name).toBe('my-container');
+    expect(devWorkspaceSpecTemplateComponents?.name).toBe('my-container');
   });
 
   test('missing dev container without devfile.parent', async () => {

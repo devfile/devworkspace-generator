@@ -103,6 +103,11 @@ describe('Test Bitbucket resolver', () => {
     expect(
       bitbucketResolver.resolve(BITBUCKET_SERVER_URL + 'projects/project/repos/repo/browse?at=branch').getBranchName(),
     ).toBe('branch');
+    // Test default branch when not specified
+    expect(bitbucketResolver.resolve(BITBUCKET_SERVER_URL + 'scm/~user/repo.git').getBranchName()).toBe('HEAD');
+    expect(bitbucketResolver.resolve(BITBUCKET_SERVER_URL + 'users/user/repos/repo/browse').getBranchName()).toBe(
+      'HEAD',
+    );
   });
 
   test('test get repository', async () => {

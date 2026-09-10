@@ -28,8 +28,8 @@ describe('Test InversifyBinding', () => {
   beforeEach(() => {
     mockedArgv.length = 2;
     process.argv = mockedArgv;
-    const fsMkdirsSpy = jest.spyOn(fs, 'mkdirs');
-    fsMkdirsSpy.mockReturnValue({});
+    const fsMkdirsSpy = jest.spyOn(fs, 'mkdirs') as any;
+    fsMkdirsSpy.mockResolvedValue(undefined);
   });
   afterEach(() => (process.argv = originalProcessArgv));
 

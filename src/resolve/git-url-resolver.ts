@@ -17,7 +17,7 @@ const { Resolver } = TYPES;
 @injectable()
 export class GitUrlResolver {
   @multiInject(Resolver)
-  private resolvers: Resolver[];
+  private resolvers!: Resolver[];
 
   resolve(link: string): Url {
     const resolver = this.resolvers.find(r => r.isValid(link));

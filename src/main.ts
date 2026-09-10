@@ -101,12 +101,12 @@ export class Main {
       // get back the content
       devfileContent = jsYaml.dump(devfileParsed);
     } else if (params.devfilePath) {
-      devfileContent = await fs.readFile(params.devfilePath);
+      devfileContent = await fs.readFile(params.devfilePath, 'utf-8');
     } else {
       devfileContent = params.devfileContent;
     }
 
-    const jsYamlDevfileContent = jsYaml.load(devfileContent) as DevfileLike;
+    const jsYamlDevfileContent = jsYaml.load(devfileContent as string) as DevfileLike;
     const schemaVersion = jsYamlDevfileContent.schemaVersion;
     if (!schemaVersion) {
       throw new Error(`Devfile is not valid, schemaVersion is required`);
@@ -125,7 +125,7 @@ export class Main {
     console.log(`Devfile is valid with schema version ${schemaVersion}`);
 
     // enhance projects
-    devfileContent = this.replaceIfExistingProjects(devfileContent, params.projects);
+    devfileContent = this.replaceIfExistingProjects(devfileContent as string, params.projects);
 
     if (params.editorContent) {
       editorContent = params.editorContent;
@@ -134,13 +134,13 @@ export class Main {
       const editorDevfile = await container.get(EditorResolver).loadEditor(params.editorUrl);
       editorContent = jsYaml.dump(editorDevfile);
     } else {
-      editorContent = await fs.readFile(params.editorPath);
+      editorContent = await fs.readFile(params.editorPath!, 'utf-8');
     }
 
     const generate = container.get(Generate);
     return generate.generate(
-      devfileContent,
-      editorContent,
+      devfileContent as string,
+      editorContent as string,
       params.outputFile,
       params.injectDefaultComponent,
       params.defaultComponentImage,
@@ -168,7 +168,7 @@ export class Main {
           delete project.git;
           project.zip = { location: userProjectConfiguration.location };
         } else {
-          project.git.remotes.origin = userProjectConfiguration.location;
+          project.git!.remotes.origin = userProjectConfiguration.location;
         }
       }
       return project;
@@ -243,7 +243,7 @@ export class Main {
       );
       return true;
     } catch (error) {
-      console.error('stack=' + error.stack);
+      console.error('stack=' + (error as Error).stack);
       console.error('Unable to start', error);
       return false;
     }

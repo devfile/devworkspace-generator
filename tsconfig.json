@@ -5,7 +5,7 @@
         "esModuleInterop": true,
         "experimentalDecorators": true,
         "lib": [
-            "ES2023",
+            "ES2023"
         ],
         "sourceMap": true,
         "rootDir": "src",
@@ -15,11 +15,15 @@
         ],
         "moduleResolution": "node",
         "resolveJsonModule": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "alwaysStrict": true
     },
     "include": [
         "src"
     ],
     "exclude": [
-        "node_modules",
+        "node_modules"
     ]
 }
