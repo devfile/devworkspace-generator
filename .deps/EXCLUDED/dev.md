@@ -3,40 +3,15 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 | Packages | Resolved CQs |
 | --- | --- |
 | `@eclipse-che/license-tool@2.0.1-next.7742774` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eclipse-che/license-tool/2.0.1-next.7742774) |
-| `@rollup/rollup-android-arm-eabi@4.62.3` | transitive dependency |
-| `@rollup/rollup-android-arm64@4.62.3` | transitive dependency |
-| `@rollup/rollup-darwin-arm64@4.62.3` | transitive dependency |
-| `@rollup/rollup-darwin-x64@4.62.3` | transitive dependency |
-| `@rollup/rollup-freebsd-arm64@4.62.3` | transitive dependency |
-| `@rollup/rollup-freebsd-x64@4.62.3` | transitive dependency |
-| `@rollup/rollup-linux-arm-gnueabihf@4.62.3` | transitive dependency |
-| `@rollup/rollup-linux-arm-musleabihf@4.62.3` | transitive dependency |
-| `@rollup/rollup-linux-arm64-gnu@4.62.3` | transitive dependency |
-| `@rollup/rollup-linux-arm64-musl@4.62.3` | transitive dependency |
-| `@rollup/rollup-linux-loong64-gnu@4.62.3` | transitive dependency |
-| `@rollup/rollup-linux-loong64-musl@4.62.3` | transitive dependency |
-| `@rollup/rollup-linux-ppc64-gnu@4.62.3` | transitive dependency |
-| `@rollup/rollup-linux-ppc64-musl@4.62.3` | transitive dependency |
-| `@rollup/rollup-linux-riscv64-gnu@4.62.3` | transitive dependency |
-| `@rollup/rollup-linux-riscv64-musl@4.62.3` | transitive dependency |
-| `@rollup/rollup-linux-s390x-gnu@4.62.3` | transitive dependency |
-| `@rollup/rollup-linux-x64-gnu@4.62.3` | transitive dependency |
-| `@rollup/rollup-linux-x64-musl@4.62.3` | transitive dependency |
-| `@rollup/rollup-openbsd-x64@4.62.3` | transitive dependency |
-| `@rollup/rollup-openharmony-arm64@4.62.3` | transitive dependency |
-| `@rollup/rollup-win32-arm64-msvc@4.62.3` | transitive dependency |
-| `@rollup/rollup-win32-ia32-msvc@4.62.3` | transitive dependency |
-| `@rollup/rollup-win32-x64-gnu@4.62.3` | transitive dependency |
-| `@rollup/rollup-win32-x64-msvc@4.62.3` | transitive dependency |
 | `@sinclair/typebox@0.34.52` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@sinclair/typebox/0.34.52) |
+| `@types/lodash@4.17.25` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/lodash/4.17.25) |
+| `@types/node@26.5.1` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/node/26.5.1) |
 | `@yarnpkg/parsers@3.1.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@yarnpkg/parsers/3.1.0) |
-| `baseline-browser-mapping@2.11.6` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/baseline-browser-mapping/2.11.6) |
-| `brace-expansion@1.1.17` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/brace-expansion/1.1.17) |
-| `brace-expansion@2.1.3` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/brace-expansion/2.1.3) |
+| `axios@1.20.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/axios/1.20.0) |
+| `eslint@10.10.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/10.10.0) |
+| `rollup@4.63.1` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/rollup/4.63.1) |
 | `js-yaml@3.15.2` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/js-yaml/3.15.2) |
 | `js-yaml@4.3.2` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/js-yaml/4.3.2) |
-| `node-gyp@13.0.1` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/node-gyp/13.0.1) |
-| `rollup@4.62.3` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/rollup/4.62.3) |
 | `which@7.0.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/which/7.0.0) |
 | `@jest/console@30.5.1` | transitive dependency |
 | `@jest/core@30.5.1` | transitive dependency |
@@ -88,3 +63,44 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 | `jest-watcher@30.5.1` | transitive dependency |
 | `jest-worker@30.5.1` | transitive dependency |
 | `pretty-format@30.5.1` | transitive dependency |
+| `@eslint/plugin-kit@0.7.3` | transitive dependency |
+| `@jridgewell/sourcemap-codec@1.6.0` | transitive dependency |
+| `@keyv/bigmap@1.3.1` | transitive dependency |
+| `@napi-rs/wasm-runtime@1.2.4` | transitive dependency |
+| `@rollup/rollup-android-arm-eabi@4.63.1` | transitive dependency |
+| `@rollup/rollup-android-arm64@4.63.1` | transitive dependency |
+| `@rollup/rollup-darwin-arm64@4.63.1` | transitive dependency |
+| `@rollup/rollup-darwin-x64@4.63.1` | transitive dependency |
+| `@rollup/rollup-freebsd-arm64@4.63.1` | transitive dependency |
+| `@rollup/rollup-freebsd-x64@4.63.1` | transitive dependency |
+| `@rollup/rollup-linux-arm-gnueabihf@4.63.1` | transitive dependency |
+| `@rollup/rollup-linux-arm-musleabihf@4.63.1` | transitive dependency |
+| `@rollup/rollup-linux-arm64-gnu@4.63.1` | transitive dependency |
+| `@rollup/rollup-linux-arm64-musl@4.63.1` | transitive dependency |
+| `@rollup/rollup-linux-loong64-gnu@4.63.1` | transitive dependency |
+| `@rollup/rollup-linux-loong64-musl@4.63.1` | transitive dependency |
+| `@rollup/rollup-linux-ppc64-gnu@4.63.1` | transitive dependency |
+| `@rollup/rollup-linux-ppc64-musl@4.63.1` | transitive dependency |
+| `@rollup/rollup-linux-riscv64-gnu@4.63.1` | transitive dependency |
+| `@rollup/rollup-linux-riscv64-musl@4.63.1` | transitive dependency |
+| `@rollup/rollup-linux-s390x-gnu@4.63.1` | transitive dependency |
+| `@rollup/rollup-linux-x64-gnu@4.63.1` | transitive dependency |
+| `@rollup/rollup-linux-x64-musl@4.63.1` | transitive dependency |
+| `@rollup/rollup-openbsd-x64@4.63.1` | transitive dependency |
+| `@rollup/rollup-openharmony-arm64@4.63.1` | transitive dependency |
+| `@rollup/rollup-win32-arm64-msvc@4.63.1` | transitive dependency |
+| `@rollup/rollup-win32-ia32-msvc@4.63.1` | transitive dependency |
+| `@rollup/rollup-win32-x64-gnu@4.63.1` | transitive dependency |
+| `@rollup/rollup-win32-x64-msvc@4.63.1` | transitive dependency |
+| `@ungap/structured-clone@1.4.0` | transitive dependency |
+| `baseline-browser-mapping@2.11.22` | transitive dependency |
+| `browserslist@4.28.9` | transitive dependency |
+| `electron-to-chromium@1.5.427` | transitive dependency |
+| `node-gyp@13.0.2` | transitive dependency |
+| `node-releases@2.0.55` | transitive dependency |
+| `picomatch@4.0.7` | transitive dependency |
+| `qified@0.10.1` | transitive dependency |
+| `react-is@19.3.0` | transitive dependency |
+| `undici-types@8.9.0` | transitive dependency |
+| `undici@8.10.2` | transitive dependency |
+| `update-browserslist-db@1.3.3` | transitive dependency |

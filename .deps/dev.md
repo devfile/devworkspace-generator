@@ -5,7 +5,7 @@
 | `@babel/code-frame@7.29.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/code-frame/7.29.7) |
 | `@babel/compat-data@7.29.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/compat-data/7.29.7) |
 | `@babel/core@7.29.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/core/7.29.7) |
-| `@babel/generator@7.29.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/generator/7.29.7) |
+| `@babel/generator@7.29.8` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/generator/7.29.8) |
 | `@babel/helper-compilation-targets@7.29.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/helper-compilation-targets/7.29.7) |
 | `@babel/helper-globals@7.29.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/helper-globals/7.29.7) |
 | `@babel/helper-module-imports@7.29.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/helper-module-imports/7.29.7) |
@@ -15,7 +15,7 @@
 | `@babel/helper-validator-identifier@7.29.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/helper-validator-identifier/7.29.7) |
 | `@babel/helper-validator-option@7.29.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/helper-validator-option/7.29.7) |
 | `@babel/helpers@7.29.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/helpers/7.29.7) |
-| `@babel/parser@7.29.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/parser/7.29.7) |
+| `@babel/parser@7.29.8` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/parser/7.29.8) |
 | `@babel/plugin-syntax-async-generators@7.8.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/plugin-syntax-async-generators/7.8.4) |
 | `@babel/plugin-syntax-bigint@7.8.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/plugin-syntax-bigint/7.8.3) |
 | `@babel/plugin-syntax-class-properties@7.12.13` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/plugin-syntax-class-properties/7.12.13) |
@@ -34,9 +34,11 @@
 | `@babel/plugin-syntax-top-level-await@7.14.5` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/plugin-syntax-top-level-await/7.14.5) |
 | `@babel/plugin-syntax-typescript@7.29.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/plugin-syntax-typescript/7.29.7) |
 | `@babel/template@7.29.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/template/7.29.7) |
-| `@babel/traverse@7.29.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/traverse/7.29.7) |
-| `@babel/types@7.29.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/types/7.29.7) |
+| `@babel/traverse@7.29.8` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/traverse/7.29.8) |
+| `@babel/types@7.29.8` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@babel/types/7.29.8) |
 | `@bcoe/v8-coverage@0.2.3` | ISC AND MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@bcoe/v8-coverage/0.2.3) |
+| `@cacheable/memory@2.2.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@cacheable/memory/2.2.0) |
+| `@cacheable/utils@2.5.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@cacheable/utils/2.5.0) |
 | `@eclipse-che/license-tool@2.0.1-next.7742774` | EPL-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eclipse-che/license-tool/2.0.1-next.7742774) |
 | `@emnapi/core@1.10.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@emnapi/core/1.10.0) |
 | `@emnapi/runtime@1.10.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@emnapi/runtime/1.10.0) |
@@ -48,7 +50,7 @@
 | `@eslint/core@1.2.1` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/core/1.2.1) |
 | `@eslint/eslintrc@3.3.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/eslintrc/3.3.4) |
 | `@eslint/object-schema@3.0.5` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/object-schema/3.0.5) |
-| `@eslint/plugin-kit@0.7.2` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eslint/plugin-kit/0.7.2) |
+| `@eslint/plugin-kit@0.7.3` | Apache-2.0 | transitive dependency |
 | `@humanfs/core@0.19.2` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@humanfs/core/0.19.2) |
 | `@humanfs/node@0.16.8` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@humanfs/node/0.16.8) |
 | `@humanfs/types@0.15.0` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@humanfs/types/0.15.0) |
@@ -60,34 +62,31 @@
 | `@istanbuljs/schema@0.1.6` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@istanbuljs/schema/0.1.6) |
 | `@jest/console@30.5.1` | MIT | transitive dependency |
 | `@jest/core@30.5.1` | MIT | transitive dependency |
-| `@jest/diff-sequences@30.4.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@jest/diff-sequences/30.4.0) |
 | `@jest/diff-sequences@30.5.0` | MIT | transitive dependency |
 | `@jest/environment@30.5.1` | MIT | transitive dependency |
-| `@jest/expect-utils@30.4.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@jest/expect-utils/30.4.1) |
 | `@jest/expect-utils@30.5.1` | MIT | transitive dependency |
 | `@jest/expect@30.5.1` | MIT | transitive dependency |
 | `@jest/fake-timers@30.5.1` | MIT | transitive dependency |
-| `@jest/get-type@30.1.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@jest/get-type/30.1.0) |
 | `@jest/get-type@30.5.0` | MIT | transitive dependency |
 | `@jest/globals@30.5.1` | MIT | transitive dependency |
-| `@jest/pattern@30.4.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@jest/pattern/30.4.0) |
 | `@jest/pattern@30.5.0` | MIT | transitive dependency |
 | `@jest/reporters@30.5.1` | MIT | transitive dependency |
-| `@jest/schemas@30.4.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@jest/schemas/30.4.1) |
 | `@jest/schemas@30.5.0` | MIT | transitive dependency |
 | `@jest/snapshot-utils@30.5.1` | MIT | transitive dependency |
 | `@jest/source-map@30.5.0` | MIT | transitive dependency |
 | `@jest/test-result@30.5.1` | MIT | transitive dependency |
 | `@jest/test-sequencer@30.5.1` | MIT | transitive dependency |
 | `@jest/transform@30.5.1` | MIT | transitive dependency |
-| `@jest/types@30.4.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@jest/types/30.4.1) |
 | `@jest/types@30.5.1` | MIT | transitive dependency |
 | `@jridgewell/gen-mapping@0.3.13` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@jridgewell/gen-mapping/0.3.13) |
 | `@jridgewell/remapping@2.3.5` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@jridgewell/remapping/2.3.5) |
 | `@jridgewell/resolve-uri@3.1.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@jridgewell/resolve-uri/3.1.2) |
-| `@jridgewell/sourcemap-codec@1.5.5` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@jridgewell/sourcemap-codec/1.5.5) |
+| `@jridgewell/sourcemap-codec@1.6.0` | MIT | transitive dependency |
 | `@jridgewell/trace-mapping@0.3.31` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@jridgewell/trace-mapping/0.3.31) |
-| `@napi-rs/wasm-runtime@1.2.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@napi-rs/wasm-runtime/1.2.0) |
+| `@keyv/bigmap@1.3.1` | MIT | transitive dependency |
+| `@keyv/serialize@1.1.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@keyv/serialize/1.1.1) |
+| `@napi-rs/lzma-linux-x64-gnu@1.5.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@napi-rs/lzma-linux-x64-gnu/1.5.1) |
+| `@napi-rs/wasm-runtime@1.2.4` |  | transitive dependency |
 | `@parcel/watcher-android-arm64@2.6.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@parcel/watcher-android-arm64/2.6.0) |
 | `@parcel/watcher-darwin-arm64@2.6.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@parcel/watcher-darwin-arm64/2.6.0) |
 | `@parcel/watcher-darwin-x64@2.6.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@parcel/watcher-darwin-x64/2.6.0) |
@@ -103,31 +102,31 @@
 | `@parcel/watcher@2.6.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@parcel/watcher/2.6.0) |
 | `@pkgjs/parseargs@0.11.0` | Apache-2.0 AND MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@pkgjs/parseargs/0.11.0) |
 | `@pkgr/core@0.3.6` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@pkgr/core/0.3.6) |
-| `@rollup/rollup-android-arm-eabi@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-android-arm64@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-darwin-arm64@4.62.3` | MIT | transitive dependency |
-| `@rollup/rollup-darwin-x64@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-freebsd-arm64@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-freebsd-x64@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-linux-arm-gnueabihf@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-linux-arm-musleabihf@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-linux-arm64-gnu@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-linux-arm64-musl@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-linux-loong64-gnu@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-linux-loong64-musl@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-linux-ppc64-gnu@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-linux-ppc64-musl@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-linux-riscv64-gnu@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-linux-riscv64-musl@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-linux-s390x-gnu@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-linux-x64-gnu@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-linux-x64-musl@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-openbsd-x64@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-openharmony-arm64@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-win32-arm64-msvc@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-win32-ia32-msvc@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-win32-x64-gnu@4.62.3` |  | transitive dependency |
-| `@rollup/rollup-win32-x64-msvc@4.62.3` |  | transitive dependency |
+| `@rollup/rollup-android-arm-eabi@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-android-arm64@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-darwin-arm64@4.63.1` | MIT | transitive dependency |
+| `@rollup/rollup-darwin-x64@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-freebsd-arm64@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-freebsd-x64@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-linux-arm-gnueabihf@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-linux-arm-musleabihf@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-linux-arm64-gnu@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-linux-arm64-musl@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-linux-loong64-gnu@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-linux-loong64-musl@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-linux-ppc64-gnu@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-linux-ppc64-musl@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-linux-riscv64-gnu@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-linux-riscv64-musl@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-linux-s390x-gnu@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-linux-x64-gnu@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-linux-x64-musl@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-openbsd-x64@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-openharmony-arm64@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-win32-arm64-msvc@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-win32-ia32-msvc@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-win32-x64-gnu@4.63.1` |  | transitive dependency |
+| `@rollup/rollup-win32-x64-msvc@4.63.1` |  | transitive dependency |
 | `@sinclair/typebox@0.34.52` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@sinclair/typebox/0.34.52) |
 | `@sinonjs/commons@3.0.1` | BSD-3-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@sinonjs/commons/3.0.1) |
 | `@sinonjs/fake-timers@15.4.0` | BSD-3-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@sinonjs/fake-timers/15.4.0) |
@@ -138,16 +137,20 @@
 | `@types/babel__traverse@7.28.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/babel__traverse/7.28.0) |
 | `@types/esrecurse@4.3.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/esrecurse/4.3.1) |
 | `@types/estree@1.0.9` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/estree/1.0.9) |
+| `@types/fs-extra@11.0.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/fs-extra/11.0.4) |
 | `@types/istanbul-lib-coverage@2.0.6` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/istanbul-lib-coverage/2.0.6) |
 | `@types/istanbul-lib-report@3.0.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/istanbul-lib-report/3.0.3) |
 | `@types/istanbul-reports@3.0.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/istanbul-reports/3.0.4) |
 | `@types/jest@30.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/jest/30.0.0) |
+| `@types/js-yaml@4.0.9` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/js-yaml/4.0.9) |
 | `@types/json-schema@7.0.15` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/json-schema/7.0.15) |
-| `@types/node@26.1.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/node/26.1.2) |
+| `@types/jsonfile@6.1.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/jsonfile/6.1.4) |
+| `@types/lodash@4.17.25` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/lodash/4.17.25) |
+| `@types/node@26.5.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/node/26.5.1) |
 | `@types/stack-utils@2.0.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/stack-utils/2.0.3) |
 | `@types/yargs-parser@21.0.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/yargs-parser/21.0.3) |
 | `@types/yargs@17.0.35` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/yargs/17.0.35) |
-| `@ungap/structured-clone@1.3.3` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@ungap/structured-clone/1.3.3) |
+| `@ungap/structured-clone@1.4.0` | ISC | transitive dependency |
 | `@unrs/resolver-binding-android-arm-eabi@1.12.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@unrs/resolver-binding-android-arm-eabi/1.12.2) |
 | `@unrs/resolver-binding-android-arm64@1.12.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@unrs/resolver-binding-android-arm64/1.12.2) |
 | `@unrs/resolver-binding-darwin-arm64@1.12.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@unrs/resolver-binding-darwin-arm64/1.12.2) |
@@ -178,7 +181,7 @@
 | `ajv@6.15.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ajv/6.15.0) |
 | `ansi-escapes@4.3.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ansi-escapes/4.3.2) |
 | `ansi-regex@5.0.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ansi-regex/5.0.1) |
-| `ansi-regex@6.2.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ansi-regex/6.2.2) |
+| `ansi-regex@6.3.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ansi-regex/6.3.0) |
 | `ansi-styles@4.3.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ansi-styles/4.3.0) |
 | `ansi-styles@5.2.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ansi-styles/5.2.0) |
 | `ansi-styles@6.2.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ansi-styles/6.2.3) |
@@ -188,7 +191,7 @@
 | `async-function@1.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/async-function/1.0.0) |
 | `async-generator-function@1.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/async-generator-function/1.0.0) |
 | `asynckit@0.4.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/asynckit/0.4.0) |
-| `axios@1.18.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/axios/1.18.1) |
+| `axios@1.20.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/axios/1.20.0) |
 | `babel-jest@30.5.1` | MIT | transitive dependency |
 | `babel-plugin-istanbul@8.0.2` | BSD-3-Clause | transitive dependency |
 | `babel-plugin-jest-hoist@30.5.0` | MIT | transitive dependency |
@@ -198,18 +201,19 @@
 | `babel-runtime@6.26.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/babel-runtime/6.26.0) |
 | `balanced-match@1.0.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/balanced-match/1.0.2) |
 | `balanced-match@4.0.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/balanced-match/4.0.4) |
-| `baseline-browser-mapping@2.11.6` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/baseline-browser-mapping/2.11.6) |
-| `brace-expansion@1.1.17` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/brace-expansion/1.1.17) |
-| `brace-expansion@2.1.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/brace-expansion/2.1.3) |
-| `brace-expansion@5.0.8` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/brace-expansion/5.0.8) |
-| `browserslist@4.28.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/browserslist/4.28.7) |
+| `baseline-browser-mapping@2.11.22` | Apache-2.0 | transitive dependency |
+| `brace-expansion@1.1.18` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/brace-expansion/1.1.18) |
+| `brace-expansion@2.1.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/brace-expansion/2.1.4) |
+| `brace-expansion@5.0.9` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/brace-expansion/5.0.9) |
+| `browserslist@4.28.9` | MIT | transitive dependency |
 | `bs-logger@0.2.6` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/bs-logger/0.2.6) |
 | `bser@2.1.1` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/bser/2.1.1) |
+| `cacheable@2.5.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/cacheable/2.5.0) |
 | `call-bind-apply-helpers@1.0.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/call-bind-apply-helpers/1.0.2) |
 | `callsites@3.1.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/callsites/3.1.0) |
 | `camelcase@5.3.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/camelcase/5.3.1) |
 | `camelcase@6.3.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/camelcase/6.3.0) |
-| `caniuse-lite@1.0.30001806` | CC-BY-4.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/caniuse-lite/1.0.30001806) |
+| `caniuse-lite@1.0.30001810` | CC-BY-4.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/caniuse-lite/1.0.30001810) |
 | `chalk@4.1.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/chalk/4.1.2) |
 | `char-regex@1.0.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/char-regex/1.0.2) |
 | `chownr@3.0.0` | BlueOak-1.0.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/chownr/3.0.0) |
@@ -235,7 +239,7 @@
 | `dunder-proto@1.0.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/dunder-proto/1.0.1) |
 | `duplexer@0.1.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/duplexer/0.1.2) |
 | `eastasianwidth@0.2.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eastasianwidth/0.2.0) |
-| `electron-to-chromium@1.5.398` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/electron-to-chromium/1.5.398) |
+| `electron-to-chromium@1.5.427` | ISC | transitive dependency |
 | `emittery@0.13.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/emittery/0.13.1) |
 | `emoji-regex@8.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/emoji-regex/8.0.0) |
 | `emoji-regex@9.2.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/emoji-regex/9.2.2) |
@@ -253,7 +257,7 @@
 | `eslint-visitor-keys@3.4.3` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint-visitor-keys/3.4.3) |
 | `eslint-visitor-keys@4.2.1` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint-visitor-keys/4.2.1) |
 | `eslint-visitor-keys@5.0.1` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint-visitor-keys/5.0.1) |
-| `eslint@10.8.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/10.8.0) |
+| `eslint@10.10.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/10.10.0) |
 | `espree@10.4.0` | BSD-2-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/espree/10.4.0) |
 | `espree@11.2.0` | BSD-2-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/espree/11.2.0) |
 | `esprima@4.0.1` | BSD-2-Clause AND BSD-3-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/esprima/4.0.1) |
@@ -264,7 +268,6 @@
 | `event-stream@3.3.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/event-stream/3.3.4) |
 | `execa@5.1.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/execa/5.1.1) |
 | `exit-x@0.2.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/exit-x/0.2.2) |
-| `expect@30.4.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/expect/30.4.1) |
 | `expect@30.5.1` | MIT | transitive dependency |
 | `exponential-backoff@3.1.3` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/exponential-backoff/3.1.3) |
 | `fast-deep-equal@3.1.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/fast-deep-equal/3.1.3) |
@@ -272,11 +275,11 @@
 | `fast-levenshtein@2.0.6` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/fast-levenshtein/2.0.6) |
 | `fb-watchman@2.0.2` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/fb-watchman/2.0.2) |
 | `fdir@6.5.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/fdir/6.5.0) |
-| `file-entry-cache@8.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/file-entry-cache/8.0.0) |
+| `file-entry-cache@11.1.5` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/file-entry-cache/11.1.5) |
 | `find-up@4.1.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/find-up/4.1.0) |
 | `find-up@5.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/find-up/5.0.0) |
-| `flat-cache@4.0.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/flat-cache/4.0.1) |
-| `flatted@3.4.3` | Artistic-2.0 AND ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/flatted/3.4.3) |
+| `flat-cache@6.1.23` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/flat-cache/6.1.23) |
+| `flatted@3.4.4` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/flatted/3.4.4) |
 | `follow-redirects@1.16.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/follow-redirects/1.16.0) |
 | `foreground-child@3.3.1` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/foreground-child/3.3.1) |
 | `form-data@4.0.6` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/form-data/4.0.6) |
@@ -300,7 +303,10 @@
 | `has-flag@4.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/has-flag/4.0.0) |
 | `has-symbols@1.1.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/has-symbols/1.1.0) |
 | `has-tostringtag@1.0.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/has-tostringtag/1.0.2) |
+| `hashery@1.5.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/hashery/1.5.1) |
 | `hasown@2.0.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/hasown/2.0.4) |
+| `hookified@1.15.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/hookified/1.15.1) |
+| `hookified@2.2.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/hookified/2.2.0) |
 | `html-escaper@2.0.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/html-escaper/2.0.2) |
 | `https-proxy-agent@5.0.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/https-proxy-agent/5.0.1) |
 | `human-signals@2.1.0` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/human-signals/2.1.0) |
@@ -327,27 +333,21 @@
 | `jest-circus@30.5.1` | MIT | transitive dependency |
 | `jest-cli@30.5.1` | MIT | transitive dependency |
 | `jest-config@30.5.1` | MIT | transitive dependency |
-| `jest-diff@30.4.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jest-diff/30.4.1) |
 | `jest-diff@30.5.1` | MIT | transitive dependency |
 | `jest-docblock@30.5.0` | MIT | transitive dependency |
 | `jest-each@30.5.1` | MIT | transitive dependency |
 | `jest-environment-node@30.5.1` | MIT | transitive dependency |
 | `jest-haste-map@30.5.1` | MIT | transitive dependency |
 | `jest-leak-detector@30.5.1` | MIT | transitive dependency |
-| `jest-matcher-utils@30.4.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jest-matcher-utils/30.4.1) |
 | `jest-matcher-utils@30.5.1` | MIT | transitive dependency |
-| `jest-message-util@30.4.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jest-message-util/30.4.1) |
 | `jest-message-util@30.5.1` | MIT | transitive dependency |
-| `jest-mock@30.4.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jest-mock/30.4.1) |
 | `jest-mock@30.5.1` | MIT | transitive dependency |
-| `jest-regex-util@30.4.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jest-regex-util/30.4.0) |
 | `jest-regex-util@30.5.0` | MIT | transitive dependency |
 | `jest-resolve-dependencies@30.5.1` | MIT | transitive dependency |
 | `jest-resolve@30.5.1` | MIT | transitive dependency |
 | `jest-runner@30.5.1` | MIT | transitive dependency |
 | `jest-runtime@30.5.1` | MIT | transitive dependency |
 | `jest-snapshot@30.5.1` | MIT | transitive dependency |
-| `jest-util@30.4.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jest-util/30.4.1) |
 | `jest-util@30.5.1` | MIT | transitive dependency |
 | `jest-validate@30.5.1` | MIT | transitive dependency |
 | `jest-watcher@30.5.1` | MIT | transitive dependency |
@@ -357,12 +357,11 @@
 | `js-yaml@3.15.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/js-yaml/3.15.2) |
 | `js-yaml@4.3.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/js-yaml/4.3.2) |
 | `jsesc@3.1.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jsesc/3.1.0) |
-| `json-buffer@3.0.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/json-buffer/3.0.1) |
 | `json-parse-even-better-errors@2.3.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/json-parse-even-better-errors/2.3.1) |
 | `json-schema-traverse@0.4.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/json-schema-traverse/0.4.1) |
 | `json-stable-stringify-without-jsonify@1.0.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/json-stable-stringify-without-jsonify/1.0.1) |
 | `json5@2.2.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/json5/2.2.3) |
-| `keyv@4.5.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/keyv/4.5.4) |
+| `keyv@5.6.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/keyv/5.6.0) |
 | `leven@3.1.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/leven/3.1.0) |
 | `levn@0.4.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/levn/0.4.1) |
 | `lines-and-columns@1.2.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/lines-and-columns/1.2.4) |
@@ -392,9 +391,9 @@
 | `natural-compare@1.4.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/natural-compare/1.4.0) |
 | `neo-async@2.6.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/neo-async/2.6.2) |
 | `node-addon-api@7.1.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/node-addon-api/7.1.1) |
-| `node-gyp@13.0.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/node-gyp/13.0.1) |
+| `node-gyp@13.0.2` | MIT | transitive dependency |
 | `node-int64@0.4.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/node-int64/0.4.0) |
-| `node-releases@2.0.51` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/node-releases/2.0.51) |
+| `node-releases@2.0.55` | MIT | transitive dependency |
 | `nopt@10.0.1` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/nopt/10.0.1) |
 | `normalize-path@3.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/normalize-path/3.0.0) |
 | `npm-run-all@1.4.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/npm-run-all/1.4.0) |
@@ -416,20 +415,20 @@
 | `pause-stream@0.0.11` | MIT OR Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/pause-stream/0.0.11) |
 | `picocolors@1.1.1` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/picocolors/1.1.1) |
 | `picomatch@2.3.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/picomatch/2.3.2) |
-| `picomatch@4.0.5` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/picomatch/4.0.5) |
+| `picomatch@4.0.7` | MIT | transitive dependency |
 | `pirates@4.0.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/pirates/4.0.7) |
 | `pkg-dir@4.2.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/pkg-dir/4.2.0) |
 | `prelude-ls@1.2.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/prelude-ls/1.2.1) |
 | `prettier@3.9.6` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/prettier/3.9.6) |
-| `pretty-format@30.4.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/pretty-format/30.4.1) |
 | `pretty-format@30.5.1` | MIT | transitive dependency |
 | `proc-log@7.0.0` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/proc-log/7.0.0) |
 | `proxy-from-env@2.1.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/proxy-from-env/2.1.0) |
 | `ps-tree@1.2.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ps-tree/1.2.0) |
 | `punycode@2.3.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/punycode/2.3.1) |
 | `pure-rand@7.0.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/pure-rand/7.0.1) |
+| `qified@0.10.1` | MIT | transitive dependency |
 | `react-is@18.3.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/react-is/18.3.1) |
-| `react-is@19.2.8` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/react-is/19.2.8) |
+| `react-is@19.3.0` |  | transitive dependency |
 | `regenerator-runtime@0.10.5` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/regenerator-runtime/0.10.5) |
 | `regenerator-runtime@0.11.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/regenerator-runtime/0.11.1) |
 | `require-directory@2.1.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/require-directory/2.1.1) |
@@ -437,7 +436,7 @@
 | `resolve-from@4.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/resolve-from/4.0.0) |
 | `resolve-from@5.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/resolve-from/5.0.0) |
 | `rimraf@6.1.3` | BlueOak-1.0.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/rimraf/6.1.3) |
-| `rollup@4.62.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/rollup/4.62.3) |
+| `rollup@4.63.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/rollup/4.63.1) |
 | `semver@6.3.1` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/semver/6.3.1) |
 | `semver@7.8.5` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/semver/7.8.5) |
 | `shebang-command@2.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/shebang-command/2.0.0) |
@@ -474,10 +473,10 @@
 | `type-fest@4.41.0` | CC0-1.0 AND MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/type-fest/4.41.0) |
 | `typescript@5.9.3` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/typescript/5.9.3) |
 | `uglify-js@3.19.3` | BSD-2-Clause AND BSD-3-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/uglify-js/3.19.3) |
-| `undici-types@8.3.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/undici-types/8.3.0) |
-| `undici@8.9.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/undici/8.9.0) |
+| `undici-types@8.9.0` | MIT | transitive dependency |
+| `undici@8.10.2` | MIT | transitive dependency |
 | `unrs-resolver@1.12.2` | Apache-2.0 AND MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/unrs-resolver/1.12.2) |
-| `update-browserslist-db@1.2.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/update-browserslist-db/1.2.3) |
+| `update-browserslist-db@1.3.3` | MIT | transitive dependency |
 | `uri-js@4.4.1` | BSD-2-Clause AND BSD-2-Clause-Views | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/uri-js/4.4.1) |
 | `v8-to-istanbul@9.3.0` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/v8-to-istanbul/9.3.0) |
 | `which@1.3.1` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/which/1.3.1) |
