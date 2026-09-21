@@ -106,7 +106,11 @@ export class Main {
       devfileContent = params.devfileContent;
     }
 
-    const jsYamlDevfileContent = jsYaml.load(devfileContent as string) as DevfileLike;
+    if (!devfileContent) {
+      throw new Error('devfileContent is required');
+    }
+
+    const jsYamlDevfileContent = jsYaml.load(devfileContent) as DevfileLike;
     const schemaVersion = jsYamlDevfileContent.schemaVersion;
     if (!schemaVersion) {
       throw new Error(`Devfile is not valid, schemaVersion is required`);
@@ -125,7 +129,7 @@ export class Main {
     console.log(`Devfile is valid with schema version ${schemaVersion}`);
 
     // enhance projects
-    devfileContent = this.replaceIfExistingProjects(devfileContent as string, params.projects);
+    devfileContent = this.replaceIfExistingProjects(devfileContent, params.projects);
 
     if (params.editorContent) {
       editorContent = params.editorContent;
@@ -137,10 +141,14 @@ export class Main {
       editorContent = await fs.readFile(params.editorPath!, 'utf-8');
     }
 
+    if (!editorContent) {
+      throw new Error('editorContent is required');
+    }
+
     const generate = container.get(Generate);
     return generate.generate(
-      devfileContent as string,
-      editorContent as string,
+      devfileContent,
+      editorContent,
       params.outputFile,
       params.injectDefaultComponent,
       params.defaultComponentImage,
@@ -168,7 +176,11 @@ export class Main {
           delete project.git;
           project.zip = { location: userProjectConfiguration.location };
         } else {
-          project.git!.remotes.origin = userProjectConfiguration.location;
+          if (!project.git) {
+            project.git = { remotes: { origin: userProjectConfiguration.location } };
+          } else {
+            project.git.remotes.origin = userProjectConfiguration.location;
+          }
         }
       }
       return project;

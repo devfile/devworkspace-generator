@@ -98,7 +98,7 @@ describe('Test Main with stubs', () => {
   describe('start', () => {
     beforeEach(() => {
       initArgs(FAKE_DEVFILE_PATH, undefined, FAKE_EDITOR_PATH, undefined, FAKE_OUTPUT_FILE, undefined, undefined);
-      (jest.spyOn(fs, 'readFile') as any).mockResolvedValue('');
+      jest.spyOn(fs, 'readFile').mockImplementation(() => Promise.resolve(''));
 
       spyInitBindings = jest.spyOn(InversifyBinding.prototype, 'initBindings');
       spyInitBindings.mockImplementation(() => Promise.resolve(container));
@@ -709,7 +709,7 @@ describe('Test Main with stubs', () => {
       });
       const editorContent = 'editor content';
 
-      (jest.spyOn(fs, 'readFile') as any).mockResolvedValue(editorContent);
+      jest.spyOn(fs, 'readFile').mockImplementation(() => Promise.resolve(editorContent));
       await main.generateDevfileContext(
         {
           devfileContent,
@@ -754,7 +754,7 @@ describe('Test Main with stubs', () => {
       });
       const editorContent = 'editor content';
 
-      (jest.spyOn(fs, 'readFile') as any).mockResolvedValue(editorContent);
+      jest.spyOn(fs, 'readFile').mockImplementation(() => Promise.resolve(editorContent));
       await expect(
         main.generateDevfileContext(
           {
