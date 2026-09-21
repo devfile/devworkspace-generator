@@ -769,6 +769,41 @@ describe('Test Main with stubs', () => {
 
       expect(validateDevfileMethod).toHaveBeenCalled();
     });
+
+    test('failed with empty editorContent', async () => {
+      const main = new Main();
+      containerGetMethod.mockReset();
+
+      const validateDevfileMethod = jest.fn();
+      const devfileSchemaValidatorMock = {
+        validateDevfile: validateDevfileMethod as any,
+      };
+      validateDevfileMethod.mockReturnValueOnce({ valid: true });
+      containerGetMethod.mockReturnValueOnce(devfileSchemaValidatorMock);
+
+      // last one is generate mock
+      containerGetMethod.mockReturnValueOnce(generateMock);
+
+      const devfileContent = jsYaml.dump({
+        schemaVersion: '2.1.0',
+      });
+
+      // Mock readFile to return empty string
+      jest.spyOn(fs, 'readFile').mockImplementation(() => Promise.resolve(''));
+      await expect(
+        main.generateDevfileContext(
+          {
+            devfileContent,
+            outputFile: FAKE_OUTPUT_FILE,
+            editorPath: FAKE_EDITOR_PATH,
+            projects: [],
+          },
+          axios.default,
+        ),
+      ).rejects.toThrow('editorContent is required');
+
+      expect(validateDevfileMethod).toHaveBeenCalled();
+    });
   });
 
   describe('replaceIfExistingProjects', () => {
@@ -906,6 +941,39 @@ describe('Test Main with stubs', () => {
       const expectedProjects: typeof initialProjects = [];
       Object.assign(expectedProjects, initialProjects);
       expectedProjects[0].git.remotes.origin = 'http://my-another-location';
+      expect(devfileResult.projects).toStrictEqual(expectedProjects);
+    });
+
+    test('existing project without git field matching location', async () => {
+      const initialProjects = [
+        {
+          name: 'my-repo',
+        },
+      ];
+
+      const devfileContent = jsYaml.dump({
+        projects: initialProjects,
+      });
+      const projects = [
+        {
+          name: 'my-repo',
+          location: 'http://my-new-location',
+        },
+      ];
+      const main = new Main();
+      const result = main.replaceIfExistingProjects(devfileContent, projects);
+      const devfileResult = jsYaml.load(result) as { projects: { git: { remotes: { origin: string } } }[] };
+
+      const expectedProjects = [
+        {
+          name: 'my-repo',
+          git: {
+            remotes: {
+              origin: 'http://my-new-location',
+            },
+          },
+        },
+      ];
       expect(devfileResult.projects).toStrictEqual(expectedProjects);
     });
   });
