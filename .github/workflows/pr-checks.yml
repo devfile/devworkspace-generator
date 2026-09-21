@@ -44,6 +44,8 @@ jobs:
           node-version: 24
       - name: Install yarn deps
         run: yarn install
+      - name: Run type-check
+        run: npx tsc --noEmit
       - name: Run eslint
         run: yarn lint
       - name: Run unit tests

@@ -12,6 +12,7 @@ import 'reflect-metadata';
 
 import { Container } from 'inversify';
 import { BitbucketServerResolver } from '../../src/bitbucket-server/bitbucket-server-resolver';
+import { BitbucketServerUrl } from '../../src/bitbucket-server/bitbucket-server-url';
 
 describe('Test Bitbucket resolver', () => {
   let container: Container;
@@ -103,6 +104,11 @@ describe('Test Bitbucket resolver', () => {
     expect(
       bitbucketResolver.resolve(BITBUCKET_SERVER_URL + 'projects/project/repos/repo/browse?at=branch').getBranchName(),
     ).toBe('branch');
+    // Test default branch when not specified
+    expect(bitbucketResolver.resolve(BITBUCKET_SERVER_URL + 'scm/~user/repo.git').getBranchName()).toBe('HEAD');
+    expect(bitbucketResolver.resolve(BITBUCKET_SERVER_URL + 'users/user/repos/repo/browse').getBranchName()).toBe(
+      'HEAD',
+    );
   });
 
   test('test get repository', async () => {
@@ -135,5 +141,19 @@ describe('Test Bitbucket resolver', () => {
     expect(() => {
       bitbucketResolver.resolve('http://unknown/che');
     }).toThrow('Invalid bitbucket-server URL:');
+  });
+
+  test('getCloneUrl with undefined project (defensive fallback)', () => {
+    // This tests the defensive `?? ''` fallback in getCloneUrl
+    // In practice, this shouldn't happen due to regex validation, but we test for 100% branch coverage
+    const url = new BitbucketServerUrl(
+      'https',
+      BITBUCKET_SERVER_URL.slice(8, -1),
+      undefined,
+      undefined,
+      'repo',
+      undefined,
+    );
+    expect(url.getCloneUrl()).toBe('https://' + BITBUCKET_SERVER_URL.slice(8, -1) + '/scm//repo.git');
   });
 });

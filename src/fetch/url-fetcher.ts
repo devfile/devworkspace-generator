@@ -19,7 +19,7 @@ import { AxiosInstance } from 'axios';
 export class UrlFetcher {
   // Can't use AxiosInstance interface there
   @inject(Symbol.for('AxiosInstance'))
-  private axiosInstance: AxiosInstance;
+  private axiosInstance!: AxiosInstance;
 
   // fetch content optionally, if the URL is not found, we return undefined without throwing errors
   async fetchTextOptionalContent(url: string): Promise<string | undefined> {

@@ -19,7 +19,7 @@ import { DevContainerComponentInserter } from './dev-container-component-inserte
 @injectable()
 export class DevContainerComponentFinder {
   @inject(DevContainerComponentInserter)
-  private devContainerComponentInserter: DevContainerComponentInserter;
+  private devContainerComponentInserter!: DevContainerComponentInserter;
 
   async find(
     devfileContext: DevfileContext,
@@ -45,9 +45,11 @@ export class DevContainerComponentFinder {
       }
       this.devContainerComponentInserter.insert(devfileContext, defaultComponentImage);
 
-      let devComponents = devfileContext.devWorkspace.spec.template.components.filter(component => component.container);
+      let devComponents = devfileContext.devWorkspace.spec?.template?.components?.filter(
+        component => component.container,
+      );
 
-      return devComponents[0];
+      return devComponents?.[0];
     } else if (devComponents.length === 1) {
       return devComponents[0];
     } else {

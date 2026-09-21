@@ -20,7 +20,7 @@ import { UrlFetcher } from '../fetch/url-fetcher';
 @injectable()
 export class EditorResolver {
   @inject(UrlFetcher)
-  private urlFetcher: UrlFetcher;
+  private urlFetcher!: UrlFetcher;
 
   // Editor URL (like https://raw.githubusercontent.com/eclipse-che/che-operator/refs/heads/main/editors-definitions/che-code-latest.yaml)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

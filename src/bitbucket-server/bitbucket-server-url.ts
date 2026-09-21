@@ -36,7 +36,7 @@ export class BitbucketServerUrl implements Url {
 
   getCloneUrl(): string {
     const isUser = this.user !== undefined;
-    return `${this.scheme}://${this.hostName}/scm/${isUser ? '~' + this.user : this.project.toLowerCase()}/${
+    return `${this.scheme}://${this.hostName}/scm/${isUser ? '~' + this.user : (this.project ?? '').toLowerCase()}/${
       this.repo
     }.git`;
   }
@@ -46,6 +46,6 @@ export class BitbucketServerUrl implements Url {
   }
 
   getBranchName(): string {
-    return this.branch;
+    return this.branch || 'HEAD';
   }
 }

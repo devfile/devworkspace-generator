@@ -46,8 +46,7 @@ metadata:
   name: che-code
 `;
 
-      const fsWriteFileSpy = jest.spyOn(fs, 'writeFile');
-      fsWriteFileSpy.mockReturnValue({});
+      const fsWriteFileSpy = jest.spyOn(fs, 'writeFile').mockImplementation(() => Promise.resolve());
 
       let context = await generate.generate(devfileContent, editorContent);
       // expect not to write the file
@@ -113,8 +112,7 @@ metadata:
   name: che-code
 `;
 
-      const fsWriteFileSpy = jest.spyOn(fs, 'writeFile');
-      fsWriteFileSpy.mockReturnValue({});
+      const fsWriteFileSpy = jest.spyOn(fs, 'writeFile').mockImplementation(() => Promise.resolve());
 
       let context = await generate.generate(devfileContent, editorContent);
       // expect not to write the file
@@ -186,8 +184,7 @@ metadata:
   name: che-code
 `;
 
-      const fsWriteFileSpy = jest.spyOn(fs, 'writeFile');
-      fsWriteFileSpy.mockReturnValue({});
+      const fsWriteFileSpy = jest.spyOn(fs, 'writeFile').mockImplementation(() => Promise.resolve());
 
       let context = await generate.generate(devfileContent, editorContent);
       // expect not to write the file
@@ -254,8 +251,7 @@ metadata:
   name: che-code
 `;
 
-      const fsWriteFileSpy = jest.spyOn(fs, 'writeFile');
-      fsWriteFileSpy.mockReturnValue({});
+      const fsWriteFileSpy = jest.spyOn(fs, 'writeFile').mockImplementation(() => Promise.resolve());
 
       let context = await generate.generate(devfileContent, editorContent);
       // expect not to write the file
@@ -318,8 +314,7 @@ metadata:
   name: che-code
 `;
 
-      const fsWriteFileSpy = jest.spyOn(fs, 'writeFile');
-      fsWriteFileSpy.mockReturnValue({});
+      const fsWriteFileSpy = jest.spyOn(fs, 'writeFile').mockImplementation(() => Promise.resolve());
 
       let context = await generate.generate(devfileContent, editorContent);
       // expect not to write the file
@@ -383,8 +378,7 @@ metadata:
   name: che-code
 `;
 
-      const fsWriteFileSpy = jest.spyOn(fs, 'writeFile');
-      fsWriteFileSpy.mockReturnValue({});
+      const fsWriteFileSpy = jest.spyOn(fs, 'writeFile').mockImplementation(() => Promise.resolve());
 
       let context = await generate.generate(devfileContent, editorContent, fakeoutputDir);
       // expect to write the file
@@ -448,8 +442,7 @@ metadata:
   name: che-code
 `;
 
-      const fsWriteFileSpy = jest.spyOn(fs, 'writeFile');
-      fsWriteFileSpy.mockReturnValue({});
+      const fsWriteFileSpy = jest.spyOn(fs, 'writeFile').mockImplementation(() => Promise.resolve());
 
       let context = await generate.generate(devfileContent, editorContent, fakeoutputDir, 'false');
       // expect to write the file
@@ -514,8 +507,7 @@ metadata:
   name: che-code
 `;
 
-      const fsWriteFileSpy = jest.spyOn(fs, 'writeFile');
-      fsWriteFileSpy.mockReturnValue({});
+      const fsWriteFileSpy = jest.spyOn(fs, 'writeFile').mockImplementation(() => Promise.resolve());
 
       let context = await generate.generate(devfileContent, editorContent, fakeoutputDir, 'false');
       // expect to write the file
@@ -537,8 +529,7 @@ metadata:
   name: che-code
 `;
 
-    const fsWriteFileSpy = jest.spyOn(fs, 'writeFile');
-    fsWriteFileSpy.mockReturnValue({});
+    const fsWriteFileSpy = jest.spyOn(fs, 'writeFile').mockImplementation(() => Promise.resolve());
 
     let context = await generate.generate(devfileContent, editorContent, fakeoutputDir, 'true');
 
@@ -562,8 +553,7 @@ metadata:
   name: che-code
 `;
 
-    const fsWriteFileSpy = jest.spyOn(fs, 'writeFile');
-    fsWriteFileSpy.mockReturnValue({});
+    const fsWriteFileSpy = jest.spyOn(fs, 'writeFile').mockImplementation(() => Promise.resolve());
 
     let image = 'quay.io/my-image:latest';
     let context = await generate.generate(devfileContent, editorContent, fakeoutputDir, 'true', image);

@@ -32,12 +32,12 @@ export class BitbucketServerResolver implements Resolver {
     if (!regExp) {
       throw new Error(`Invalid bitbucket-server URL: ${url}`);
     }
-    const match = regExp.exec(url);
-    const scheme = this.getGroup(match, 'scheme');
-    const hostName = this.getGroup(match, 'host');
+    const match = regExp.exec(url)!;
+    const scheme = this.getGroup(match, 'scheme')!;
+    const hostName = this.getGroup(match, 'host')!;
     const user = this.getGroup(match, 'user');
     const project = this.getGroup(match, 'project');
-    const repo = this.getGroup(match, 'repo');
+    const repo = this.getGroup(match, 'repo')!;
     let branch = this.getGroup(match, 'branch');
     if (branch !== undefined && branch.startsWith('refs%2Fheads%2F')) {
       branch = branch.substring(15);

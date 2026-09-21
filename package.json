@@ -12,6 +12,7 @@
     "src"
   ],
   "scripts": {
+    "setup": "yarn install && yarn compile && echo '\n✅ Setup complete! Run \"yarn test\" to verify.'",
     "prepare": "yarn run clean && yarn run build",
     "clean": "rimraf lib",
     "build": "yarn run format && yarn run compile && yarn run lint && yarn run test",
@@ -48,7 +49,10 @@
   },
   "devDependencies": {
     "@eclipse-che/license-tool": "^2.0.1-next.7742774",
+    "@types/fs-extra": "^11.0.4",
     "@types/jest": "^30.0.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/lodash": "^4.17.25",
     "@types/node": "^26.1.2",
     "axios": "^1.13.1",
     "eslint": "^10.0.2",

@@ -98,7 +98,7 @@ describe('Test Main with stubs', () => {
   describe('start', () => {
     beforeEach(() => {
       initArgs(FAKE_DEVFILE_PATH, undefined, FAKE_EDITOR_PATH, undefined, FAKE_OUTPUT_FILE, undefined, undefined);
-      jest.spyOn(fs, 'readFile').mockResolvedValue('');
+      jest.spyOn(fs, 'readFile').mockImplementation(() => Promise.resolve(''));
 
       spyInitBindings = jest.spyOn(InversifyBinding.prototype, 'initBindings');
       spyInitBindings.mockImplementation(() => Promise.resolve(container));
@@ -458,7 +458,7 @@ describe('Test Main with stubs', () => {
         );
         throw new Error('Dummy error');
       } catch (e) {
-        message = e.message;
+        message = (e as Error).message;
       }
       expect(message).toEqual('missing editorPath or editorUrl or editorContent');
     });
@@ -476,7 +476,7 @@ describe('Test Main with stubs', () => {
         );
         throw new Error('Dummy error');
       } catch (e) {
-        message = e.message;
+        message = (e as Error).message;
       }
       expect(message).toEqual('missing devfilePath or devfileUrl or devfileContent');
     });
@@ -709,7 +709,7 @@ describe('Test Main with stubs', () => {
       });
       const editorContent = 'editor content';
 
-      jest.spyOn(fs, 'readFile').mockResolvedValue(editorContent);
+      jest.spyOn(fs, 'readFile').mockImplementation(() => Promise.resolve(editorContent));
       await main.generateDevfileContext(
         {
           devfileContent,
@@ -754,7 +754,7 @@ describe('Test Main with stubs', () => {
       });
       const editorContent = 'editor content';
 
-      jest.spyOn(fs, 'readFile').mockResolvedValue(editorContent);
+      jest.spyOn(fs, 'readFile').mockImplementation(() => Promise.resolve(editorContent));
       await expect(
         main.generateDevfileContext(
           {
@@ -769,12 +769,47 @@ describe('Test Main with stubs', () => {
 
       expect(validateDevfileMethod).toHaveBeenCalled();
     });
+
+    test('failed with empty editorContent', async () => {
+      const main = new Main();
+      containerGetMethod.mockReset();
+
+      const validateDevfileMethod = jest.fn();
+      const devfileSchemaValidatorMock = {
+        validateDevfile: validateDevfileMethod as any,
+      };
+      validateDevfileMethod.mockReturnValueOnce({ valid: true });
+      containerGetMethod.mockReturnValueOnce(devfileSchemaValidatorMock);
+
+      // last one is generate mock
+      containerGetMethod.mockReturnValueOnce(generateMock);
+
+      const devfileContent = jsYaml.dump({
+        schemaVersion: '2.1.0',
+      });
+
+      // Mock readFile to return empty string
+      jest.spyOn(fs, 'readFile').mockImplementation(() => Promise.resolve(''));
+      await expect(
+        main.generateDevfileContext(
+          {
+            devfileContent,
+            outputFile: FAKE_OUTPUT_FILE,
+            editorPath: FAKE_EDITOR_PATH,
+            projects: [],
+          },
+          axios.default,
+        ),
+      ).rejects.toThrow('editorContent is required');
+
+      expect(validateDevfileMethod).toHaveBeenCalled();
+    });
   });
 
   describe('replaceIfExistingProjects', () => {
     test('empty', async () => {
       const devfileContent = '';
-      const projects = [];
+      const projects: { name: string; location: string }[] = [];
       const main = new Main();
       const result = main.replaceIfExistingProjects(devfileContent, projects);
       expect(result).toBe('');
@@ -903,9 +938,42 @@ describe('Test Main with stubs', () => {
       const result = main.replaceIfExistingProjects(devfileContent, projects);
       const devfileResult = jsYaml.load(result) as { projects: { git: { remotes: { origin: string } } }[] };
 
-      const expectedProjects = [];
+      const expectedProjects: typeof initialProjects = [];
       Object.assign(expectedProjects, initialProjects);
       expectedProjects[0].git.remotes.origin = 'http://my-another-location';
+      expect(devfileResult.projects).toStrictEqual(expectedProjects);
+    });
+
+    test('existing project without git field matching location', async () => {
+      const initialProjects = [
+        {
+          name: 'my-repo',
+        },
+      ];
+
+      const devfileContent = jsYaml.dump({
+        projects: initialProjects,
+      });
+      const projects = [
+        {
+          name: 'my-repo',
+          location: 'http://my-new-location',
+        },
+      ];
+      const main = new Main();
+      const result = main.replaceIfExistingProjects(devfileContent, projects);
+      const devfileResult = jsYaml.load(result) as { projects: { git: { remotes: { origin: string } } }[] };
+
+      const expectedProjects = [
+        {
+          name: 'my-repo',
+          git: {
+            remotes: {
+              origin: 'http://my-new-location',
+            },
+          },
+        },
+      ];
       expect(devfileResult.projects).toStrictEqual(expectedProjects);
     });
   });

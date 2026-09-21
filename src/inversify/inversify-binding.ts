@@ -24,7 +24,7 @@ import { bitbucketServerModule } from '../bitbucket-server/bitbucket-server-modu
  * Manage all bindings for inversify
  */
 export class InversifyBinding {
-  private container: Container;
+  private container!: Container;
 
   public async initBindings(options: InversifyBindingOptions): Promise<Container> {
     this.container = new Container();

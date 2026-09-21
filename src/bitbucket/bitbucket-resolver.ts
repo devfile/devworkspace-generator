@@ -28,8 +28,8 @@ export class BitbucketResolver implements Resolver {
     if (!match) {
       throw new Error(`Invalid bitbucket URL: ${url}`);
     }
-    const workspaceId = this.getGroup(match, 'workspaceId');
-    let repoName = this.getGroup(match, 'repoName');
+    const workspaceId = this.getGroup(match, 'workspaceId')!;
+    let repoName = this.getGroup(match, 'repoName')!;
     if (/^[\w-][\w.-]*?\.git$/.test(repoName)) {
       repoName = repoName.substring(0, repoName.length - 4);
     }
@@ -37,7 +37,7 @@ export class BitbucketResolver implements Resolver {
     return new BitbucketUrl(workspaceId, repoName, branchName);
   }
 
-  private getGroup(match: RegExpExecArray, groupName: string, defaultValue?: string) {
+  private getGroup(match: RegExpExecArray, groupName: string, defaultValue: string = 'HEAD'): string {
     if (match.groups && match.groups[groupName]) {
       return match.groups[groupName];
     }

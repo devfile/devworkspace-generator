@@ -4,6 +4,21 @@ node_modules/
 coverage
 lib
 output
+dist/
+
+# TypeScript
+*.tsbuildinfo
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Package managers
+.npm/
+.pnpm-store/
 
 # https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
 # not zero-install mode

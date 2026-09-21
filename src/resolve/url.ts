@@ -16,7 +16,7 @@ export interface Url {
    * Provides RAW file content url
    * @param path file path
    */
-  getContentUrl(path: string);
+  getContentUrl(path: string): string;
 
   /**
    * Provides repositories Url

@@ -101,9 +101,13 @@ export class Main {
       // get back the content
       devfileContent = jsYaml.dump(devfileParsed);
     } else if (params.devfilePath) {
-      devfileContent = await fs.readFile(params.devfilePath);
+      devfileContent = await fs.readFile(params.devfilePath, 'utf-8');
     } else {
       devfileContent = params.devfileContent;
+    }
+
+    if (!devfileContent) {
+      throw new Error('devfileContent is required');
     }
 
     const jsYamlDevfileContent = jsYaml.load(devfileContent) as DevfileLike;
@@ -134,7 +138,11 @@ export class Main {
       const editorDevfile = await container.get(EditorResolver).loadEditor(params.editorUrl);
       editorContent = jsYaml.dump(editorDevfile);
     } else {
-      editorContent = await fs.readFile(params.editorPath);
+      editorContent = await fs.readFile(params.editorPath!, 'utf-8');
+    }
+
+    if (!editorContent) {
+      throw new Error('editorContent is required');
     }
 
     const generate = container.get(Generate);
@@ -168,7 +176,11 @@ export class Main {
           delete project.git;
           project.zip = { location: userProjectConfiguration.location };
         } else {
-          project.git.remotes.origin = userProjectConfiguration.location;
+          if (!project.git) {
+            project.git = { remotes: { origin: userProjectConfiguration.location } };
+          } else {
+            project.git.remotes.origin = userProjectConfiguration.location;
+          }
         }
       }
       return project;
@@ -243,7 +255,7 @@ export class Main {
       );
       return true;
     } catch (error) {
-      console.error('stack=' + error.stack);
+      console.error('stack=' + (error as Error).stack);
       console.error('Unable to start', error);
       return false;
     }
