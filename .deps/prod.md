@@ -12,9 +12,9 @@
 | `@types/node-fetch@2.6.13` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/node-fetch/2.6.13) |
 | `es6-promise@4.2.8` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/es6-promise/4.2.8) |
 | `form-data@2.5.6` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/form-data/2.5.6) |
-| `fs-extra@11.4.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/fs-extra/11.4.0) |
+| `fs-extra@11.4.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/fs-extra/11.4.1) |
 | `inversify@7.11.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/inversify/7.11.0) |
-| `js-yaml@5.4.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/js-yaml/5.4.1) |
+| `js-yaml@5.4.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/js-yaml/5.4.3) |
 | `jsonc-parser@3.3.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jsonc-parser/3.3.1) |
 | `jsonfile@6.2.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jsonfile/6.2.1) |
 | `jsonschema@1.5.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jsonschema/1.5.0) |

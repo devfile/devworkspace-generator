@@ -33,3 +33,4 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 | `@rollup/rollup-win32-ia32-msvc@4.63.1` | transitive dependency |
 | `@rollup/rollup-win32-x64-gnu@4.63.1` | transitive dependency |
 | `@rollup/rollup-win32-x64-msvc@4.63.1` | transitive dependency |
+| `babel-jest@30.5.2` | transitive dependency |
