@@ -424,7 +424,7 @@
 | `pirates@4.0.7` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/pirates/4.0.7) |
 | `pkg-dir@4.2.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/pkg-dir/4.2.0) |
 | `prelude-ls@1.2.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/prelude-ls/1.2.1) |
-| `prettier@3.9.6` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/prettier/3.9.6) |
+| `prettier@3.9.10` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/prettier/3.9.10) |
 | `pretty-format@30.5.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/pretty-format/30.5.1) |
 | `proc-log@7.0.0` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/proc-log/7.0.0) |
 | `proxy-from-env@2.1.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/proxy-from-env/2.1.0) |

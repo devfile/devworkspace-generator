@@ -6,6 +6,7 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 | `@sinclair/typebox@0.34.52` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@sinclair/typebox/0.34.52) |
 | `@types/lodash@4.17.26` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/lodash/4.17.26) |
 | `@yarnpkg/parsers@3.1.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@yarnpkg/parsers/3.1.0) |
+| `prettier@3.9.10` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/prettier/3.9.10) |
 | `rollup@4.63.1` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/rollup/4.63.1) |
 | `babel-plugin-istanbul@8.0.2` | transitive dependency |
 | `@rollup/rollup-android-arm-eabi@4.63.1` | transitive dependency |
