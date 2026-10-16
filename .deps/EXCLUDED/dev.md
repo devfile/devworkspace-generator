@@ -4,69 +4,10 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 | --- | --- |
 | `@eclipse-che/license-tool@2.0.1-next.7742774` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eclipse-che/license-tool/2.0.1-next.7742774) |
 | `@sinclair/typebox@0.34.52` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@sinclair/typebox/0.34.52) |
-| `@types/lodash@4.17.25` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/lodash/4.17.25) |
-| `@types/node@26.5.1` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/node/26.5.1) |
+| `@types/lodash@4.17.26` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/lodash/4.17.26) |
 | `@yarnpkg/parsers@3.1.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@yarnpkg/parsers/3.1.0) |
-| `axios@1.20.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/axios/1.20.0) |
-| `eslint@10.10.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/10.10.0) |
 | `rollup@4.63.1` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/rollup/4.63.1) |
-| `js-yaml@3.15.2` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/js-yaml/3.15.2) |
-| `js-yaml@4.3.2` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/js-yaml/4.3.2) |
-| `which@7.0.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/which/7.0.0) |
-| `@jest/console@30.5.1` | transitive dependency |
-| `@jest/core@30.5.1` | transitive dependency |
-| `@jest/diff-sequences@30.5.0` | transitive dependency |
-| `@jest/environment@30.5.1` | transitive dependency |
-| `@jest/expect-utils@30.5.1` | transitive dependency |
-| `@jest/expect@30.5.1` | transitive dependency |
-| `@jest/fake-timers@30.5.1` | transitive dependency |
-| `@jest/get-type@30.5.0` | transitive dependency |
-| `@jest/globals@30.5.1` | transitive dependency |
-| `@jest/pattern@30.5.0` | transitive dependency |
-| `@jest/reporters@30.5.1` | transitive dependency |
-| `@jest/schemas@30.5.0` | transitive dependency |
-| `@jest/snapshot-utils@30.5.1` | transitive dependency |
-| `@jest/source-map@30.5.0` | transitive dependency |
-| `@jest/test-result@30.5.1` | transitive dependency |
-| `@jest/test-sequencer@30.5.1` | transitive dependency |
-| `@jest/transform@30.5.1` | transitive dependency |
-| `@jest/types@30.5.1` | transitive dependency |
-| `babel-jest@30.5.1` | transitive dependency |
 | `babel-plugin-istanbul@8.0.2` | transitive dependency |
-| `babel-plugin-jest-hoist@30.5.0` | transitive dependency |
-| `babel-preset-jest@30.5.0` | transitive dependency |
-| `cjs-module-lexer@2.2.1` | transitive dependency |
-| `es-module-lexer@2.3.2` | transitive dependency |
-| `expect@30.5.1` | transitive dependency |
-| `jest@30.5.1` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/jest/30.5.1) |
-| `jest-changed-files@30.5.1` | transitive dependency |
-| `jest-circus@30.5.1` | transitive dependency |
-| `jest-cli@30.5.1` | transitive dependency |
-| `jest-config@30.5.1` | transitive dependency |
-| `jest-diff@30.5.1` | transitive dependency |
-| `jest-docblock@30.5.0` | transitive dependency |
-| `jest-each@30.5.1` | transitive dependency |
-| `jest-environment-node@30.5.1` | transitive dependency |
-| `jest-haste-map@30.5.1` | transitive dependency |
-| `jest-leak-detector@30.5.1` | transitive dependency |
-| `jest-matcher-utils@30.5.1` | transitive dependency |
-| `jest-message-util@30.5.1` | transitive dependency |
-| `jest-mock@30.5.1` | transitive dependency |
-| `jest-regex-util@30.5.0` | transitive dependency |
-| `jest-resolve-dependencies@30.5.1` | transitive dependency |
-| `jest-resolve@30.5.1` | transitive dependency |
-| `jest-runner@30.5.1` | transitive dependency |
-| `jest-runtime@30.5.1` | transitive dependency |
-| `jest-snapshot@30.5.1` | transitive dependency |
-| `jest-util@30.5.1` | transitive dependency |
-| `jest-validate@30.5.1` | transitive dependency |
-| `jest-watcher@30.5.1` | transitive dependency |
-| `jest-worker@30.5.1` | transitive dependency |
-| `pretty-format@30.5.1` | transitive dependency |
-| `@eslint/plugin-kit@0.7.3` | transitive dependency |
-| `@jridgewell/sourcemap-codec@1.6.0` | transitive dependency |
-| `@keyv/bigmap@1.3.1` | transitive dependency |
-| `@napi-rs/wasm-runtime@1.2.4` | transitive dependency |
 | `@rollup/rollup-android-arm-eabi@4.63.1` | transitive dependency |
 | `@rollup/rollup-android-arm64@4.63.1` | transitive dependency |
 | `@rollup/rollup-darwin-arm64@4.63.1` | transitive dependency |
@@ -92,15 +33,3 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 | `@rollup/rollup-win32-ia32-msvc@4.63.1` | transitive dependency |
 | `@rollup/rollup-win32-x64-gnu@4.63.1` | transitive dependency |
 | `@rollup/rollup-win32-x64-msvc@4.63.1` | transitive dependency |
-| `@ungap/structured-clone@1.4.0` | transitive dependency |
-| `baseline-browser-mapping@2.11.22` | transitive dependency |
-| `browserslist@4.28.9` | transitive dependency |
-| `electron-to-chromium@1.5.427` | transitive dependency |
-| `node-gyp@13.0.2` | transitive dependency |
-| `node-releases@2.0.55` | transitive dependency |
-| `picomatch@4.0.7` | transitive dependency |
-| `qified@0.10.1` | transitive dependency |
-| `react-is@19.3.0` | transitive dependency |
-| `undici-types@8.9.0` | transitive dependency |
-| `undici@8.10.2` | transitive dependency |
-| `update-browserslist-db@1.3.3` | transitive dependency |
