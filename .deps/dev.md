@@ -39,7 +39,7 @@
 | `@bcoe/v8-coverage@0.2.3` | ISC AND MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@bcoe/v8-coverage/0.2.3) |
 | `@cacheable/memory@2.2.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@cacheable/memory/2.2.0) |
 | `@cacheable/utils@2.5.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@cacheable/utils/2.5.0) |
-| `@eclipse-che/license-tool@2.0.1-next.7742774` | EPL-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eclipse-che/license-tool/2.0.1-next.7742774) |
+| `@eclipse-che/license-tool@2.0.1` | EPL-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eclipse-che/license-tool/2.0.1) |
 | `@emnapi/core@1.10.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@emnapi/core/1.10.0) |
 | `@emnapi/runtime@1.10.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@emnapi/runtime/1.10.0) |
 | `@emnapi/wasi-threads@1.2.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@emnapi/wasi-threads/1.2.1) |
