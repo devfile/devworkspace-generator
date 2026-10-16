@@ -258,7 +258,7 @@
 | `eslint-visitor-keys@3.4.3` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint-visitor-keys/3.4.3) |
 | `eslint-visitor-keys@4.2.1` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint-visitor-keys/4.2.1) |
 | `eslint-visitor-keys@5.0.1` | Apache-2.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint-visitor-keys/5.0.1) |
-| `eslint@10.10.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/10.10.0) |
+| `eslint@10.12.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/10.12.0) |
 | `espree@10.4.0` | BSD-2-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/espree/10.4.0) |
 | `espree@11.2.0` | BSD-2-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/espree/11.2.0) |
 | `esprima@4.0.1` | BSD-2-Clause AND BSD-3-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/esprima/4.0.1) |
