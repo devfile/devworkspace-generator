@@ -8,8 +8,10 @@
 #
 
 # Main workflow for building and publishing release builds
-# Release commit 
+# Release commit
 name: Publish project to npmjs
+run-name: >-
+  ${{ github.event_name == 'workflow_dispatch' && format('Release {0} on {1}', github.event.inputs.release-version, github.ref_name) || format('Build next for {0} @ {1}', github.ref_name, github.sha) }}
 
 on:
   workflow_dispatch:
@@ -40,13 +42,16 @@ jobs:
       - name: Validate parameters and build type
         shell: bash
         id: dist-tag-eval
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          RELEASE_VERSION: ${{ github.event.inputs.release-version }}
+          REF_NAME: ${{ github.ref_name }}
         run: |
           # check if workflow is triggered manually (release) or via branch push (next build)
           # release will always be performed as workflow_dispatch trigger, while push triggers are for dev/next builds
           # based on this information, we determine the dist-tag for pushing to npmjs
           DIST_TAG=
-          if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" ]]; then
-            RELEASE_VERSION=${{ github.event.inputs.release-version }}
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
             if [[ "$RELEASE_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
               echo "[INFO]" preparing to build and release with version: $RELEASE_VERSION
               # DIST_TAG is not used in make-release.sh, as release version will always be latest anyway
@@ -56,10 +61,10 @@ jobs:
               exit 1
             fi
           fi
-          if [[ "$GITHUB_EVENT_NAME" == "push" ]]; then
-            if [[ ${GITHUB_REF##*/} == "7."**".x" ]]; then
-              echo "[INFO] using ${GITHUB_REF##*/} tag"
-              DIST_TAG="next-${GITHUB_REF##*/}"
+          if [[ "$EVENT_NAME" == "push" ]]; then
+            if [[ ${REF_NAME} == "7."*".x" ]]; then
+              echo "[INFO] using ${REF_NAME} tag"
+              DIST_TAG="next-${REF_NAME}"
             else
               echo "[INFO] using "next" tag"
               DIST_TAG=next
@@ -70,14 +75,30 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Display release parameters
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          VERSION: ${{ github.event.inputs.release-version }}
+          RECREATE_TAGS: ${{ github.event.inputs.release-remake }}
+          REF_NAME: ${{ github.ref_name }}
+          COMMIT_SHA: ${{ github.sha }}
+          TRIGGERED_BY: ${{ github.actor }}
+        run: |
+          echo "=== Release Parameters ==="
+          echo "Version: ${VERSION}"
+          echo "Recreate tags: ${RECREATE_TAGS}"
+          echo "Branch: ${REF_NAME}"
+          echo "Commit SHA: ${COMMIT_SHA}"
+          echo "Triggered by: ${TRIGGERED_BY}"
+          echo "=========================="
       - name: Check existing release tags
         if: github.event_name == 'workflow_dispatch'
         env:
           GITHUB_TOKEN: ${{secrets.DEVWORKSPACE_GENERATOR_RELEASE_GITHUB_TOKEN}}
+          RECREATE_TAGS: ${{ github.event.inputs.release-remake }}
+          VERSION: ${{ github.event.inputs.release-version }}
         run: |
           set +e
-          RECREATE_TAGS=${{ github.event.inputs.release-remake }}
-          VERSION=${{ github.event.inputs.release-version }}
           EXISTING_TAG=$(git ls-remote --exit-code origin refs/tags/${VERSION})
           if [[ -n ${EXISTING_TAG} ]]; then
             if [[ ${RECREATE_TAGS} == "true" ]]; then
@@ -114,13 +135,16 @@ jobs:
         if: github.event_name == 'workflow_dispatch'
         env:
           GITHUB_TOKEN: ${{secrets.DEVWORKSPACE_GENERATOR_RELEASE_GITHUB_TOKEN}}
+          RELEASE_VERSION: ${{ github.event.inputs.release-version }}
         run: |
           git config --global user.name "Mykhailo Kuznietsov"
           git config --global user.email "mkuznets@redhat.com"
 
-          ./make-release.sh --version ${{ github.event.inputs.release-version }}
+          ./make-release.sh --version ${RELEASE_VERSION}
       - name: Build and publish next version
         if: github.event_name == 'push'
+        env:
+          NPM_DIST_TAG: ${{ steps.dist-tag-eval.outputs.npm_dist_tag }}
         run: |
           SHORT_SHA1=$(git rev-parse --short=7 HEAD)
           CURRENT_VERSION=$(jq -r '.version' package.json)
@@ -132,4 +156,4 @@ jobs:
           yarn
           yarn compile
 
-          npm publish --tag ${{ steps.dist-tag-eval.outputs.npm_dist_tag }} 
+          npm publish --tag ${NPM_DIST_TAG} 
