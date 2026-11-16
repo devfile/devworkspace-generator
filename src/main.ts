@@ -21,7 +21,6 @@ import { DevfileContext } from './api/devfile-context';
 import { GitUrlResolver } from './resolve/git-url-resolver';
 import { ValidatorResult } from 'jsonschema';
 
-export const DEVWORKSPACE_DEVFILE = 'che.eclipse.org/devfile';
 export const DEVWORKSPACE_DEVFILE_SOURCE = 'che.eclipse.org/devfile-source';
 
 export class Main {
@@ -77,7 +76,6 @@ export class Main {
         devfileParsed.attributes = {};
       }
       devfileParsed.attributes[DEVWORKSPACE_METADATA_ANNOTATION] = {
-        [DEVWORKSPACE_DEVFILE]: devfileContent,
         [DEVWORKSPACE_DEVFILE_SOURCE]: jsYaml.dump({
           factory: {
             params: 'url=' + params.devfileUrl,
