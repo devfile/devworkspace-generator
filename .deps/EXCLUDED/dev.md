@@ -5,7 +5,6 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 | `@eclipse-che/license-tool@2.0.1` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eclipse-che/license-tool/2.0.1) |
 | `@sinclair/typebox@0.34.52` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@sinclair/typebox/0.34.52) |
 | `@types/lodash@4.17.26` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/lodash/4.17.26) |
-| `@types/node@26.6.5` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/node/26.6.5) |
 | `@yarnpkg/parsers@3.1.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@yarnpkg/parsers/3.1.0) |
 | `eslint@10.12.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/eslint/10.12.0) |
 | `prettier@3.9.10` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/prettier/3.9.10) |
