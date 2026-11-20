@@ -1,0 +1,58 @@
+#
+# Copyright (c) 2022-2026
+# This program and the accompanying materials are made
+# available under the terms of the Eclipse Public License 2.0
+# which is available at https://www.eclipse.org/legal/epl-2.0/
+#
+# SPDX-License-Identifier: EPL-2.0
+#
+
+name: Dependabot License Update
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  update-licenses:
+    runs-on: ubuntu-22.04
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Use Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: yarn install
+
+      # @eclipse-che/license-tool 2.x writes unresolved transitive dependencies
+      # to .deps/EXCLUDED/ on its own. Unresolved direct dependencies (the ones
+      # listed in a package.json) still fail here and need a manual CQ entry,
+      # so they are never hidden silently.
+      - name: Regenerate licenses
+        run: yarn license:generate
+
+      - name: Commit and push changes
+        # Push whatever was regenerated even when the step above failed on a
+        # direct dependency, so only the manual CQ entry is left to add.
+        if: ${{ !cancelled() }}
+        run: |
+          git diff --quiet .deps/ && exit 0
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .deps/
+          git commit -s -m "chore(deps): regenerate license dependencies"
+          git push
