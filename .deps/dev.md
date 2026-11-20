@@ -301,7 +301,7 @@
 | `globals@14.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/globals/14.0.0) |
 | `gopd@1.2.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/gopd/1.2.0) |
 | `graceful-fs@4.2.11` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/graceful-fs/4.2.11) |
-| `handlebars@4.7.9` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/handlebars/4.7.9) |
+| `handlebars@4.7.10` | MIT | transitive dependency |
 | `has-flag@4.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/has-flag/4.0.0) |
 | `has-symbols@1.1.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/has-symbols/1.1.0) |
 | `has-tostringtag@1.0.2` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/has-tostringtag/1.0.2) |
@@ -470,7 +470,7 @@
 | `test-exclude@7.0.2` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/test-exclude/7.0.2) |
 | `through@2.3.8` | Apache-2.0 AND MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/through/2.3.8) |
 | `tinyglobby@0.2.17` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/tinyglobby/0.2.17) |
-| `ts-jest@29.4.14` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ts-jest/29.4.14) |
+| `ts-jest@29.4.15` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/ts-jest/29.4.15) |
 | `tslib@2.8.1` | 0BSD | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/tslib/2.8.1) |
 | `type-check@0.4.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/type-check/0.4.0) |
 | `type-detect@4.0.8` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/type-detect/4.0.8) |
