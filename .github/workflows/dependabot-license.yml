@@ -37,52 +37,17 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      # @eclipse-che/license-tool 2.x writes unresolved transitive dependencies
+      # to .deps/EXCLUDED/ on its own. Unresolved direct dependencies (the ones
+      # listed in a package.json) still fail here and need a manual CQ entry,
+      # so they are never hidden silently.
       - name: Regenerate licenses
-        run: |
-          MAX_ATTEMPTS=3
-          for attempt in $(seq 1 $MAX_ATTEMPTS); do
-            echo "=== Attempt $attempt of $MAX_ATTEMPTS ==="
-
-            if yarn license:generate; then
-              echo "License generation succeeded."
-              break
-            fi
-
-            if [ ! -f .deps/problems.md ]; then
-              echo "::error::License generation failed but no problems.md found."
-              exit 1
-            fi
-
-            SECTION=""
-            while IFS= read -r line; do
-              if echo "$line" | grep -q "## UNRESOLVED Production dependencies"; then
-                SECTION="prod"
-              elif echo "$line" | grep -q "## UNRESOLVED Development dependencies"; then
-                SECTION="dev"
-              fi
-
-              PKG=$(echo "$line" | grep -oP '`\K[^`]+' || true)
-              if [ -z "$PKG" ] || [ -z "$SECTION" ]; then
-                continue
-              fi
-
-              EXCLUDED_FILE=".deps/EXCLUDED/${SECTION}.md"
-              if grep -qF "\`${PKG}\`" "$EXCLUDED_FILE" 2>/dev/null; then
-                echo "Already excluded: $PKG"
-                continue
-              fi
-
-              echo "| \`${PKG}\` | transitive dependency |" >> "$EXCLUDED_FILE"
-              echo "Added $PKG to $EXCLUDED_FILE"
-            done < .deps/problems.md
-
-            if [ "$attempt" -eq "$MAX_ATTEMPTS" ]; then
-              echo "::error::Failed to resolve all dependencies after $MAX_ATTEMPTS attempts."
-              exit 1
-            fi
-          done
+        run: yarn license:generate
 
       - name: Commit and push changes
+        # Push whatever was regenerated even when the step above failed on a
+        # direct dependency, so only the manual CQ entry is left to add.
+        if: ${{ !cancelled() }}
         run: |
           git diff --quiet .deps/ && exit 0
 
