@@ -4,7 +4,6 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 | --- | --- |
 | `@eclipse-che/license-tool@2.0.1` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@eclipse-che/license-tool/2.0.1) |
 | `@sinclair/typebox@0.34.52` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@sinclair/typebox/0.34.52) |
-| `@types/lodash@4.17.26` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/lodash/4.17.26) |
 | `@yarnpkg/parsers@3.1.0` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@yarnpkg/parsers/3.1.0) |
 | `prettier@3.10.1` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/prettier/3.10.1) |
 | `rollup@4.68.4` | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/rollup/4.68.4) |
@@ -44,3 +43,4 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 | `minimatch@11.0.9` | transitive dependency |
 | `glob@14.0.6` | transitive dependency |
 | `path-scurry@3.0.0` | transitive dependency |
+| `handlebars@4.7.10` | transitive dependency |
