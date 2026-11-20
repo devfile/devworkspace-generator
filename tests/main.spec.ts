@@ -11,7 +11,7 @@
 import 'reflect-metadata';
 
 import { InversifyBinding } from '../src/inversify/inversify-binding';
-import { Main, DEVWORKSPACE_DEVFILE, DEVWORKSPACE_DEVFILE_SOURCE } from '../src/main';
+import { Main, DEVWORKSPACE_DEVFILE_SOURCE } from '../src/main';
 import fs from 'fs-extra';
 import * as jsYaml from 'js-yaml';
 import * as axios from 'axios';
@@ -194,7 +194,6 @@ describe('Test Main with stubs', () => {
         schemaVersion: '2.1.0',
         attributes: {
           [DEVWORKSPACE_METADATA_ANNOTATION]: {
-            [DEVWORKSPACE_DEVFILE]: 'schemaVersion: 2.1.0',
             [DEVWORKSPACE_DEVFILE_SOURCE]: jsYaml.dump({
               factory: {
                 params: `url=${FAKE_DEVFILE_URL}`,
@@ -282,7 +281,6 @@ describe('Test Main with stubs', () => {
         attributes: {
           foo: 'bar',
           [DEVWORKSPACE_METADATA_ANNOTATION]: {
-            [DEVWORKSPACE_DEVFILE]: 'schemaVersion: 2.1.0\nattributes:\n  foo: bar',
             [DEVWORKSPACE_DEVFILE_SOURCE]: jsYaml.dump({
               factory: {
                 params: `url=${FAKE_DEVFILE_URL}`,
@@ -372,7 +370,6 @@ describe('Test Main with stubs', () => {
       const devfileParsed = jsYaml.load(devfileContent) as any;
       devfileParsed.attributes = {
         [DEVWORKSPACE_METADATA_ANNOTATION]: {
-          [DEVWORKSPACE_DEVFILE]: devfileContent,
           [DEVWORKSPACE_DEVFILE_SOURCE]: jsYaml.dump({
             factory: {
               params: `url=${FAKE_DEVFILE_URL}`,
