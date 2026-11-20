@@ -86,7 +86,6 @@
 | `@jridgewell/trace-mapping@0.3.31` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@jridgewell/trace-mapping/0.3.31) |
 | `@keyv/bigmap@1.3.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@keyv/bigmap/1.3.1) |
 | `@keyv/serialize@1.1.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@keyv/serialize/1.1.1) |
-| `@napi-rs/lzma-linux-x64-gnu@1.5.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@napi-rs/lzma-linux-x64-gnu/1.5.1) |
 | `@napi-rs/wasm-runtime@1.2.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@napi-rs/wasm-runtime/1.2.4) |
 | `@parcel/watcher-android-arm64@2.6.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@parcel/watcher-android-arm64/2.6.0) |
 | `@parcel/watcher-darwin-arm64@2.6.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@parcel/watcher-darwin-arm64/2.6.0) |
@@ -103,31 +102,32 @@
 | `@parcel/watcher@2.6.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@parcel/watcher/2.6.0) |
 | `@pkgjs/parseargs@0.11.0` | Apache-2.0 AND MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@pkgjs/parseargs/0.11.0) |
 | `@pkgr/core@0.3.6` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@pkgr/core/0.3.6) |
-| `@rollup/rollup-android-arm-eabi@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-android-arm64@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-darwin-arm64@4.64.6` | MIT | transitive dependency |
-| `@rollup/rollup-darwin-x64@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-freebsd-arm64@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-freebsd-x64@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-linux-arm-gnueabihf@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-linux-arm-musleabihf@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-linux-arm64-gnu@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-linux-arm64-musl@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-linux-loong64-gnu@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-linux-loong64-musl@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-linux-ppc64-gnu@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-linux-ppc64-musl@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-linux-riscv64-gnu@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-linux-riscv64-musl@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-linux-s390x-gnu@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-linux-x64-gnu@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-linux-x64-musl@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-openbsd-x64@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-openharmony-arm64@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-win32-arm64-msvc@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-win32-ia32-msvc@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-win32-x64-gnu@4.64.6` |  | transitive dependency |
-| `@rollup/rollup-win32-x64-msvc@4.64.6` |  | transitive dependency |
+| `@rollup/rollup-android-arm-eabi@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-android-arm64@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-android-x64@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-darwin-arm64@4.68.4` | MIT | transitive dependency |
+| `@rollup/rollup-darwin-x64@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-freebsd-arm64@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-freebsd-x64@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-linux-arm-gnueabihf@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-linux-arm-musleabihf@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-linux-arm64-gnu@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-linux-arm64-musl@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-linux-loong64-gnu@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-linux-loong64-musl@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-linux-ppc64-gnu@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-linux-ppc64-musl@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-linux-riscv64-gnu@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-linux-riscv64-musl@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-linux-s390x-gnu@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-linux-x64-gnu@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-linux-x64-musl@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-openbsd-x64@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-openharmony-arm64@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-win32-arm64-msvc@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-win32-ia32-msvc@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-win32-x64-gnu@4.68.4` |  | transitive dependency |
+| `@rollup/rollup-win32-x64-msvc@4.68.4` |  | transitive dependency |
 | `@sinclair/typebox@0.34.52` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@sinclair/typebox/0.34.52) |
 | `@sinonjs/commons@3.0.1` | BSD-3-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@sinonjs/commons/3.0.1) |
 | `@sinonjs/fake-timers@15.4.0` | BSD-3-Clause | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@sinonjs/fake-timers/15.4.0) |
@@ -137,6 +137,7 @@
 | `@types/babel__template@7.4.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/babel__template/7.4.4) |
 | `@types/babel__traverse@7.28.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/babel__traverse/7.28.0) |
 | `@types/esrecurse@4.3.1` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/esrecurse/4.3.1) |
+| `@types/estree@1.0.10` | MIT | transitive dependency |
 | `@types/estree@1.0.9` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/estree/1.0.9) |
 | `@types/fs-extra@11.0.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/fs-extra/11.0.4) |
 | `@types/istanbul-lib-coverage@2.0.6` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/istanbul-lib-coverage/2.0.6) |
@@ -441,7 +442,7 @@
 | `resolve-from@4.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/resolve-from/4.0.0) |
 | `resolve-from@5.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/resolve-from/5.0.0) |
 | `rimraf@6.1.3` | BlueOak-1.0.0 | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/rimraf/6.1.3) |
-| `rollup@4.64.6` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/rollup/4.64.6) |
+| `rollup@4.68.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/rollup/4.68.4) |
 | `semver@6.3.1` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/semver/6.3.1) |
 | `semver@7.8.5` | ISC | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/semver/7.8.5) |
 | `shebang-command@2.0.0` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/-/shebang-command/2.0.0) |
