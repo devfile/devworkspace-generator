@@ -42,3 +42,5 @@ This file contains a manual contribution to .deps/dev.md and it's needed because
 | `brace-expansion@5.0.13` | transitive dependency |
 | `follow-redirects@1.16.3` | transitive dependency |
 | `minimatch@11.0.9` | transitive dependency |
+| `glob@14.0.6` | transitive dependency |
+| `path-scurry@3.0.0` | transitive dependency |
