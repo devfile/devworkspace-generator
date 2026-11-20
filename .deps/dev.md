@@ -148,7 +148,7 @@
 | `@types/js-yaml@4.0.9` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/js-yaml/4.0.9) |
 | `@types/json-schema@7.0.15` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/json-schema/7.0.15) |
 | `@types/jsonfile@6.1.4` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/jsonfile/6.1.4) |
-| `@types/lodash@4.17.26` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/lodash/4.17.26) |
+| `@types/lodash@4.17.27` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/lodash/4.17.27) |
 | `@types/node@26.6.6` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/node/26.6.6) |
 | `@types/stack-utils@2.0.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/stack-utils/2.0.3) |
 | `@types/yargs-parser@21.0.3` | MIT | [clearlydefined](https://clearlydefined.io/definitions/npm/npmjs/@types/yargs-parser/21.0.3) |
